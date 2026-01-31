@@ -42,11 +42,22 @@ func _on_profile_clicked(choice_index: int) -> void:
 	story_engine.PickChoice(choice_index)
 	_clean_current_scene()
 	var chat: Chat = _chat_scene.instantiate()
+	chat.continue_button_pressed.connect(_chat_continue_button_pressed)
+	chat.choice_pressed.connect(_chat_choice_pressed)
 	%MobileScreen.add_child(chat)
 	_current_child_scene = chat
 	if not chat.is_node_ready():
 		await chat.ready
 	_state = State.Chat
+	story_engine.Continue()
+
+
+func _chat_continue_button_pressed():
+	story_engine.Continue()
+
+
+func _chat_choice_pressed(choice_index: int):
+	story_engine.PickChoice(choice_index)
 	story_engine.Continue()
 
 
@@ -64,7 +75,7 @@ func _on_story_engine_generic_text_line(line: String, choices: PackedStringArray
 
 	var who := parts[0].strip_edges().to_lower()
 	var text := parts[1].strip_edges()
-	_chat.step(who == "pg", text, [])
+	_chat.step(who == "pg", text, choices)
 
 
 func _clean_current_scene() -> void:

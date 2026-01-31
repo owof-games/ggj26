@@ -1,11 +1,18 @@
 [gd_resource type="Theme" format=3 uid="uid://bje1xdoowr41k"]
 
+[ext_resource type="StyleBox" uid="uid://b601osnwxgnhy" path="res://theme/dialogue_box_choice_stylebox.tres" id="1_84gcg"]
+
 [resource]
 DialogueBox1MarginContainer/base_type = &"MarginContainer"
 DialogueBox1MarginContainer/constants/margin_bottom = 50
 DialogueBox1MarginContainer/constants/margin_left = 42
 DialogueBox1MarginContainer/constants/margin_right = 49
 DialogueBox1MarginContainer/constants/margin_top = 27
+DialogueBoxChoice/base_type = &"Button"
+DialogueBoxChoice/colors/font_color = Color(0, 0, 0, 1)
+DialogueBoxChoice/styles/hover = ExtResource("1_84gcg")
+DialogueBoxChoice/styles/normal = ExtResource("1_84gcg")
+DialogueBoxChoice/styles/pressed = ExtResource("1_84gcg")
 DialogueBoxVBoxContainer/base_type = &"VBoxContainer"
 DialogueBoxVBoxContainer/constants/separation = 16
 ProfilePicture/base_type = &"Button"

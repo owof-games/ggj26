@@ -160,6 +160,10 @@ VAR PGInSearchOf = ()
 === dialogue_Char_uno
 PG: Ageismo
 {Char_uno}: Vero, ageismo.
++ [PG: Però tu.]
+    {Char_uno}: Eh ma tu!
++ [PG: Per fortuna che.]
+    {Char_uno}: Decisamente.
 - (ageism)
 
 -> character_personalization
