@@ -33,33 +33,33 @@ VAR PGInSearchOf = ()
 - (top)
 @choose_character
 //Personaggi speciali
-+ [{Char_uno}]
++ [{Char_uno} #alias:Uno #age:37 #body:medium #insearchof:sex]
   //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
   -> dialogue_Char_uno
-+ [{Char_due}]
++ [{Char_due} #alias:Due #age:37 #body:medium #insearchof:sex]
   -> dialogue_Char_due
-+ [{Char_tre}]
++ [{Char_tre} #alias:Tre #age:37 #body:medium #insearchof:sex]
   -> dialogue_Char_tre
-+ [{Char_quattro}]
++ [{Char_quattro} #alias:Quattro #age:37 #body:medium #insearchof:sex]
   ->dialogue_Char_quattro
-+ [{Char_cinque}]
++ [{Char_cinque} #alias:Cinque #age:37 #body:medium #insearchof:sex]
   -> dialogue_Char_cinque
-+ [{Char_sei}]
++ [{Char_sei} #alias:Set #age:37 #body:medium #insearchof:sex]
   -> dialogue_Char_sei
-+ [{Char_sette}]
-  -> dialogue_Char_sette
-+ [{Char_otto}]
-  -> dialogue_Char_otto
+// + [{Char_sette} #alias:Uno #age:37 #body:medium #insearchof:sex]
+//   -> dialogue_Char_sette
+// + [{Char_otto} #alias:Uno #age:37 #body:medium #insearchof:sex]
+//   -> dialogue_Char_otto
 
 
 //Personaggi anonimi
-+ [Anon_uno]
++ [Anon_uno #alias:Anon #age:37 #body:medium #insearchof:sex]
   conversazione con anonymous 1
     -> top
-+ [Anon_due]
++ [Anon_due #alias:Anon #age:37 #body:medium #insearchof:sex]
   conversazione con anonymous 2
     -> top
-+ [Anon_tre]
++ [Anon_tre #alias:Anon #age:37 #body:medium #insearchof:sex]
   conversazione con anonymous 3
     -> top
 -

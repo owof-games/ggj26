@@ -18,10 +18,16 @@ func _ready() -> void:
 	story_engine.Continue()
 
 
-func _on_story_engine_choose_character(characters: PackedStringArray) -> void:
+func _on_story_engine_choose_character(indices: PackedInt32Array, characters: PackedStringArray, aliases: PackedStringArray, ages: PackedInt32Array, bodies: PackedStringArray, in_search_ofs: PackedStringArray) -> void:
 	if _current_child_scene != null:
 		_current_child_scene.queue_free()
 	var profiles: Profiles = _profiles_scene.instantiate()
 	%MobileScreen.add_child(profiles)
-	#await profiles.ready
-	profiles.setup(characters)
+	profiles.setup(indices, characters, aliases, ages, bodies, in_search_ofs)
+	profiles.profile_clicked.connect(_on_profile_clicked)
+
+
+func _on_profile_clicked(choice_index: int) -> void:
+	print("Choice taken: %d" % [choice_index])
+	story_engine.PickChoice(choice_index)
+	story_engine.Continue()
