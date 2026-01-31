@@ -21,11 +21,11 @@ LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Mascu
 
 
 
-// da randomizzare
+// Dati PG
 VAR PGAge = (Giovane, Medio, Vecchio)
 VAR PGBody = (Bear, Fit, Twink)
 VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
-
+VAR Alias = ""
 
 -> randomize_pg
 
@@ -33,11 +33,34 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 === function pg_age_translator()
 { PGAge:
   - Giovane:
-      ~ return 19
+      ~ return "19 anni"
   - Medio:
-      ~ return 34
+      ~ return "34 anni"
   - Vecchio:
-      ~ return 59
+      ~ return "59 anni"
+}
+
+=== function pg_body_translator()
+{ PGBody: 
+  - Bear:
+      ~ return "Orsetto"
+  - Fit:
+      ~ return "Muscoloso"
+  - Twink:
+      ~ return "Twink"
+}
+
+
+=== function pg_in_search_of()
+{ PGInSearchOf: 
+  - Monogamia:
+      ~ return "Qualcuno da amare"
+  - Poliamore:
+      ~ return "In relazione poli, aperto a nuove persone"
+  - Sesso:
+      ~ return "Divertimento, ora"
+  - Amicizia:
+      ~ return "Due chiacchiere e una nuova amicizia"    
 }
 
 
@@ -45,14 +68,16 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
   ~ PGAge = LIST_RANDOM(PGAge)
   ~ PGBody = LIST_RANDOM(PGBody)
   ~ PGInSearchOf = LIST_RANDOM(PGInSearchOf)
+  ~ Alias = "{~ Looking4Something|22AndMore|FuckAndTalk|Normale|M|Ospito|Maschile|NewInTown|TomTom|Ulisse|420|Gino|ACAB&Coccole|FatCock|THENERD|Gaymer|MaschioBianco}"
+
+{debug: Dati del PG. #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchoff:{pg_in_search_of()}}
 
 -> conversation_selection
 
-//Tagging PG
-#alias:Looking4Something #age:{pg_age_translator()} #body:{PGBody} #insearchoff:{PGInSearchOf}
+
 
 === conversation_selection
-{debug: Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}}
+
 
 - (top)
 @choose_character
