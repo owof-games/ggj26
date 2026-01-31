@@ -1,7 +1,7 @@
 //VARIABILI//
 
 //Debug
-VAR debug = true
+VAR debug = false
 
 
 //Liste per character design
@@ -33,6 +33,8 @@ VAR Alias = ""
 VAR startNumber = 3
 //Numero di personaggi max per schermata
 VAR maxScreenChar = 9
+//Numero di personaggi speciali max per schermata
+VAR maxSpecialChar = 3
 
 //FUNZIONI///
 //GESTIONE PG//

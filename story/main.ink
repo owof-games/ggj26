@@ -544,7 +544,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_uno:
             ~ actualSpeakers += Char_uno
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -559,7 +559,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_due:
             ~ actualSpeakers += Char_due
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -574,7 +574,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_tre:
             ~actualSpeakers += Char_tre
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -589,7 +589,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_quattro:
             ~ actualSpeakers += Char_quattro
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -604,7 +604,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_cinque:
             ~ actualSpeakers += Char_cinque
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -619,7 +619,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_sei:
             ~actualSpeakers += Char_sei
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -634,7 +634,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_sette:
             ~ actualSpeakers += Char_sette
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
@@ -649,7 +649,7 @@ INCLUDE dialogues.ink
           - not dialogue_Char_otto:
             ~ actualSpeakers += Char_otto
               {
-                - LIST_COUNT(actualSpeakers) <=3: 
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
                       -> mainTop
                 - else:
                   -> anon_randomize 
