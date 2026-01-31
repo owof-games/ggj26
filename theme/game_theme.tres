@@ -2,6 +2,24 @@
 
 [ext_resource type="StyleBox" uid="uid://b601osnwxgnhy" path="res://theme/dialogue_box_choice_stylebox.tres" id="1_84gcg"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84gcg"]
+bg_color = Color(0.7490196, 0.7490196, 0.7490196, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxhkd"]
+bg_color = Color(0.007843138, 0.74509805, 0.9490196, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 10.0
+expand_margin_top = 2.0
+expand_margin_right = 10.0
+expand_margin_bottom = 2.0
+
 [resource]
 DialogueBox1MarginContainer/base_type = &"MarginContainer"
 DialogueBox1MarginContainer/constants/margin_bottom = 50
@@ -16,3 +34,17 @@ DialogueBoxVBoxContainer/base_type = &"VBoxContainer"
 DialogueBoxVBoxContainer/constants/separation = 16
 MyProfileTopicButton/base_type = &"Button"
 MyProfileTopicButton/styles/pressed = ExtResource("1_84gcg")
+ProfileButtonAge/base_type = &"Label"
+ProfileButtonAge/colors/font_color = Color(0, 0, 0, 1)
+ProfileButtonAge/font_sizes/font_size = 12
+ProfileButtonAge/styles/normal = SubResource("StyleBoxFlat_84gcg")
+ProfileButtonAlias/base_type = &"Label"
+ProfileButtonBody/base_type = &"Label"
+ProfileButtonBody/font_sizes/font_size = 11
+ProfileButtonLookingFor/base_type = &"Label"
+ProfileButtonLookingFor/colors/font_color = Color(0, 0, 0, 1)
+ProfileButtonLookingFor/font_sizes/font_size = 14
+ProfileButtonLookingFor/styles/normal = SubResource("StyleBoxFlat_lxhkd")
+ProfilesGrid/base_type = &"GridContainer"
+ProfilesGrid/constants/h_separation = 1
+ProfilesGrid/constants/v_separation = 0
