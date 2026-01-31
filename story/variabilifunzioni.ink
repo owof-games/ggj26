@@ -18,7 +18,7 @@ LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char
 LIST dialogueStates = on
 
 
-LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
+LIST activeTopics = (Ageism), (OldTwink), Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
 
 VAR discoveredTopics = ()
@@ -76,13 +76,32 @@ VAR endGameCounter = 3
       ~ return "Due chiacchiere e una nuova amicizia"    
 }
 
+=== function activeWords()
+~ temp text = ""
+{ activeTopics has Ageism:
+    ~ text = concat(text, "we ageismo.")
+}
+{ activeTopics has OldTwink:
+    ~ text = concat(text, "oooh twink.")
+}
+~ return text
+
+
+=== function concat(str1, str2)
+{ str1 == "":
+    ~ return str2
+- else:
+    ~ return "{str1} {str2}"
+}
+
+
 === character_personalization
 {debug: <i>character_personalization}
   - (loop)
 
-  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchof:{pg_in_search_of()}
+  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchof:{pg_in_search_of()} #tag:{activeWords()}
 
-  + {discoveredTopics has Ageism} Ageism
+  + {discoveredTopics has Ageism} [Ageism]
       {
         - activeTopics hasnt Ageism:
           ~ activeTopics += Ageism
