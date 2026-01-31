@@ -14,6 +14,9 @@ public partial class StoryEngine : Node
     [Signal]
     public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, int[] ages, string[] bodies, string[] inSearchOfs);
 
+    [Signal]
+    public delegate void GenericTextLineEventHandler(string line, string[] choices);
+
     private const string ChooseCharacterCommand = "@choose_character";
     private const string AliasTagName = "alias";
     private const string AgeTagName = "age";
@@ -44,6 +47,13 @@ public partial class StoryEngine : Node
                 .ToArray();
             var indices = choices.Select(choice => choice.Index).ToArray();
             EmitSignalChooseCharacter(indices, characters, aliases, ages, bodies, inSearchOfs);
+        }
+        else
+        {
+            EmitSignalGenericTextLine(
+                story.CurrentText.Trim(),
+                story.CurrentChoices.Select(choice => choice.Text.Trim()).ToArray()
+                );
         }
     }
 

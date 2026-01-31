@@ -1,4 +1,11 @@
 [gd_resource type="Theme" format=3 uid="uid://bje1xdoowr41k"]
 
 [resource]
+DialogueBox1MarginContainer/base_type = &"MarginContainer"
+DialogueBox1MarginContainer/constants/margin_bottom = 50
+DialogueBox1MarginContainer/constants/margin_left = 42
+DialogueBox1MarginContainer/constants/margin_right = 49
+DialogueBox1MarginContainer/constants/margin_top = 27
+DialogueBoxVBoxContainer/base_type = &"VBoxContainer"
+DialogueBoxVBoxContainer/constants/separation = 16
 ProfilePicture/base_type = &"Button"
