@@ -30,6 +30,16 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 -> randomize_pg
 
 
+=== function pg_age_translator()
+{ PGAge:
+  - Giovane:
+      ~ return 19
+  - Medio:
+      ~ return 34
+  - Vecchio:
+      ~ return 59
+}
+
 
 === randomize_pg
   ~ PGAge = LIST_RANDOM(PGAge)
@@ -38,7 +48,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 
 -> conversation_selection
 
-#alias:xx #age:{PGAge} #body:medium #insearchoff:sex
+//Tagging PG
+#alias:Looking4Something #age:{pg_age_translator()} #body:{PGBody} #insearchoff:{PGInSearchOf}
 
 === conversation_selection
 {debug: Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}}
@@ -46,10 +57,9 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 - (top)
 @choose_character
 //Personaggi speciali
-+ {character_personalization >= 2 && not dialogue_Char_uno}[{Char_uno}]
++ {character_personalization >= 2 && not dialogue_Char_uno}[{Char_uno} #alias:xx #age:37 #body:medium #insearchof:sex]
   //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
-      {
-        - activeTopics:
+      {activeTopics:
           - Expectations:
               non mi interessano quelle cose lì
             -> top
@@ -60,8 +70,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non mi interessano quelle cose lì
             -> top
       }
-      {
-          - PGAge:
+      {PGAge:
             - Vecchio:
               -> dialogue_Char_uno
             - Medio:
@@ -70,16 +79,14 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Fit:
               -> dialogue_Char_uno
             - else:
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Sesso:
               -> dialogue_Char_uno
             - else:
@@ -88,9 +95,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
       }
 
     
-+ {character_personalization >= 2 && not dialogue_Char_due}[{Char_due}]
-      {
-        - activeTopics:
++ {character_personalization >= 2 && not dialogue_Char_due}[{Char_due} #alias:xx #age:37 #body:medium #insearchof:sex]
+      {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
             -> top
@@ -104,16 +110,14 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non mi interessano quelle cose lì
             -> top
       }
-      {
-          - PGAge:
+      {PGAge:
             - Medio:
               -> dialogue_Char_due
             - else:
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Fit:
               -> dialogue_Char_due
             - Twink:
@@ -122,8 +126,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Sesso:
               -> dialogue_Char_due
             - Monogamia:
@@ -133,9 +136,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_tre}[{Char_tre}]
-      {
-        - activeTopics:
++ {character_personalization >= 2  && not dialogue_Char_tre}[{Char_tre} #alias:xx #age:37 #body:medium #insearchof:sex]
+      {activeTopics:
           - Masculinity:
               non mi interessano quelle cose lì
             -> top
@@ -146,8 +148,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non mi interessano quelle cose lì
             -> top  
       }
-      {
-          - PGAge:
+      {PGAge:
             - Giovane:
               -> dialogue_Char_tre
             - Medio:
@@ -156,16 +157,14 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Fit:
               -> dialogue_Char_tre
             - else:
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Poliamore:
               -> dialogue_Char_tre
             - else:
@@ -173,9 +172,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_quattro}[{Char_quattro}]
-      {
-        - activeTopics:
++ {character_personalization >= 2  && not dialogue_Char_quattro}[{Char_quattro} #alias:xx #age:37 #body:medium #insearchof:sex]
+      {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
             -> top
@@ -189,24 +187,21 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non mi interessano quelle cose lì
             -> top
       }
-      {
-          - PGAge:
+      {PGAge:
             - Giovane:
               -> dialogue_Char_quattro
             - else:
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Bear:
               -> dialogue_Char_quattro
             - else:
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Monogamia:
               -> dialogue_Char_quattro
             - Amicizia:
@@ -216,9 +211,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_cinque}[{Char_cinque}]    
-      {
-        - activeTopics:
++ {character_personalization >= 2  && not dialogue_Char_cinque}[{Char_cinque} #alias:xx #age:37 #body:medium #insearchof:sex]    
+      {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
             -> top
@@ -229,24 +223,21 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non mi interessano quelle cose lì
             -> top  
       }
-      {
-          - PGAge:
+      {PGAge:
             - Giovane:
               -> dialogue_Char_cinque
             - else:
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Fit:
               -> dialogue_Char_cinque
             - else:
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Sesso:
               -> dialogue_Char_cinque
             - else:
@@ -255,9 +246,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
       }
 
     
-+ {character_personalization >= 2  && not dialogue_Char_sei}[{Char_sei}]
-      {
-        - activeTopics:
++ {character_personalization >= 2  && not dialogue_Char_sei}[{Char_sei} #alias:xx #age:37 #body:medium #insearchof:sex]
+      {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
             -> top
@@ -271,8 +261,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non mi interessano quelle cose lì
             -> top
       }
-      {
-          - PGAge:
+      {PGAge:
             - Medio:
               -> dialogue_Char_sei
             - Giovane:
@@ -281,8 +270,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Fit:
               -> dialogue_Char_sei
             - Bear:
@@ -291,8 +279,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Sesso:
               -> dialogue_Char_sei
             - else:
@@ -300,9 +287,8 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_sette}[{Char_sette}]      
-      {
-        - activeTopics:
++ {character_personalization >= 2  && not dialogue_Char_sette}[{Char_sette} #alias:xx #age:37 #body:medium #insearchof:sex]      
+      {activeTopics:
           - OldTwink:
               non mi interessano quelle cose lì
             -> top
@@ -314,8 +300,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
             -> top       
 
       }
-      {
-          - PGAge:
+      {PGAge:
             - Medio:
               -> dialogue_Char_sette
             - Giovane:
@@ -324,8 +309,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Fit:
               -> dialogue_Char_sette
             - Twink:
@@ -334,8 +318,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Monogamia:
               -> dialogue_Char_sette
             - else:
@@ -344,15 +327,13 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
       }
 
     
-+ {character_personalization >= 2  && not dialogue_Char_otto}[{Char_otto}]
-      {
-        - activeTopics:
++ {character_personalization >= 2  && not dialogue_Char_otto}[{Char_otto} #alias:xx #age:37 #body:medium #insearchof:sex]
+      {activeTopics:
           - Masculinity:
               non mi interessano quelle cose lì
             -> top
       }
-      {
-          - PGAge:
+      {PGAge:
             - Medio:
               -> dialogue_Char_otto
             - Vecchio:
@@ -361,8 +342,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top  
       }
-      {
-          - PGBody:
+      {PGBody:
             - Bear:
               -> dialogue_Char_otto
             - Twink:
@@ -371,8 +351,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
               non sei il mio tipo
               -> top    
       }
-      {
-          - PGInSearchOf:
+      {PGInSearchOf:
             - Amicizia:
               -> dialogue_Char_otto
             - else:
@@ -383,7 +362,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 
 
 //Personaggi anonimi
-+ (anon_uno)[Anon_uno]#alias:xx #age:37 #body:medium #insearchof:sex
++ (anon_uno)[Anon_uno #alias:xx #age:37 #body:medium #insearchof:sex]
   {
     - anon_uno == 1:
       conversazione con anonymous 1
@@ -392,7 +371,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
        -> top 
   }
     
-+ (anon_due)[Anon_due]
++ (anon_due)[Anon_due #alias:xx #age:37 #body:medium #insearchof:sex]
    {
     - anon_due == 1:
       conversazione con anonymous 2
@@ -400,7 +379,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
       Smamma!
        -> top 
   }
-+ (anon_tre)[Anon_tre]
++ (anon_tre)[Anon_tre #alias:xx #age:37 #body:medium #insearchof:sex]
    {
     - anon_tre == 1:
       conversazione con anonymous 3
