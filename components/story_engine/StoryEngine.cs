@@ -26,7 +26,7 @@ public partial class StoryEngine : Node
     private const string AliasTagName = "alias";
     private const string AgeTagName = "age";
     private const string BodyTagName = "body";
-    private const string InSearchOfTagName = "searching";
+    private const string InSearchOfTagName = "insearchof";
     private const string DescriptionTagName = "tag";
     private const string CharacterPersonalizationCommand = "@profile";
 
@@ -108,6 +108,6 @@ public partial class StoryEngine : Node
     {
         var prefix = $"{tagName}:";
         var result = tags.SingleOrDefault(tag => tag.StartsWith(prefix));
-        return result?[prefix.Length..];
+        return result?[prefix.Length..]?.Trim();
     }
 }
