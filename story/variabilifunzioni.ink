@@ -18,7 +18,7 @@ LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char
 LIST dialogueStates = on
 
 
-LIST activeTopics = (Ageism), (OldTwink), Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
+LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
 
 VAR discoveredTopics = ()
@@ -203,11 +203,9 @@ VAR endGameCounter = 3
 
   {
     - character_personalization >= startNumber:
-    {debug: <i>il valore di character_personalization è uguale a {character_personalization}, per cui vado a main_randomize.}
       -> main_randomize
     
     - else:
-    {debug: <i>il valore di character_personalization è uguale a {character_personalization}, per cui vado ad anon_randomize  .}
       -> anon_randomize  
   }
 

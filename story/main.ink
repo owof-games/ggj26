@@ -46,21 +46,21 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_uno
               - else:
                 non sei il mio tipo
-                -> randomize_characters  
+                -> randomize_characters
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_uno
               - else:
                 non sei il mio tipo
-                -> randomize_characters    
+                -> randomize_characters 
         }
         {PGInSearchOf:
               - Sesso:
                 -> dialogue_Char_uno
               - else:
                 non sei il mio tipo
-                -> randomize_characters  
+                -> randomize_characters   
         }
 
       
@@ -336,21 +336,19 @@ INCLUDE dialogues.ink
             - Femme:
                 Interessante quella roba lì sul tuo profilo, di abbracciare la tua femminilità.
                 Vuoi vedere il mio cazzone?
-                  -> randomize_characters
+                  -> character_personalization
             - Ageism:
                 Come se ci fosse qualcosa di orgoglioso nell'essere vecchio.
                 Ti tira ancora, almeno?
-                  -> randomize_characters
+                  -> character_personalization
             - OldTwink:
                 Uno però alla certa dovrebbe accettare la sua età.
                 Mi fai tristezza.
-              -> randomize_characters
+                  -> character_personalization
             - Polyamory:
                 "Orgoglioso di essere poliamoroso" è come "Sono felice di essere cornuto."
                 Sfigato.
-              -> randomize_characters
-              abbiamo già parlato, via.
-              -> randomize_characters   
+                    -> character_personalization
         }
       
         {PGAge:
@@ -359,25 +357,25 @@ INCLUDE dialogues.ink
                   Per la tua età.
                   Io ho mentito un poco sulla mia.
                   Sono cose che si fanno, no?
-                    -> randomize_characters  
+                    -> character_personalization 
         }
         {PGBody:
               - Twink:
                   Mi piacciono i tipetti asciutti.
                   E un po' così, effemminati.
                   Ora sono di corsa, ma mi faccio risentire.
-                      -> randomize_characters  
+                      -> character_personalization  
               - Fit:
                   No.
                   Non potrei mai stare con uno più muscoloso di me.
                   Mi sentirei sempre una merda.
-                      -> randomize_characters   
+                      -> character_personalization 
         }
         {PGInSearchOf:
               - Poliamore:
                   Che palle con questo poliamore.
                   Imparare a impegnarsi, no?
-                    -> randomize_characters  
+                    -> character_personalization 
               - Monogamia:
                   Anche io cerco una relazione seria.
                   Ma becco solo casi umani.
@@ -385,12 +383,12 @@ INCLUDE dialogues.ink
                   Ehi!
                   Cafone!
                   Ti sto scrivendo!
-                  -> randomize_characters  
+                      -> character_personalization
               - Sesso:
                   Tu mi sai proprio di cazzo grosso.
                   Appena torno da lavoro ti mando una foto.
                   Ho due chiappe che sono da Nobel.
-                -> randomize_characters
+                    -> character_personalization
               
               - else:
                 {
@@ -398,7 +396,7 @@ INCLUDE dialogues.ink
                     Ciao.
                     Anzi, no.
                     Non sei il mio tipo.
-                      -> randomize_characters 
+                      -> character_personalization
                   - else:
                     Abbiamo già parlato, smamma.
                       -> randomize_characters 
@@ -415,35 +413,35 @@ INCLUDE dialogues.ink
                 Anche per scopare è sempre un casino.
                 Funziona meglio quando ti trovi e scopri sul momento cosa vuoi.
                 Grande! 
-                  -> randomize_characters
+                  -> character_personalization
             - Femme:
                 Questa roba dell'essere femme mi disagia un po'.
                 Cioè, se voglio andare con una donna, vado con una donna, no?
-                  -> randomize_characters
+                  -> character_personalization
             - Ageism:
                 Ciao nonno.
                 Sai che non sono mai stato con uno della tua età?
                 Devi avere un sacco di cose da insegnarmi.
                 E magari qualche regalo da farmi.
                 Ci sentiamo dopo lezione!
-                  -> randomize_characters
+                  -> character_personalization
             - Polyamory:
                 Figa la roba poli comunque.
                 Non capisco perché posso avere tanti amici ma una sola persona da amare.
                 Non tu, non mi piaci.
                 Ma mi piace l'idea!
-                  -> randomize_characters
+                  -> character_personalization
         }
         
         {PGAge:
             - Vecchio:
               Uh, un po' di carne con esperienza, interessante.
               Chissà se hai più grosso il cazzo o il portafoglio?
-                -> randomize_characters  
+                -> character_personalization 
             - Giovane:
               Non ho molto da imparare da un tipo che ha quasi la mia età
               Anche se sei carino.
-                -> randomize_characters    
+                -> character_personalization
         }
         {PGBody:
               - Bear:
@@ -451,28 +449,28 @@ INCLUDE dialogues.ink
                 Troppa panza.
                 Però hai un bel faccino.
                 Se fai della palestra poi ti do un GROSSO premio!
-                  -> randomize_characters  
+                  -> character_personalization
               - Fit:
                 Mi piacciono i muscoli.
                 Due bei deltoidi tesi mentre mi succhi il cazzo.
-                  -> randomize_characters
+                  -> character_personalization
         }
         {PGInSearchOf:
               - Amicizia:
                 Cercare amicizia qui, che roba da sfigati.
                 Ti faccio una sega, giusto per pietà, se vuoi.
                 Dopo lezione.
-                  -> randomize_characters  
+                  -> character_personalization 
               - Monogamia:
                 Che cosa da vecchi questa roba della monogamia.
-                  -> randomize_characters
+                  -> character_personalization
               - else:
                 {
                   - anon_due == 1:
                       Sai che una botta te la darei? 
                       Non è che sei il mio tipo, ma c'è qualcosa che mi fa dire "Faccia da bukkake".
                       Ed è un gran complimento detto da me!
-                        -> randomize_characters  
+                        -> character_personalization
                   - else:
                       Ed eccolo che ci riprova.
                       Guarda che ti blocco!
@@ -494,38 +492,38 @@ INCLUDE dialogues.ink
                 Tranquilla.
                 Senza pretese.
                 Ma ora devo andare.
-                  -> randomize_characters
+                  -> character_personalization
             - Femme:
                 Il tag "femme".
                 Cioè.
                 Non è che puoi esserlo senza pure dirlo?
                 O è un modo per prendere soldi dai più grandi?
                 Perché io non ne ho.
-                  -> randomize_characters
+                  -> character_personalization
             - Friendship:
                 L'amicizia è una cosa carina, per carità.
                 Mi fa piacere che l'hai messa nel tag.
                 Ma, insomma.
                 Non qui.
                 Manco l'amore qui si trova!
-                  -> randomize_characters
+                  -> character_personalization
             - Masculinity:
                 Ma vedi te se uno deve criticare la mascolinità anche qui.
                 Come se non ti facessi le seghe sui maschioni.
                 Poi chiedono perché sono tutti incazzati con le cose woke.
-                  -> randomize_characters
+                  -> character_personalization
         }
         {PGAge:
               - Vecchio:
                   Vederti qui mi uccide.
                   Perché se anche uno vecchio come te è a caccia, allora è vero che l'amore non esiste.
                   Che schifo essere gay.
-                    -> randomize_characters  
+                    -> character_personalization
               - Medio:
                   Uno della mia età quasi, qui.
                   Chissà se anche tu hai una storia triste.
                   Ora sono a lavoro, ma poi ti racconto la mia.
-                    -> randomize_characters
+                    -> character_personalization
         }
         {PGBody:
               - Bear:
@@ -534,11 +532,11 @@ INCLUDE dialogues.ink
                   Chissà com'è stare su quella pancia.
                   E invece devo stare qui, a scrivere mail al mio capo idiota.
                   A dopo.
-                    -> randomize_characters  
+                    -> character_personalization 
               - Twink:
                   Goditelo questo corpo sottile.
                   Perché non è eterno.
-                -> randomize_characters  
+                      -> character_personalization 
         }
         {PGInSearchOf:
               - Poliamore:
@@ -547,17 +545,17 @@ INCLUDE dialogues.ink
                   Te lo dico io: non hai trovato quello giusto.
                   Punto.
                   Magari una di queste sere si beve assieme.
-                    -> randomize_characters  
+                    -> character_personalization
               - Monogamia:
                   Un miracolo, un monogamo!
                   Forse c'è speranza.
                   Anche se non sei molto carino.
-                    -> randomize_characters  
+                    -> character_personalization 
               - Sesso:
                   Sesso, sesso, sesso.
                   Gli uomini gay pensano solo al sesso.
                   E poi dormono soli, disperati.
-                      -> randomize_characters  
+                      -> character_personalization
               - else:
               {
                 - anon_tre == 1:
@@ -568,7 +566,7 @@ INCLUDE dialogues.ink
                     Lo sposo.
                     E poi mi fotte.
                     Per cui addio.
-                    -> randomize_characters  
+                    -> character_personalization 
                 - else:
                     Non ho altro da dirti.
                     -> randomize_characters  
@@ -576,643 +574,608 @@ INCLUDE dialogues.ink
         }
           
     + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_quattro == 1:
+
+        {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
       {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_quattro == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_cinque){actualSpeakers has Anon_cinque}[Anon_cinque #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_cinque == 1:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
       {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_cinque == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_sei){actualSpeakers has Anon_sei}[Anon_sei #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_sei == 1:
-        {PGAge:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_sei == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_sette == 1:
-        {PGAge:
+             {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_sette == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_otto){actualSpeakers has Anon_otto}[Anon_otto #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_otto == 1:
-        {PGAge:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_otto == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_nove){actualSpeakers has Anon_nove}[Anon_nove #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_nove == 1:
-        {PGAge:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_nove == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_dieci){actualSpeakers has Anon_dieci}[Anon_dieci #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_dieci == 1:
-        {PGAge:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_dieci == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_undici){actualSpeakers has Anon_undici}[Anon_undici #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_undici == 1:
-        {PGAge:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_undici == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      }
+  
 
     + (anon_dodici){actualSpeakers has Anon_dodici}[Anon_dodici #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_dodici == 1:
-        {PGAge:
+              {activeTopics:
+            - Expectations:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Femme:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Friendship:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Ageism:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - OldTwink:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Polyamory:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Dysmorphia:
+                non mi interessano quelle cose lì
+              -> character_personalization
+            - Masculinity:
+                non mi interessano quelle cose lì
+              -> character_personalization 
+        }  
+        
+      {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                -> character_personalization
               - Medio:
-                -> randomize_characters
+                -> character_personalization
               - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                -> character_personalization  
+
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                -> character_personalization
               - Twink:
-                -> randomize_characters  
+                -> character_personalization
               - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
+                -> character_personalization
+  
         }
         {PGInSearchOf:
               - Amicizia:
-                -> randomize_characters  
+                -> character_personalization
               - Poliamore:
-                -> randomize_characters  
+                -> character_personalization
               - Monogamia:
-                -> randomize_characters  
+                -> character_personalization 
               - Sesso:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> character_personalization
+              - else
+                {
+                  - anon_dodici == 1:
+                    Non sei il mio tipo.
+                      -> character_personalization
+                  - else:
+                    Abbiamo già parlato.
+                    -> randomize_characters  
+                }   
         }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
-        }
-          
-      } 
+  
     -
 
     -> character_personalization
