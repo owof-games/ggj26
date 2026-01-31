@@ -82,7 +82,7 @@ func _on_story_engine_generic_text_line(line: String, choices: PackedStringArray
 
 
 
-func _on_story_engine_character_personalization(alias: String, age: String, body: String, in_search_of: String, topics: Array[String]) -> void:
+func _on_story_engine_character_personalization(alias: String, age: String, body: String, in_search_of: String, description: String, topics: Array[String]) -> void:
 	await _wait_for_chat()
 	var character_personalization: MyProfile
 	if _state == State.MyProfile:
@@ -94,7 +94,7 @@ func _on_story_engine_character_personalization(alias: String, age: String, body
 		character_personalization.chat_pressed.connect(_chat_pressed)
 		%MobileScreen.add_child(character_personalization)
 	var active_topics := story_engine.GetActiveTopics()
-	character_personalization.setup(topics, active_topics, alias, age, body, in_search_of)
+	character_personalization.setup(topics, active_topics, alias, age, body, in_search_of, description)
 	_current_child_scene = character_personalization
 	_state = State.MyProfile
 
