@@ -83,7 +83,61 @@ VAR endGameCounter = 3
         VAR anon_treSesso = true
         VAR anon_treOldTwink = true
         VAR anon_treDysmorphia = true
-
+    //anon_quattro
+        VAR anon_quattroFemme = true
+        VAR anon_quattroAgeism = true
+        VAR anon_quattroMasculinity = true
+        VAR anon_quattroGiovane = true
+        VAR anon_quattroBear = true
+        VAR anon_quattroFit = true
+        VAR anon_quattroSesso = true 
+    //anon_cinque
+        VAR anon_cinqueFemme = true 
+        VAR anon_cinqueMasculinity = true 
+        VAR anon_cinqueGiovane = true 
+        VAR anon_cinqueBear = true 
+        VAR anon_cinqueSesso = true 
+    //anon_sei
+        VAR anon_seiFriendship  = true 
+        VAR anon_seiDysmorphia = true 
+        VAR anon_seiMedio = true 
+        VAR anon_seiTwink = true 
+        VAR anon_seiPoliamore = true
+    //anon_sette
+        VAR anon_setteFriendship = true
+        VAR anon_setteAgeism = true
+        VAR anon_setteGiovane = true
+        VAR anon_setteTwink = true
+        VAR anon_setteSesso = true
+    //anon_otto
+        VAR anon_ottoFemme = true
+        VAR anon_ottoDysmorphia = true
+        VAR anon_ottoMedio = true
+        VAR anon_ottoBear = true
+        VAR anon_ottoMonogamia = true
+    //anon_nove
+        VAR anon_novePolyamory = true
+        VAR anon_noveMasculinity = true
+        VAR anon_noveGiovane = true
+        VAR anon_noveMonogamia = true
+        VAR anon_noveSesso = true
+    //anon_dieci
+        VAR anon_dieciAgeism = true
+        VAR anon_dieciOldTwink = true
+        VAR anon_dieciVecchio = true
+        VAR anon_dieciBear = true
+        VAR anon_dieciMonogamia = true
+    //anon_undici
+        VAR anon_undiciPolyamory = true
+        VAR anon_undiciVecchio = true
+        VAR anon_undiciMedio = true
+        VAR anon_undiciFit = true
+        VAR anon_undiciPoliamore = true    
+    //anon_dodici
+        VAR anon_dodiciExpectations = true  
+        VAR anon_dodiciDysmorphia = true  
+        VAR anon_dodiciFit = true  
+        VAR anon_dodiciSesso = true  
 
 //FUNZIONI///
 //GESTIONE PG//

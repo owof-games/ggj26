@@ -662,129 +662,129 @@ INCLUDE dialogues.ink
             -> randomize_characters  
       }    
           
-    + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:xx #age:37 #body:medium #insearchof:sex]
+    + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:. #age:sì #body:sì #insearchof:sì]
 
         {activeTopics:
-            - Expectations:
-                {anon_treExpectations:
-                  Anon: Un miracolo, un monogamo!
-                    ~ anon_treExpectations = false
-                    -> character_personalization
-                }
             - Femme:
-                  {anon_treFemme:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treFemme = false
-                      -> character_personalization
-                  }
-            - Friendship:
-                  {anon_treFriendship:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treFriendship = false
+                  {anon_quattroFemme:
+                    Anon: C'hai il cazzo?
+                    Anon: Ah ma non sei trans.
+                    Anon: Cazzo è la dea?
+                      ~ anon_quattroFemme = false
                       -> character_personalization
                   }
             - Ageism:
-                {anon_treAgeism:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treAgeism = false
-                      -> character_personalization
-                  }
-            - OldTwink:
-                {anon_treOldTwink:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treOldTwink = false
-                      -> character_personalization
-                  }
-            - Polyamory:
-                {anon_trePolyamory:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_trePolyamory = false
-                      -> character_personalization
-                  }
-            - Dysmorphia:
-                {anon_treDysmorphia:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treDysmorphia = false
+                {anon_quattroAgeism:
+                    Anon: Vecchio di merda.
+                      ~ anon_quattroAgeism = false
                       -> character_personalization
                   }
             - Masculinity:
-                {anon_treMasculinity:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treMasculinity = false
+                {anon_quattroMasculinity:
+                    Anon: Meglio beta, certo.
+                    Anon: Puoi anche dire che lo pigli e basta.
+                      ~ anon_quattroMasculinity = false
                       -> character_personalization
                   }
         }  
         
       {PGAge:
-              - Vecchio:
-                {anon_treVecchio:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treVecchio = false
-                      -> character_personalization
-                  }
-              - Medio:
-                {anon_treMedio:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treMedio = false
-                      -> character_personalization
-                  }
               - Giovane:
-                {anon_treGiovane:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treGiovane = false
+                {anon_quattroGiovane:
+                    Anon: Ti piacciono più vecchi?
+                    Anon: Ehi rispondi!
+                    Anon: Hai foto culo?
+                      ~ anon_quattroGiovane = false
                       -> character_personalization
                   }
 
         }
         {PGBody:
               - Bear:
-                {anon_treBear:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treBear= false
-                      -> character_personalization
-                  }
-              - Twink:
-                {anon_treTwink:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treTwink = false
+                {anon_quattroBear:
+                    Anon: ...
+                    Anon: ...
+                    Anon: SO io come farti dimagire.
+                      ~ anon_quattroBear= false
                       -> character_personalization
                   }
               - Fit:
-                {anon_treFit:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treFit = false
+                {anon_quattroFit:
+                    Anon: Bei muscoli.
+                    Anon: Si vede che non c'hai niente da fare.
+                      ~ anon_quattroFit = false
                       -> character_personalization
                   }
   
         }
         {PGInSearchOf:
-              - Amicizia:
-                {anon_treAmicizia:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treAmicizia = false
-                      -> character_personalization
-                  }
-              - Poliamore:
-                {anon_trePoliamore:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_trePoliamore = false
-                      -> character_personalization
-                  }
-              - Monogamia:
-                {anon_treMonogamia:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treMonogamia = false
-                      -> character_personalization
-                  }
               - Sesso:
-                {anon_treSesso:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_treSesso = false
+                {anon_quattroSesso:
+                    Anon: Siamo in due.
+                    Anon: Il mio amico è una di quelle passive da battaglia.
+                    Anon: Bel culo.
+                    Anon: Ti va?
+                    Anon: Ohi, ci 6?
+                    Anon: Ma vaffanculo!
+                      ~ anon_quattroSesso = false
                       -> character_personalization
                   } 
         }
         {
           - anon_quattro == 1:
+              Anon: No grazie.
+              -> character_personalization
+          - else:
+              Anon: Smollami.
+            -> randomize_characters  
+        } 
+  
+
+    + (anon_cinque){actualSpeakers has Anon_cinque}[Anon_cinque #alias:QuelBenny #age:21 #body:alphaMale #insearchof: divertimento tra maschi]
+    //Lui è il tipo camerata
+          {activeTopics:
+            - Femme:
+                  {anon_cinqueFemme:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_cinqueFemme = false
+                      -> character_personalization
+                  }
+            - Masculinity:
+                {anon_cinqueMasculinity:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_cinqueMasculinity = false
+                      -> character_personalization
+                  }
+        }  
+        
+      {PGAge:
+              - Giovane:
+                {anon_cinqueGiovane:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_cinqueGiovane = false
+                      -> character_personalization
+                  }
+
+        }
+        {PGBody:
+              - Bear:
+                {anon_cinqueBear:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_cinqueBear= false
+                      -> character_personalization
+                  }
+  
+        }
+        {PGInSearchOf:
+              - Sesso:
+                {anon_cinqueSesso:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_cinqueSesso = false
+                      -> character_personalization
+                  } 
+        }
+        {
+          - anon_cinque == 1:
             Non sei il mio tipo.
               -> character_personalization
           - else:
@@ -793,540 +793,361 @@ INCLUDE dialogues.ink
         } 
   
 
-    + (anon_cinque){actualSpeakers has Anon_cinque}[Anon_cinque #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
+    + (anon_sei){actualSpeakers has Anon_sei}[Anon_sei #alias: Manga&Gangia #age:42 #body:orsone #insearchof: amicizia&coccoline]
+      //Sciallo amichevole
+         {activeTopics:
             - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                  {anon_seiFriendship:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_seiFriendship = false
+                      -> character_personalization
+                  }
             - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
+                {anon_seiDysmorphia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_seiDysmorphia = false
+                      -> character_personalization
+                  }
         }  
         
       {PGAge:
-              - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
+            - Medio:
+              {anon_seiMedio:
+                  Anon: Un miracolo, un monogamo!
+                    ~ anon_seiMedio = false
+                    -> character_personalization
+                }
+
+        }
+        {PGBody:
+              - Twink:
+                {anon_seiTwink:
+                      Anon: Ehi, non so se te lo hanno mai detto.
+                      Anon: Ma se ti dicono qualcosa perché sei supermagro: fregatene.
+                      Anon: Qui stanno ore a cercare i loro sosia.
+                      Anon: E poi passano le notti da soli.
+                      Anon: Buona giornata bello!
+                      ~ anon_seiTwink = false
+                      -> character_personalization
+                  }
+  
+        }
+        {PGInSearchOf:
+              - Poliamore:
+                {anon_seiPoliamore:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_seiPoliamore = false
+                      -> character_personalization
+                  }
+        }
+        {
+          - anon_sei == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
+  
+
+    + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias: CoppiaVolpi #age: 57 #body: Sugar bear+Polar bear #insearchof: una domenica tranquilla in tre]
+      //Simpatici ma un po' a caccia. Acculturati. Stranamente critici verso il discorso poli. Cercano molto giovane.
+        {activeTopics:
+            - Friendship:
+                  {anon_setteFriendship:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_setteFriendship = false
+                      -> character_personalization
+                  }
+            - Ageism:
+                {anon_setteAgeism:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_setteAgeism = false
+                      -> character_personalization
+                  }
+        }  
+        
+      {PGAge:
               - Giovane:
-                -> character_personalization  
+                {anon_setteGiovane:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_setteGiovane = false
+                      -> character_personalization
+                  }
+
+        }
+        {PGBody:
+              - Twink:
+                {anon_setteTwink:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_setteTwink = false
+                      -> character_personalization
+                  }
+  
+        }
+        {PGInSearchOf:
+              - Sesso:
+                {anon_setteSesso:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_setteSesso = false
+                      -> character_personalization
+                  } 
+        }
+        {
+          - anon_sette == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
+
+    + (anon_otto){actualSpeakers has Anon_otto}[Anon_otto #alias: LaPatty #age: 24 #body: magra e alta #insearchof: il principe azzurro]
+      //Hai quasi ammesso di essere una ama trans, quasi. Dai Patty che ce la fai!
+        {activeTopics:
+            - Femme:
+                  {anon_ottoFemme:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_ottoFemme = false
+                      -> character_personalization
+                  }
+            - Dysmorphia:
+                {anon_ottoDysmorphia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_ottoDysmorphia = false
+                      -> character_personalization
+                  }
+        }  
+        
+      {PGAge:
+              - Medio:
+                {anon_ottoMedio:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_ottoMedio = false
+                      -> character_personalization
+                  }
 
         }
         {PGBody:
               - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
-              - Fit:
-                -> character_personalization
+                {anon_ottoBear:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_ottoBear= false
+                      -> character_personalization
+                  }
   
         }
         {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
               - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_cinque == 1:
-                    Non sei il mio tipo.
+                {anon_ottoMonogamia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_ottoMonogamia = false
                       -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
+                  }
         }
+        {
+          - anon_otto == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
+
+    + (anon_nove){actualSpeakers has Anon_nove}[Anon_nove #alias: FreePalestine #age:23 #body:Cub #insearchof: Compagnx di lotta]
+        {activeTopics:
+            - Polyamory:
+                {anon_novePolyamory:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_novePolyamory = false
+                      -> character_personalization
+                  }
+            - Masculinity:
+                {anon_noveMasculinity:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_noveMasculinity = false
+                      -> character_personalization
+                  }
+        }  
+        
+      {PGAge:
+              - Giovane:
+                {anon_noveGiovane:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_noveGiovane = false
+                      -> character_personalization
+                  }
+
+        }
+        {PGInSearchOf:
+              - Monogamia:
+                {anon_noveMonogamia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_noveMonogamia = false
+                      -> character_personalization
+                  }
+              - Sesso:
+                {anon_noveSesso:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_noveSesso = false
+                      -> character_personalization
+                  } 
+        }
+        {
+          - anon_nove == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
   
 
-    + (anon_sei){actualSpeakers has Anon_sei}[Anon_sei #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
+    + (anon_dieci){actualSpeakers has Anon_dieci}[Anon_dieci #alias:twinkXBear #age:49 #body:twink #insearchof:ora?]
+        {activeTopics:
             - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_dieciAgeism:
+                    Anon: Bella la frase sull'età.
+                    Anon: Bella la consapevolezza.
+                    Anon: Ma poi io continuo a sentirmi solo.
+                      ~ anon_dieciAgeism = false
+                      -> character_personalization
+                  }
             - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
+                {anon_dieciOldTwink:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dieciOldTwink = false
+                      -> character_personalization
+                  }
         }  
         
       {PGAge:
               - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
+                {anon_dieciVecchio:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dieciVecchio = false
+                      -> character_personalization
+                  }
 
         }
         {PGBody:
               - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
-              - Fit:
-                -> character_personalization
-  
+                {anon_dieciBear:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dieciBear= false
+                      -> character_personalization
+                  }
         }
         {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
               - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_sei == 1:
-                    Non sei il mio tipo.
+                {anon_dieciMonogamia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dieciMonogamia = false
                       -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
+                  }
         }
+        {
+          - anon_dieci == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
   
 
-    + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias:xx #age:37 #body:medium #insearchof:sex]
-             {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
+    + (anon_undici){actualSpeakers has Anon_undici}[Anon_undici #alias:Piedone #age:69 #body:lupo #insearchof:un grande cuore, non solo per me]
+      {activeTopics:
             - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
+                {anon_undiciPolyamory:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_undiciPolyamory = false
+                      -> character_personalization
+                  }
         }  
         
       {PGAge:
               - Vecchio:
-                -> character_personalization
+                {anon_undiciVecchio:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_undiciVecchio = false
+                      -> character_personalization
+                  }
               - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
+                {anon_undiciMedio:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_undiciMedio = false
+                      -> character_personalization
+                  }
 
         }
         {PGBody:
-              - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
               - Fit:
-                -> character_personalization
+                {anon_undiciFit:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_undiciFit = false
+                      -> character_personalization
+                  }
   
         }
         {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
               - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_sette == 1:
-                    Non sei il mio tipo.
+                {anon_undiciPoliamore:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_undiciPoliamore = false
                       -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
+                  }
         }
-  
+        {
+          - anon_undici == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
 
-    + (anon_otto){actualSpeakers has Anon_otto}[Anon_otto #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
+    + (anon_dodici){actualSpeakers has Anon_dodici}[Anon_dodici #alias:CercoSingola #age:20 #body:palestronza #insearchof: un letto e un culetto]
+        {activeTopics:
             - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_dodiciExpectations:
+                  Anon: Un miracolo, un monogamo!
+                    ~ anon_dodiciExpectations = false
+                    -> character_personalization
+                }
             - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
+                {anon_dodiciDysmorphia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dodiciDysmorphia = false
+                      -> character_personalization
+                  }
         }  
         
-      {PGAge:
-              - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
-
-        }
         {PGBody:
-              - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
               - Fit:
-                -> character_personalization
+                {anon_dodiciFit:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dodiciFit = false
+                      -> character_personalization
+                  }
   
         }
         {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
               - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_otto == 1:
-                    Non sei il mio tipo.
+                {anon_dodiciSesso:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_dodiciSesso = false
                       -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
+                  } 
         }
-  
-
-    + (anon_nove){actualSpeakers has Anon_nove}[Anon_nove #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
+        {
+          - anon_dodici == 1:
+            Non sei il mio tipo.
               -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
-        }  
-        
-      {PGAge:
-              - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
-
-        }
-        {PGBody:
-              - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
-              - Fit:
-                -> character_personalization
-  
-        }
-        {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_nove == 1:
-                    Non sei il mio tipo.
-                      -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
-        }
-  
-
-    + (anon_dieci){actualSpeakers has Anon_dieci}[Anon_dieci #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
-        }  
-        
-      {PGAge:
-              - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
-
-        }
-        {PGBody:
-              - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
-              - Fit:
-                -> character_personalization
-  
-        }
-        {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_dieci == 1:
-                    Non sei il mio tipo.
-                      -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
-        }
-  
-
-    + (anon_undici){actualSpeakers has Anon_undici}[Anon_undici #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
-        }  
-        
-      {PGAge:
-              - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
-
-        }
-        {PGBody:
-              - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
-              - Fit:
-                -> character_personalization
-  
-        }
-        {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_undici == 1:
-                    Non sei il mio tipo.
-                      -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
-        }
-  
-
-    + (anon_dodici){actualSpeakers has Anon_dodici}[Anon_dodici #alias:xx #age:37 #body:medium #insearchof:sex]
-              {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
-        }  
-        
-      {PGAge:
-              - Vecchio:
-                -> character_personalization
-              - Medio:
-                -> character_personalization
-              - Giovane:
-                -> character_personalization  
-
-        }
-        {PGBody:
-              - Bear:
-                -> character_personalization
-              - Twink:
-                -> character_personalization
-              - Fit:
-                -> character_personalization
-  
-        }
-        {PGInSearchOf:
-              - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_dodici == 1:
-                    Non sei il mio tipo.
-                      -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
-        }
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
   
     -
 
