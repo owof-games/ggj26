@@ -70,7 +70,7 @@ VAR Alias = ""
   ~ PGInSearchOf = LIST_RANDOM(PGInSearchOf)
   ~ Alias = "{~ Looking4Something|22AndMore|FuckAndTalk|Normale|M|Ospito|Maschile|NewInTown|TomTom|Ulisse|420|Gino|ACAB&Coccole|FatCock|THENERD|Gaymer|MaschioBianco}"
 
-{debug: Dati del PG. #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchoff:{pg_in_search_of()}}
+
 
 -> conversation_selection
 
@@ -421,7 +421,8 @@ VAR Alias = ""
 
 - (loop)
 
-@topics
+@profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchoff:{pg_in_search_of()}
+
 + {dialogue_Char_uno.ageism} Ageism
     {
       - activeTopics hasnt Ageism:
