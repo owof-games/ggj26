@@ -158,7 +158,8 @@ VAR PGInSearchOf = ()
 
 ///Storylets personaggi speciali///
 === dialogue_Char_uno
-Ageismo
+PG: Ageismo
+{Char_uno}: Vero, ageismo.
 - (ageism)
 
 -> character_personalization
