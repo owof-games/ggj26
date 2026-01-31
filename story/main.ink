@@ -11,27 +11,25 @@ LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char
 LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
 // da randomizzare
-VAR PGAge = ()
-VAR PGBody = ()
-VAR PGInSearchOf = ()
+VAR PGAge = (Giovane, Medio, Vecchio)
+VAR PGBody = (Bear, Fit, Twink)
+VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 
 -> randomize_pg
 
 
 
 === randomize_pg
-~ PGAge = LIST_RANDOM (ages)
-~ PGBody = LIST_RANDOM (bodies)
-~ PGInSearchOf = LIST_RANDOM (inSearchOf)
+  ~ PGAge = LIST_RANDOM(PGAge)
+  ~ PGBody = LIST_RANDOM(PGBody)
+  ~ PGInSearchOf = LIST_RANDOM(PGInSearchOf)
 
-Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}
-
--> END
-//-> conversation_selection
+-> conversation_selection
 
 
 
 === conversation_selection
+Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}
 
 - (top)
 @choose_character
