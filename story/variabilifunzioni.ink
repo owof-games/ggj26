@@ -75,3 +75,418 @@ VAR endGameCounter = 3
   - Amicizia:
       ~ return "Due chiacchiere e una nuova amicizia"    
 }
+
+=== character_personalization
+{debug: <i>character_personalization}
+  - (loop)
+
+  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchof:{pg_in_search_of()}
+
+  + {discoveredTopics has Ageism} Ageism
+      {
+        - activeTopics hasnt Ageism:
+          ~ activeTopics += Ageism
+        - else:
+          ~ activeTopics-= Ageism  
+      }
+      -> loop
+
+  + {discoveredTopics has OldTwink} OldTwink
+      {
+        - activeTopics hasnt OldTwink:
+          ~ activeTopics += OldTwink
+        - else:
+          ~ activeTopics -= OldTwink 
+      }
+      -> loop
+
+  + {discoveredTopics has Polyamory} Polyamory
+      {
+        - activeTopics hasnt Polyamory:
+          ~ activeTopics += Polyamory
+        - else:
+          ~ activeTopics -= Polyamory
+      }
+      -> loop
+
+  + {discoveredTopics has Expectations} Expectations
+      {
+        - activeTopics hasnt Expectations:
+          ~ activeTopics += Expectations
+        - else:
+          ~ activeTopics -= Expectations
+      }
+      -> loop
+  + {discoveredTopics has Dysmorphia} Dysmorphia
+      {
+        - activeTopics hasnt Dysmorphia:
+          ~ activeTopics += Dysmorphia
+        - else:
+          ~ activeTopics -= Dysmorphia
+      }
+      -> loop
+
+  + {discoveredTopics has Masculinity} Masculinity
+      {
+        - activeTopics hasnt Masculinity:
+          ~ activeTopics += Masculinity
+        - else:
+          ~ activeTopics -= Masculinity
+      }
+      -> loop
+
+  + {discoveredTopics has Femme} Femme
+      {
+        - activeTopics hasnt Femme:
+          ~ activeTopics += Femme
+        - else:
+          ~ activeTopics -= Femme
+      }
+      -> loop
+
+  + {discoveredTopics has Friendship} Friendship
+      {
+        - activeTopics hasnt Friendship:
+          ~ activeTopics += Friendship
+        - else:
+          ~ activeTopics -= Friendship
+      }
+      -> loop
+
+  + [Chat]
+      -> randomize_characters
+
+
+
+=== randomize_characters
+// logica di randomizzazione dei personaggi 
+//La logica è: randomizzo prima tre png seri, se le condizioni sono rispettate, e poi sei png anonimi
+{debug: passo per character_personalization. Il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}.}
+~ actualSpeakers = ()
+
+  {
+    - character_personalization >= startNumber:
+    {debug: <i>il valore di character_personalization è uguale a {character_personalization}, per cui vado a main_randomize.}
+      -> main_randomize
+    
+    - else:
+    {debug: <i>il valore di character_personalization è uguale a {character_personalization}, per cui vado ad anon_randomize  .}
+      -> anon_randomize  
+  }
+
+ 
+  = main_randomize
+    - (mainTop)
+    ~ temp mainDice = RANDOM(1,8)
+    
+    {mainDice:
+      - 1:
+        {
+          - not dialogue_Char_uno:
+            ~ actualSpeakers += Char_uno
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 2:
+        {
+          - not dialogue_Char_due:
+            ~ actualSpeakers += Char_due
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 3:
+        {
+          - not dialogue_Char_tre:
+            ~actualSpeakers += Char_tre
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 4:
+        {
+          - not dialogue_Char_quattro:
+            ~ actualSpeakers += Char_quattro
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 5:
+        {
+          - not dialogue_Char_cinque:
+            ~ actualSpeakers += Char_cinque
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 6:
+        {
+          - not dialogue_Char_sei:
+            ~actualSpeakers += Char_sei
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 7:
+        {
+          - not dialogue_Char_sette:
+            ~ actualSpeakers += Char_sette
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+      
+      - 8:
+        {
+          - not dialogue_Char_otto:
+            ~ actualSpeakers += Char_otto
+              {
+                - LIST_COUNT(actualSpeakers) < maxSpecialChar: 
+                      -> mainTop
+                - else:
+                  -> anon_randomize 
+
+              }
+          - else:
+            -> mainTop
+        }
+
+
+    }
+    -> anon_randomize 
+
+
+  = anon_randomize
+  ~ temp anon_randomizeDice = RANDOM(1,12)
+  {debug: il valore di anon_randomizeDice è {anon_randomizeDice}.}
+  {anon_randomizeDice:
+    - 1:
+      {
+        - actualSpeakers hasnt Anon_uno:
+          ~ actualSpeakers += Anon_uno 
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      }  
+
+    
+    - 2:
+      {
+        - actualSpeakers hasnt Anon_due:
+          ~ actualSpeakers += Anon_due
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 3:
+    {
+        - actualSpeakers hasnt Anon_tre:
+          ~ actualSpeakers += Anon_tre 
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 4:
+      {
+          - actualSpeakers hasnt Anon_quattro:
+            ~ actualSpeakers += Anon_quattro
+              {
+                - LIST_COUNT(actualSpeakers) < maxScreenChar:
+                {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                    -> anon_randomize
+                - else:
+                    -> conversation_selection
+              }   
+          - else:
+          -> anon_randomize
+        } 
+    
+    - 5:
+      {
+        - actualSpeakers hasnt Anon_cinque:
+          ~ actualSpeakers += Anon_cinque
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 6:
+    {
+        - actualSpeakers hasnt Anon_sei:
+          ~ actualSpeakers += Anon_sei
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 7:
+      {
+        - actualSpeakers hasnt Anon_sette:
+          ~ actualSpeakers += Anon_sette 
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 8:
+      {
+          - actualSpeakers hasnt Anon_otto:
+            ~ actualSpeakers += Anon_otto
+              {
+                - LIST_COUNT(actualSpeakers) < maxScreenChar:
+                {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                    -> anon_randomize
+                - else:
+                    -> conversation_selection
+              }   
+          - else:
+          -> anon_randomize
+        } 
+    
+    - 9:
+      {
+        - actualSpeakers hasnt Anon_nove:
+          ~ actualSpeakers += Anon_nove 
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 10:
+      {
+        - actualSpeakers hasnt Anon_dieci:
+          ~ actualSpeakers += Anon_dieci 
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 11:
+      {
+        - actualSpeakers hasnt Anon_undici:
+          ~ actualSpeakers += Anon_undici
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+    
+    - 12:
+      {
+        - actualSpeakers hasnt Anon_dodici:
+          ~ actualSpeakers += Anon_dodici
+            {
+              - LIST_COUNT(actualSpeakers) < maxScreenChar:
+              {debug: il valore di actualSpeakers è {LIST_COUNT(actualSpeakers)}}
+                  -> anon_randomize
+              - else:
+                  -> conversation_selection
+            }   
+         - else:
+         -> anon_randomize
+      } 
+  }
