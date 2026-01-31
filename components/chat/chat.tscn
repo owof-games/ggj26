@@ -15,31 +15,34 @@ size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_rmmqr")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1475674277]
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=132487575]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 273.0
-offset_bottom = -273.0
+offset_top = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer2" unique_id=1475674277]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="ChatContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=588169815]
+[node name="ChatContainer" type="VBoxContainer" parent="VBoxContainer2/ScrollContainer" unique_id=588169815]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ContinueButton" type="Button" parent="." unique_id=165509852]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -92.0
-offset_top = -254.0
-offset_bottom = -223.0
-grow_horizontal = 0
-grow_vertical = 0
+[node name="ContinueButton" type="Button" parent="VBoxContainer2" unique_id=165509852]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
 text = "Continue »"
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer2" unique_id=961823453]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer2/ContinueButton" to="." method="_on_continue_button_pressed"]

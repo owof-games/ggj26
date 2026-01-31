@@ -1,7 +1,6 @@
 extends NinePatchRect
 class_name ChatBox
 
-
 @onready var _content: Control = %MarginContainer
 @onready var _label: Label = %Label
 

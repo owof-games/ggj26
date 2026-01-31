@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cmwi5jl87bfp1"]
+
+[ext_resource type="Script" uid="uid://dyqjrdf0ruio1" path="res://components/chat/choice_box.gd" id="2_n3gde"]
+
+[node name="ChoiceBox" type="Button" unique_id=1409486982]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 78.0
+offset_bottom = 169.0
+theme_type_variation = &"DialogueBoxChoice"
+text = "Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. "
+autowrap_mode = 2
+script = ExtResource("2_n3gde")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
