@@ -4,6 +4,7 @@ class_name Chat
 
 signal continue_button_pressed
 signal choice_pressed(choice_index: int)
+signal quit
 
 
 var _chat_box_1_scene: PackedScene = preload("uid://b6af3jd5vdg3n")
@@ -12,6 +13,7 @@ var _choice_box_scene: PackedScene = preload("uid://cmwi5jl87bfp1")
 @onready var _chat_container: VBoxContainer = %ChatContainer
 @onready var _continue_button: Button = %ContinueButton
 @onready var _choices_container: VBoxContainer = %ChoicesContainer
+@onready var _quit_button: Button = %QuitButton
 
 
 
@@ -53,3 +55,14 @@ func _on_continue_button_pressed() -> void:
 
 func _choice_pressed(choice_index: int) -> void:
 	choice_pressed.emit(choice_index)
+
+
+func show_quit() -> void:
+	_continue_button.visible = false
+	for choice in _choices_container.get_children():
+		choice.queue_free()
+	_quit_button.visible = true
+
+
+func _on_quit_button_pressed() -> void:
+	quit.emit()
