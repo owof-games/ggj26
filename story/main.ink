@@ -482,78 +482,99 @@ INCLUDE dialogues.ink
         }
 
       
-          
       
-    + (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:xx #age:37 #body:medium #insearchof:sex]
-      {
-        - anon_tre == 1:
+    + (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:Riproviamoci #age:36 #body:skinny legend #insearchof:amore della vita]
+
+        {activeTopics:
+            - Expectations:
+                Ehi, ho visto i tuoi tag, e mi ha colpito il fatto che parli di aspettative.
+                Qui mi sento un pesce fuor d'acqua.
+                Dopo anni di matrimonio e tutto il resto.
+                Vorrei solo una bella conversazione.
+                Tranquilla.
+                Senza pretese.
+                Ma ora devo andare.
+                  -> randomize_characters
+            - Femme:
+                Il tag "femme".
+                Cioè.
+                Non è che puoi esserlo senza pure dirlo?
+                O è un modo per prendere soldi dai più grandi?
+                Perché io non ne ho.
+                  -> randomize_characters
+            - Friendship:
+                L'amicizia è una cosa carina, per carità.
+                Mi fa piacere che l'hai messa nel tag.
+                Ma, insomma.
+                Non qui.
+                Manco l'amore qui si trova!
+                  -> randomize_characters
+            - Masculinity:
+                Ma vedi te se uno deve criticare la mascolinità anche qui.
+                Come se non ti facessi le seghe sui maschioni.
+                Poi chiedono perché sono tutti incazzati con le cose woke.
+                  -> randomize_characters
+        }
         {PGAge:
               - Vecchio:
-                -> randomize_characters  
+                  Vederti qui mi uccide.
+                  Perché se anche uno vecchio come te è a caccia, allora è vero che l'amore non esiste.
+                  Che schifo essere gay.
+                    -> randomize_characters  
               - Medio:
-                -> randomize_characters
-              - Giovane:
-                -> randomize_characters   
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
+                  Uno della mia età quasi, qui.
+                  Chissà se anche tu hai una storia triste.
+                  Ora sono a lavoro, ma poi ti racconto la mia.
+                    -> randomize_characters
         }
         {PGBody:
               - Bear:
-                -> randomize_characters  
+                  I corpi grossi mi piacciono.
+                  Mi fanno sentire al sicuro.
+                  Chissà com'è stare su quella pancia.
+                  E invece devo stare qui, a scrivere mail al mio capo idiota.
+                  A dopo.
+                    -> randomize_characters  
               - Twink:
+                  Goditelo questo corpo sottile.
+                  Perché non è eterno.
                 -> randomize_characters  
-              - Fit:
-                -> randomize_characters  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters    
         }
         {PGInSearchOf:
-              - Amicizia:
-                -> randomize_characters  
               - Poliamore:
-                -> randomize_characters  
+                  Avete rovinato tutto, voi poligami.
+                  Con le relazioni aperte e le cose anarchiche.
+                  Te lo dico io: non hai trovato quello giusto.
+                  Punto.
+                  Magari una di queste sere si beve assieme.
+                    -> randomize_characters  
               - Monogamia:
-                -> randomize_characters  
+                  Un miracolo, un monogamo!
+                  Forse c'è speranza.
+                  Anche se non sei molto carino.
+                    -> randomize_characters  
               - Sesso:
-                -> randomize_characters  
+                  Sesso, sesso, sesso.
+                  Gli uomini gay pensano solo al sesso.
+                  E poi dormono soli, disperati.
+                      -> randomize_characters  
               - else:
-                non sei il mio tipo
-                -> randomize_characters   
-        }
-        - else:
-          {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - else:
-              abbiamo già parlato, via.
-              -> randomize_characters   
+              {
+                - anon_tre == 1:
+                    Non sembri male.
+                    Ma l'ho già vista questa storia.
+                    Uno è carino, belloccio.
+                    Mi innamoro.
+                    Lo sposo.
+                    E poi mi fotte.
+                    Per cui addio.
+                    -> randomize_characters  
+                - else:
+                    Non ho altro da dirti.
+                    -> randomize_characters  
+              }
         }
           
-      }
     + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:xx #age:37 #body:medium #insearchof:sex]
       {
         - anon_quattro == 1:
