@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bi1lkscnsof5v"]
+
+[ext_resource type="PackedScene" uid="uid://cq4yeei78kgu7" path="res://components/my_profile/topic_button.tscn" id="1_exlrj"]
+[ext_resource type="Script" uid="uid://c800ylddgbplp" path="res://components/my_profile/my_profile.gd" id="1_v1vdn"]
+
+[node name="MyProfile" type="Control" unique_id=525923400]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1320.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_v1vdn")
+
+[node name="Name" type="Label" parent="." unique_id=1596974021]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 52.0
+offset_bottom = 23.0
+text = "prova"
+
+[node name="Age" type="Label" parent="." unique_id=1512995699]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 31.0
+offset_right = 350.0
+offset_bottom = 54.0
+text = "prova"
+
+[node name="Body" type="Label" parent="." unique_id=1613266563]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 61.0
+offset_right = 350.0
+offset_bottom = 84.0
+text = "prova"
+
+[node name="InSearchOf" type="Label" parent="." unique_id=238649533]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 100.0
+offset_right = 350.0
+offset_bottom = 123.0
+text = "prova"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1055093614]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 249.0
+offset_right = 528.0
+offset_bottom = 1044.0
+
+[node name="Button" parent="VBoxContainer" unique_id=713931208 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+topic_name = "Ageism"
+
+[node name="Button2" parent="VBoxContainer" unique_id=251301885 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Old Twink"
+topic_name = "OldTwink"
+
+[node name="Button3" parent="VBoxContainer" unique_id=1112506265 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Poliamore"
+topic_name = "Polyamory"
+
+[node name="Button4" parent="VBoxContainer" unique_id=1213435029 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Aspettative"
+topic_name = "Expectations"
+
+[node name="Button5" parent="VBoxContainer" unique_id=143954911 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Dismorfia"
+topic_name = "Dysmorphia"
+
+[node name="Button6" parent="VBoxContainer" unique_id=96442205 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mascolinità"
+topic_name = "Masculinity"
+
+[node name="Button7" parent="VBoxContainer" unique_id=1905627593 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Femme"
+topic_name = "Femme"
+
+[node name="Button8" parent="VBoxContainer" unique_id=1274511278 instance=ExtResource("1_exlrj")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Amicizia"
+topic_name = "Friendship"

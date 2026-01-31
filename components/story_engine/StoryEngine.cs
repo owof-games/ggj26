@@ -12,16 +12,21 @@ public partial class StoryEngine : Node
     [Export] private InkStory story;
 
     [Signal]
-    public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, int[] ages, string[] bodies, string[] inSearchOfs);
+    public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, int[] ages,
+        string[] bodies, string[] inSearchOfs);
 
     [Signal]
     public delegate void GenericTextLineEventHandler(string line, string[] choices);
+
+    [Signal]
+    public delegate void CharacterPersonalizationEventHandler(string alias, string age, string body, string inSearchOf);
 
     private const string ChooseCharacterCommand = "@choose_character";
     private const string AliasTagName = "alias";
     private const string AgeTagName = "age";
     private const string BodyTagName = "body";
     private const string InSearchOfTagName = "insearchof";
+    private const string CharacterPersonalizationCommand = "@profile";
 
     public void OverrideStory(InkStory overrideStory)
     {
@@ -48,13 +53,34 @@ public partial class StoryEngine : Node
             var indices = choices.Select(choice => choice.Index).ToArray();
             EmitSignalChooseCharacter(indices, characters, aliases, ages, bodies, inSearchOfs);
         }
+        else if (result == CharacterPersonalizationCommand)
+        {
+            var alias = GetTagValue(story.CurrentTags, AliasTagName);
+            var age = GetTagValue(story.CurrentTags, AgeTagName);
+            var body = GetTagValue(story.CurrentTags, BodyTagName);
+            var inSearchOf = GetTagValue(story.CurrentTags, InSearchOfTagName);
+            EmitSignalCharacterPersonalization(alias, age, body, inSearchOf);
+        }
         else
         {
             EmitSignalGenericTextLine(
                 story.CurrentText.Trim(),
                 story.CurrentChoices.Select(choice => choice.Text.Trim()).ToArray()
-                );
+            );
         }
+    }
+
+    private const string ActiveTopicsVariableName = "activeTopics";
+
+    public void HookActiveTopicsChanged(Callable callable)
+    {
+        story.ObserveVariable(ActiveTopicsVariableName, callable);
+    }
+
+    public string[] GetActiveTopics()
+    {
+        var x = story.FetchVariable(ActiveTopicsVariableName);
+        return [];
     }
 
     private void PickChoice(int choiceIndex)
@@ -62,7 +88,7 @@ public partial class StoryEngine : Node
         story.ChooseChoiceIndex(choiceIndex);
     }
 
-    string GetTagValue(IReadOnlyList<string> tags, string tagName)
+    private static string GetTagValue(IReadOnlyList<string> tags, string tagName)
     {
         var prefix = $"{tagName}:";
         var result = tags.SingleOrDefault(tag => tag.StartsWith(prefix));

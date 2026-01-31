@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cq4yeei78kgu7"]
+
+[ext_resource type="Script" uid="uid://cnl3pymto4dj7" path="res://components/my_profile/topic_button.gd" id="1_4phif"]
+
+[node name="Button" type="Button" unique_id=713931208]
+theme_type_variation = &"MyProfileTopicButton"
+toggle_mode = true
+text = "Ageismo"
+script = ExtResource("1_4phif")
