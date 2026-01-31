@@ -1,8 +1,9 @@
 INCLUDE variabilifunzioni.ink
 INCLUDE dialogues.ink
 
+~ discoveredTopics += Ageism
+~ discoveredTopics += OldTwink
 ~ activeTopics += Ageism
-~ activeTopics += OldTwink
 
 
 -> randomize_pg
@@ -61,11 +62,12 @@ INCLUDE dialogues.ink
 
 
 === character_personalization
+{debug: <i>character_personalization}
   - (loop)
 
-  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchoff:{pg_in_search_of()}
+  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchof:{pg_in_search_of()}
 
-  + {dialogue_Char_uno.ageism} Ageism
+  + {discoveredTopics has Ageism} [Ageism]
       {
         - activeTopics hasnt Ageism:
           ~ activeTopics += Ageism
@@ -74,7 +76,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_due.old_twink} OldTwink
+  + {discoveredTopics has OldTwink} [OldTwink]
       {
         - activeTopics hasnt OldTwink:
           ~ activeTopics += OldTwink
@@ -83,7 +85,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_tre.poli_things} Polyamory
+  + {discoveredTopics has Polyamory} [Polyamory]
       {
         - activeTopics hasnt Polyamory:
           ~ activeTopics += Polyamory
@@ -92,7 +94,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_quattro.expectations} Expectations
+  + {discoveredTopics has Expectations} [Expectations]
       {
         - activeTopics hasnt Expectations:
           ~ activeTopics += Expectations
@@ -100,7 +102,7 @@ INCLUDE dialogues.ink
           ~ activeTopics -= Expectations
       }
       -> loop
-  + {dialogue_Char_cinque.dysmorphia} Dysmorphia
+  + {discoveredTopics has Dysmorphia} [Dysmorphia]
       {
         - activeTopics hasnt Dysmorphia:
           ~ activeTopics += Dysmorphia
@@ -109,7 +111,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_sei.masculinity} Masculinity
+  + {discoveredTopics has Masculinity} [Masculinity]
       {
         - activeTopics hasnt Masculinity:
           ~ activeTopics += Masculinity
@@ -118,7 +120,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_sette.femme} Femme
+  + {discoveredTopics has Femme} [Femme]
       {
         - activeTopics hasnt Femme:
           ~ activeTopics += Femme
@@ -127,7 +129,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_otto.friendship} Friendship
+  + {discoveredTopics has Friendship} [Friendship]
       {
         - activeTopics hasnt Friendship:
           ~ activeTopics += Friendship

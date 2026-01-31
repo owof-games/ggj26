@@ -48,9 +48,9 @@ text = "prova"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1055093614]
 layout_mode = 0
-offset_left = 16.0
+offset_left = 17.0
 offset_top = 249.0
-offset_right = 528.0
+offset_right = 529.0
 offset_bottom = 1044.0
 
 [node name="Button" parent="VBoxContainer" unique_id=713931208 instance=ExtResource("1_exlrj")]
@@ -99,3 +99,21 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Amicizia"
 topic_name = "Friendship"
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1104010924]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChatButton" type="Button" parent="VBoxContainer" unique_id=1551940554]
+layout_mode = 2
+text = "Chat"
+
+[connection signal="topic_pressed" from="VBoxContainer/Button" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button2" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button3" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button4" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button5" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button6" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button7" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="VBoxContainer/Button8" to="." method="_on_button_topic_pressed"]
+[connection signal="pressed" from="VBoxContainer/ChatButton" to="." method="_on_chat_button_pressed"]

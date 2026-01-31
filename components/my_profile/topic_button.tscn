@@ -7,3 +7,5 @@ theme_type_variation = &"MyProfileTopicButton"
 toggle_mode = true
 text = "Ageismo"
 script = ExtResource("1_4phif")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
