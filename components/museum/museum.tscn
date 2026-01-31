@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d4jcjgahluf6"]
+
+[ext_resource type="PackedScene" uid="uid://ci8a1evxcfr0v" path="res://components/container/container.tscn" id="1_nab0f"]
+[ext_resource type="Resource" uid="uid://572topxe766t" path="res://components/museum/override_story.ink" id="2_ab6jy"]
+
+[node name="Museum" type="Control" unique_id=182361704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" parent="." unique_id=426943350 instance=ExtResource("1_nab0f")]
+layout_mode = 1
+override_story = ExtResource("2_ab6jy")

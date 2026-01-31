@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://y16e7cyb1kjn"]
+
+[ext_resource type="PackedScene" uid="uid://bqgqknlxtbjjg" path="res://components/profiles/profile_button.tscn" id="1_gyasx"]
+
+[node name="Profiles" type="Control" unique_id=475539994]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1320.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonsContainer" type="GridContainer" parent="." unique_id=1162176127]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 260.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="ProfileButton" parent="ButtonsContainer" unique_id=400822401 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton2" parent="ButtonsContainer" unique_id=1574138881 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton3" parent="ButtonsContainer" unique_id=1398094312 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton4" parent="ButtonsContainer" unique_id=710113478 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton5" parent="ButtonsContainer" unique_id=1533755469 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton6" parent="ButtonsContainer" unique_id=1535425086 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton7" parent="ButtonsContainer" unique_id=657727474 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton8" parent="ButtonsContainer" unique_id=541106214 instance=ExtResource("1_gyasx")]
+layout_mode = 2
+
+[node name="ProfileButton9" parent="ButtonsContainer" unique_id=57156859 instance=ExtResource("1_gyasx")]
+layout_mode = 2
