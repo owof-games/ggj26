@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://572topxe766t"
+path="res://.godot/imported/override_story.ink-caa9485d116a3a21318d3486a9ce964c.res"
+
+[deps]
+
+source_file="res://story/override_story.ink"
+dest_files=["res://.godot/imported/override_story.ink-caa9485d116a3a21318d3486a9ce964c.res"]
+
+[params]
+
+is_main_file=true
+compress=true

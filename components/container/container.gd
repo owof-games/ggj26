@@ -6,6 +6,7 @@ extends Control
 
 var _profiles_scene: PackedScene = preload("uid://y16e7cyb1kjn")
 var _chat_scene: PackedScene = preload("uid://d03lout7yjecq")
+var _character_personalization: PackedScene = preload("uid://bi1lkscnsof5v")
 
 
 var _current_child_scene: Node
@@ -76,6 +77,32 @@ func _on_story_engine_generic_text_line(line: String, choices: PackedStringArray
 	var who := parts[0].strip_edges().to_lower()
 	var text := parts[1].strip_edges()
 	_chat.step(who == "pg", text, choices)
+
+
+
+func _on_story_engine_character_personalization(alias: String, age: String, body: String, inSearchOf: String, topics: Array[String]) -> void:
+	var character_personalization: MyProfile
+	if _current_child_scene is MyProfile:
+		character_personalization = _current_child_scene
+	else:
+		_clean_current_scene()
+		character_personalization = _character_personalization.instantiate()
+		character_personalization.topic_pressed.connect(_topic_pressed)
+		character_personalization.chat_pressed.connect(_chat_pressed)
+		%MobileScreen.add_child(character_personalization)
+	var active_topics := story_engine.GetActiveTopics()
+	character_personalization.setup(topics, active_topics)
+	_current_child_scene = character_personalization
+
+
+func _topic_pressed(topic_name: String):
+	story_engine.PickChoiceByName(topic_name)
+	story_engine.Continue()
+
+
+func _chat_pressed():
+	story_engine.PickChoiceByName("Chat")
+	story_engine.Continue()
 
 
 func _clean_current_scene() -> void:
