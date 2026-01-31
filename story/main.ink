@@ -422,8 +422,8 @@ INCLUDE dialogues.ink
               }             
         }
 
-      {anon_uno:
-        - = 1:
+      {
+        - anon_uno == 1:
           Anon: Ciao.
           Anon: Anzi, no.
           Anon: Non sei il mio tipo.
@@ -525,8 +525,8 @@ INCLUDE dialogues.ink
               }    
         }
 
-        {anon_due:
-          - = 1:
+        {
+          - anon_due == 1:
               Anon: Sai che una botta te la darei? 
               Anon: Non è che sei il mio tipo, ma c'è qualcosa che mi fa dire "Faccia da bukkake".
               Anon: Ed è un gran complimento detto da me!
@@ -541,92 +541,114 @@ INCLUDE dialogues.ink
     + (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:Riproviamoci #age:36 #body:skinny legend #insearchof:amore della vita]
 
         {activeTopics:
-            - Expectations && anon_treExpectations:
-                Ehi, ho visto i tuoi tag, e mi ha colpito il fatto che parli di aspettative.
-                Qui mi sento un pesce fuor d'acqua.
-                Dopo anni di matrimonio e tutto il resto.
-                Vorrei solo una bella conversazione.
-                Tranquilla.
-                Senza pretese.
-                Ma ora devo andare.
+            - Expectations:
+            {anon_treExpectations:
+                Anon: Ehi, ho visto i tuoi tag, e mi ha colpito il fatto che parli di aspettative.
+                Anon: Qui mi sento un pesce fuor d'acqua.
+                Anon: Dopo anni di matrimonio e tutto il resto.
+                Anon: Vorrei solo una bella conversazione.
+                Anon: Tranquilla.
+                Anon: Senza pretese.
+                Anon: Ma ora devo andare.
                   ~ anon_treExpectations = false
                   -> character_personalization
-            - Femme && anon_treFemme:
-                Il tag "femme".
-                Cioè.
-                Non è che puoi esserlo senza pure dirlo?
-                O è un modo per prendere soldi dai più grandi?
-                Perché io non ne ho.
+            }      
+            - Femme:
+            {anon_treFemme:
+                Anon: Il tag "femme".
+                Anon: Cioè.
+                Anon: Non è che puoi esserlo senza pure dirlo?
+                Anon: O è un modo per prendere soldi dai più grandi?
+                Anon: Perché io non ne ho.
                   ~ anon_treFemme = false
                   -> character_personalization
-            - Friendship && anon_treFriendship:
-                L'amicizia è una cosa carina, per carità.
-                Mi fa piacere che l'hai messa nel tag.
-                Ma, insomma.
-                Non qui.
-                Manco l'amore qui si trova!
+            }      
+            - Friendship:
+            {anon_treFriendship:
+                Anon: L'amicizia è una cosa carina, per carità.
+                Anon: Mi fa piacere che l'hai messa nel tag.
+                Anon: Ma, insomma.
+                Anon: Non qui.
+                Anon: Manco l'amore qui si trova!
                   ~ anon_treFriendship = false
                   -> character_personalization
-            - Masculinity && anon_treMasculinity:
-                Ma vedi te se uno deve criticare la mascolinità anche qui.
-                Come se non ti facessi le seghe sui maschioni.
-                Poi chiedono perché sono tutti incazzati con le cose woke.
+            }      
+            - Masculinity:
+            {anon_treMasculinity:
+                Anon: Ma vedi te se uno deve criticare la mascolinità anche qui.
+                Anon: Come se non ti facessi le seghe sui maschioni.
+                Anon: Poi chiedono perché sono tutti incazzati con le cose woke.
                   ~ anon_treMasculinity = false
                   -> character_personalization
+            }      
         }
         {PGAge:
-              - Vecchio && anon_treVecchio:
-                  Vederti qui mi uccide.
-                  Perché se anche uno vecchio come te è a caccia, allora è vero che l'amore non esiste.
-                  Che schifo essere gay.
+              - Vecchio:
+              {anon_treVecchio:
+                  Anon: Vederti qui mi uccide.
+                  Anon: Perché se anche uno vecchio come te è a caccia, allora è vero che l'amore non esiste.
+                  Anon: Che schifo essere gay.
                     ~ anon_treVecchio = false
                     -> character_personalization
-              - Medio && anon_treMedio:
-                  Uno della mia età quasi, qui.
-                  Chissà se anche tu hai una storia triste.
-                  Ora sono a lavoro, ma poi ti racconto la mia.
+              }      
+              - Medio:
+              {anon_treMedio:
+                  Anon: Uno della mia età quasi, qui.
+                  Anon: Chissà se anche tu hai una storia triste.
+                  Anon: Ora sono a lavoro, ma poi ti racconto la mia.
                     ~ anon_treMedio = false
                     -> character_personalization
+              }      
         }
         {PGBody:
-              - Bear && anon_treBear:
-                  I corpi grossi mi piacciono.
-                  Mi fanno sentire al sicuro.
-                  Chissà com'è stare su quella pancia.
-                  E invece devo stare qui, a scrivere mail al mio capo idiota.
-                  A dopo.
+              - Bear:
+              {anon_treBear:
+                  Anon: I corpi grossi mi piacciono.
+                  Anon: Mi fanno sentire al sicuro.
+                  Anon: Chissà com'è stare su quella pancia.
+                  Anon: E invece devo stare qui, a scrivere mail al mio capo idiota.
+                  Anon: A dopo.
                     ~ anon_treBear = false
-                    -> character_personalization 
-              - Twink && anon_treTwink:
-                  Goditelo questo corpo sottile.
-                  Perché non è eterno.
+                    -> character_personalization
+              }      
+              - Twink:
+              {anon_treTwink:
+                  Anon: Goditelo questo corpo sottile.
+                  Anon: Perché non è eterno.
                     ~ anon_treTwink = false
-                      -> character_personalization 
+                      -> character_personalization
+              }       
         }
         {PGInSearchOf:
-              - Poliamore && anon_trePoliamore:
-                  Avete rovinato tutto, voi poligami.
-                  Con le relazioni aperte e le cose anarchiche.
-                  Te lo dico io: non hai trovato quello giusto.
-                  Punto.
-                  Magari una di queste sere si beve assieme.
+              - Poliamore:
+              {anon_trePoliamore:
+                  Anon: Avete rovinato tutto, voi poligami.
+                  Anon: Con le relazioni aperte e le cose anarchiche.
+                  Anon: Te lo dico io: non hai trovato quello giusto.
+                  Anon: Punto.
+                  Anon: Magari una di queste sere si beve assieme.
                     ~ anon_trePoliamore = false
                     -> character_personalization
-              - Monogamia && anon_treMonogamia:
-                  Un miracolo, un monogamo!
-                  Forse c'è speranza.
-                  Anche se non sei molto carino.
+              }      
+              - Monogamia:
+              {anon_treMonogamia:
+                  Anon: Un miracolo, un monogamo!
+                  Anon: Forse c'è speranza.
+                  Anon: Anche se non sei molto carino.
                     ~ anon_treMonogamia = false
-                    -> character_personalization 
-              - Sesso && anon_treSesso:
-                  Sesso, sesso, sesso.
-                  Gli uomini gay pensano solo al sesso.
-                  E poi dormono soli, disperati.
+                    -> character_personalization
+              }       
+              - Sesso:
+              {anon_treSesso:
+                  Anon: Sesso, sesso, sesso.
+                  Anon: Gli uomini gay pensano solo al sesso.
+                  Anon: E poi dormono soli, disperati.
                     ~ anon_treSesso = false
                       -> character_personalization
+              }        
         }
-      {anon_tre:
-        - = 1:
+      {
+        - anon_tre == 1:
             Anon: Non sembri male.
             Anon: Ma l'ho già vista questa storia.
             Anon: Uno è carino, belloccio.
@@ -644,68 +666,131 @@ INCLUDE dialogues.ink
 
         {activeTopics:
             - Expectations:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_treExpectations:
+                  Anon: Un miracolo, un monogamo!
+                    ~ anon_treExpectations = false
+                    -> character_personalization
+                }
             - Femme:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                  {anon_treFemme:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treFemme = false
+                      -> character_personalization
+                  }
             - Friendship:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                  {anon_treFriendship:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treFriendship = false
+                      -> character_personalization
+                  }
             - Ageism:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_treAgeism:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treAgeism = false
+                      -> character_personalization
+                  }
             - OldTwink:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_treOldTwink:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treOldTwink = false
+                      -> character_personalization
+                  }
             - Polyamory:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_trePolyamory:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_trePolyamory = false
+                      -> character_personalization
+                  }
             - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> character_personalization
+                {anon_treDysmorphia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treDysmorphia = false
+                      -> character_personalization
+                  }
             - Masculinity:
-                non mi interessano quelle cose lì
-              -> character_personalization 
+                {anon_treMasculinity:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treMasculinity = false
+                      -> character_personalization
+                  }
         }  
         
       {PGAge:
               - Vecchio:
-                -> character_personalization
+                {anon_treVecchio:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treVecchio = false
+                      -> character_personalization
+                  }
               - Medio:
-                -> character_personalization
+                {anon_treMedio:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treMedio = false
+                      -> character_personalization
+                  }
               - Giovane:
-                -> character_personalization  
+                {anon_treGiovane:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treGiovane = false
+                      -> character_personalization
+                  }
 
         }
         {PGBody:
               - Bear:
-                -> character_personalization
+                {anon_treBear:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treBear= false
+                      -> character_personalization
+                  }
               - Twink:
-                -> character_personalization
+                {anon_treTwink:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treTwink = false
+                      -> character_personalization
+                  }
               - Fit:
-                -> character_personalization
+                {anon_treFit:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treFit = false
+                      -> character_personalization
+                  }
   
         }
         {PGInSearchOf:
               - Amicizia:
-                -> character_personalization
-              - Poliamore:
-                -> character_personalization
-              - Monogamia:
-                -> character_personalization 
-              - Sesso:
-                -> character_personalization
-              - else
-                {
-                  - anon_quattro == 1:
-                    Non sei il mio tipo.
+                {anon_treAmicizia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treAmicizia = false
                       -> character_personalization
-                  - else:
-                    Abbiamo già parlato.
-                    -> randomize_characters  
-                }   
+                  }
+              - Poliamore:
+                {anon_trePoliamore:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_trePoliamore = false
+                      -> character_personalization
+                  }
+              - Monogamia:
+                {anon_treMonogamia:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treMonogamia = false
+                      -> character_personalization
+                  }
+              - Sesso:
+                {anon_treSesso:
+                    Anon: Un miracolo, un monogamo!
+                      ~ anon_treSesso = false
+                      -> character_personalization
+                  } 
         }
+        {
+          - anon_quattro == 1:
+            Non sei il mio tipo.
+              -> character_personalization
+          - else:
+            Abbiamo già parlato.
+            -> randomize_characters  
+        } 
   
 
     + (anon_cinque){actualSpeakers has Anon_cinque}[Anon_cinque #alias:xx #age:37 #body:medium #insearchof:sex]

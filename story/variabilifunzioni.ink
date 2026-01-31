@@ -81,7 +81,8 @@ VAR endGameCounter = 3
         VAR anon_treMedio = true
         VAR anon_trePoliamore = true
         VAR anon_treSesso = true
-
+        VAR anon_treOldTwink = true
+        VAR anon_treDysmorphia = true
 
 
 //FUNZIONI///
