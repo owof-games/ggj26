@@ -1,14 +1,14 @@
-LIST Ages = Giovane, Medio, Vecchio
-LIST Bodies = Bear, Fit, Twink
-LIST InSearchOf = Monogamia, Poliamore, Sesso, Amicizia
+LIST ages = Giovane, Medio, Vecchio
+LIST bodies = Bear, Fit, Twink
+LIST inSearchOf = Monogamia, Poliamore, Sesso, Amicizia
 
 //Personaggi anomini
-LIST anonymousChar = anon_uno, anon_due, anon_tre, anon_quattro
+LIST anonymousChar = Anon_uno, Anon_due, Anon_tre, Anon_quattro
 //Personaggi speciali
-LIST specialChar = char_uno, char_due, char_tre, char_quattro, char_cinque, char_sei, char_sette, char_otto
+LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char_sei, Char_sette, Char_otto
 
 
-LIST ActiveTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
+LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
 // da randomizzare
 VAR PGAge = ()
@@ -20,8 +20,14 @@ VAR PGInSearchOf = ()
 
 
 === randomize_pg
-// randomizzazione delle caratteristiche PG
--> conversation_selection
+~ PGAge = LIST_RANDOM (ages)
+~ PGBody = LIST_RANDOM (bodies)
+~ PGInSearchOf = LIST_RANDOM (inSearchOf)
+
+Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}
+
+-> END
+//-> conversation_selection
 
 
 
@@ -30,33 +36,33 @@ VAR PGInSearchOf = ()
 - (top)
 @choose_character
 //Personaggi speciali
-+ [{char_uno}]
++ [{Char_uno}]
   //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
-  -> dialogue_char_uno
-+ [{char_due}]
-  -> dialogue_char_due
-+ [{char_tre}]
-  -> dialogue_char_tre
-+ [{char_quattro}]
-  ->dialogue_char_quattro
-+ [{char_cinque}]
-  -> dialogue_char_cinque
-+ [{char_sei}]
-  -> dialogue_char_sei
-+ [{char_sette}]
-  -> dialogue_char_sette
-+ [{char_otto}]
-  -> dialogue_char_otto
+  -> dialogue_Char_uno
++ [{Char_due}]
+  -> dialogue_Char_due
++ [{Char_tre}]
+  -> dialogue_Char_tre
++ [{Char_quattro}]
+  ->dialogue_Char_quattro
++ [{Char_cinque}]
+  -> dialogue_Char_cinque
++ [{Char_sei}]
+  -> dialogue_Char_sei
++ [{Char_sette}]
+  -> dialogue_Char_sette
++ [{Char_otto}]
+  -> dialogue_Char_otto
 
 
 //Personaggi anonimi
-+ [anon_uno]
++ [Anon_uno]
   conversazione con anonymous 1
     -> top
-+ [anon_due]
++ [Anon_due]
   conversazione con anonymous 2
     -> top
-+ [anon_tre]
++ [Anon_tre]
   conversazione con anonymous 3
     -> top
 -
@@ -70,74 +76,74 @@ VAR PGInSearchOf = ()
 - (loop)
 
 @topics
-+ {dialogue_char_uno.ageism} Ageism
++ {dialogue_Char_uno.ageism} Ageism
     {
-      - ActiveTopics hasnt Ageism:
-        ~ ActiveTopics += Ageism
+      - activeTopics hasnt Ageism:
+        ~ activeTopics += Ageism
       - else:
-        ~ ActiveTopics -= Ageism  
+        ~ activeTopics-= Ageism  
     }
     -> loop
 
-+ {dialogue_char_due.old_twink} OldTwink
++ {dialogue_Char_due.old_twink} OldTwink
     {
-      - ActiveTopics hasnt OldTwink:
-        ~ ActiveTopics += OldTwink
+      - activeTopics hasnt OldTwink:
+        ~ activeTopics += OldTwink
       - else:
-        ~ ActiveTopics -= OldTwink 
+        ~ activeTopics -= OldTwink 
     }
     -> loop
 
-+ {dialogue_char_tre.poli_things} Polyamory
++ {dialogue_Char_tre.poli_things} Polyamory
     {
-      - ActiveTopics hasnt Polyamory:
-        ~ ActiveTopics += Polyamory
+      - activeTopics hasnt Polyamory:
+        ~ activeTopics += Polyamory
       - else:
-        ~ ActiveTopics -= Polyamory
+        ~ activeTopics -= Polyamory
     }
     -> loop
 
-+ {dialogue_char_quattro.expectations} Expectations
++ {dialogue_Char_quattro.expectations} Expectations
     {
-      - ActiveTopics hasnt Expectations:
-        ~ ActiveTopics += Expectations
+      - activeTopics hasnt Expectations:
+        ~ activeTopics += Expectations
       - else:
-        ~ ActiveTopics -= Expectations
+        ~ activeTopics -= Expectations
     }
     -> loop
-+ {dialogue_char_cinque.dysmorphia} Dysmorphia
++ {dialogue_Char_cinque.dysmorphia} Dysmorphia
     {
-      - ActiveTopics hasnt Dysmorphia:
-        ~ ActiveTopics += Dysmorphia
+      - activeTopics hasnt Dysmorphia:
+        ~ activeTopics += Dysmorphia
       - else:
-        ~ ActiveTopics -= Dysmorphia
-    }
-    -> loop
-
-+ {dialogue_char_sei.masculinity} Masculinity
-    {
-      - ActiveTopics hasnt Masculinity:
-        ~ ActiveTopics += Masculinity
-      - else:
-        ~ ActiveTopics -= Masculinity
+        ~ activeTopics -= Dysmorphia
     }
     -> loop
 
-+ {dialogue_char_sette.femme} Femme
++ {dialogue_Char_sei.masculinity} Masculinity
     {
-      - ActiveTopics hasnt Femme:
-        ~ ActiveTopics += Femme
+      - activeTopics hasnt Masculinity:
+        ~ activeTopics += Masculinity
       - else:
-        ~ ActiveTopics -= Femme
+        ~ activeTopics -= Masculinity
     }
     -> loop
 
-+ {dialogue_char_otto.friendship} Friendship
++ {dialogue_Char_sette.femme} Femme
     {
-      - ActiveTopics hasnt Friendship:
-        ~ ActiveTopics += Friendship
+      - activeTopics hasnt Femme:
+        ~ activeTopics += Femme
       - else:
-        ~ ActiveTopics -= Friendship
+        ~ activeTopics -= Femme
+    }
+    -> loop
+
++ {dialogue_Char_otto.friendship} Friendship
+    {
+      - activeTopics hasnt Friendship:
+        ~ activeTopics += Friendship
+      - else:
+        ~ activeTopics -= Friendship
     }
     -> loop
 
@@ -154,40 +160,40 @@ VAR PGInSearchOf = ()
 
 
 ///Storylets personaggi speciali///
-=== dialogue_char_uno
+=== dialogue_Char_uno
 Ageismo
 - (ageism)
 
 -> character_personalization
 
 
-=== dialogue_char_due
+=== dialogue_Char_due
 Vecchio twink
 - (old_twink)
 
 -> character_personalization
 
-=== dialogue_char_tre
+=== dialogue_Char_tre
 Questioni poli
 - (poli_things)
 
 -> character_personalization
 
 
-=== dialogue_char_quattro
+=== dialogue_Char_quattro
 Aspettative
 - (expectations)
 
 -> character_personalization
 
-=== dialogue_char_cinque
+=== dialogue_Char_cinque
 Fit e dismorfia
 - (dysmorphia)
 
 -> character_personalization
 
 
-=== dialogue_char_sei
+=== dialogue_Char_sei
 Mascolinità Bear
 - (masculinity)
 
@@ -195,7 +201,7 @@ Mascolinità Bear
 -> character_personalization
 
 
-=== dialogue_char_sette
+=== dialogue_Char_sette
 Twink femme
 - (femme)
 
@@ -203,7 +209,7 @@ Twink femme
 -> character_personalization
 
 
-=== dialogue_char_otto
+=== dialogue_Char_otto
 Amicizia hacking
 - (friendship)
 
