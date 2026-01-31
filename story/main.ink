@@ -12,7 +12,14 @@ LIST anonymousChar = Anon_uno, Anon_due, Anon_tre, Anon_quattro
 //Personaggi speciali
 LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char_sei, Char_sette, Char_otto
 
+//Gestione disponibilità al dialogo
+LIST dialogueStates = on
+
+
 LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
+
+
+
 
 // da randomizzare
 VAR PGAge = (Giovane, Medio, Vecchio)
@@ -39,23 +46,359 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 - (top)
 @choose_character
 //Personaggi speciali
-+ {character_personalization >= 2}[{Char_uno}]
++ {character_personalization >= 2 && not dialogue_Char_uno}[{Char_uno}]
   //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
-    -> dialogue_Char_uno
-+ {character_personalization >= 2}[{Char_due}]
-    -> dialogue_Char_due
-+ {character_personalization >= 2}[{Char_tre}]
-    -> dialogue_Char_tre
-+ {character_personalization >= 2}[{Char_quattro}]
-    ->dialogue_Char_quattro
-+ {character_personalization >= 2}[{Char_cinque}]
-    -> dialogue_Char_cinque
-+ {character_personalization >= 2}[{Char_sei}]
-    -> dialogue_Char_sei
-+ {character_personalization >= 2}[{Char_sette}]
-    -> dialogue_Char_sette
-+ {character_personalization >= 2}[{Char_otto}]
-    -> dialogue_Char_otto
+      {
+        - activeTopics:
+          - Expectations:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Vecchio:
+              -> dialogue_Char_uno
+            - Medio:
+              -> dialogue_Char_uno
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Fit:
+              -> dialogue_Char_uno
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Sesso:
+              -> dialogue_Char_uno
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+
+    
++ {character_personalization >= 2 && not dialogue_Char_due}[{Char_due}]
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Medio:
+              -> dialogue_Char_due
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Fit:
+              -> dialogue_Char_due
+            - Twink:
+              -> dialogue_Char_due  
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Sesso:
+              -> dialogue_Char_due
+            - Monogamia:
+              -> dialogue_Char_due  
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+    
++ {character_personalization >= 2  && not dialogue_Char_tre}[{Char_tre}]
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Giovane:
+              -> dialogue_Char_tre
+            - Medio:
+              -> dialogue_Char_tre
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Fit:
+              -> dialogue_Char_tre
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Poliamore:
+              -> dialogue_Char_tre
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+    
++ {character_personalization >= 2  && not dialogue_Char_quattro}[{Char_quattro}]
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Giovane:
+              -> dialogue_Char_quattro
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Bear:
+              -> dialogue_Char_quattro
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Monogamia:
+              -> dialogue_Char_quattro
+            - Poliamore:
+              -> dialogue_Char_quattro  
+            - Amicizia:
+              -> dialogue_Char_quattro  
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+    
++ {character_personalization >= 2  && not dialogue_Char_cinque}[{Char_cinque}]    
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Giovane:
+              -> dialogue_Char_cinque
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Fit:
+              -> dialogue_Char_cinque
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Sesso:
+              -> dialogue_Char_cinque
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+
+    
++ {character_personalization >= 2  && not dialogue_Char_sei}[{Char_sei}]
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Medio:
+              -> dialogue_Char_sei
+            - Giovane:
+              -> dialogue_Char_sei
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Fit:
+              -> dialogue_Char_sei
+            - Bear:
+              -> dialogue_Char_sei  
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Sesso:
+              -> dialogue_Char_sei
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+    
++ {character_personalization >= 2  && not dialogue_Char_sette}[{Char_sette}]      
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Medio:
+              -> dialogue_Char_sette
+            - Giovane:
+              -> dialogue_Char_sette
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Fit:
+              -> dialogue_Char_sette
+            - Twink:
+              -> dialogue_Char_sette 
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Monogamia:
+              -> dialogue_Char_sette
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+
+    
++ {character_personalization >= 2  && not dialogue_Char_otto}[{Char_otto}]
+      {
+        - activeTopics:
+          - Ageism:
+              non mi interessano quelle cose lì
+            -> top
+          - Dysmorphia:
+              non mi interessano quelle cose lì
+            -> top
+          - Femme:
+              non mi interessano quelle cose lì
+            -> top  
+          - Friendship:
+              non mi interessano quelle cose lì
+            -> top
+      }
+      {
+          - PGAge:
+            - Medio:
+              -> dialogue_Char_otto
+            - Vecchio:
+              -> dialogue_Char_otto
+            - else:
+              non sei il mio tipo
+              -> top  
+      }
+      {
+          - PGBody:
+            - Bear:
+              -> dialogue_Char_otto
+            - Twink:
+              -> dialogue_Char_otto
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+      {
+          - PGInSearchOf:
+            - Amicizia:
+              -> dialogue_Char_otto
+            - else:
+              non sei il mio tipo
+              -> top    
+      }
+    
 
 
 //Personaggi anonimi
