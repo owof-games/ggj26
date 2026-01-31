@@ -29,6 +29,10 @@ project/assembly_name="Global Game Jam 2026"
 
 enabled=PackedStringArray("res://addons/GodotInk/plugin.cfg")
 
+[gui]
+
+theme/custom="uid://bje1xdoowr41k"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
