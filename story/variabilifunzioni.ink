@@ -79,10 +79,28 @@ VAR endGameCounter = 3
 === function activeWords()
 ~ temp text = ""
 { activeTopics has Ageism:
-    ~ text = concat(text, "we ageismo.")
+    ~ text = concat(text, "Proud To Be Old.")
 }
 { activeTopics has OldTwink:
-    ~ text = concat(text, "oooh twink.")
+    ~ text = concat(text, "Vecchia twink fa buon twerk.")
+}
+{ activeTopics has Polyamory:
+    ~ text = concat(text, "L'amore è infinito ma la mia pazienza no.")
+}
+{ activeTopics has Expectations:
+    ~ text = concat(text, "Conosciamoci con calma, senza preconcetti.")
+}
+{ activeTopics has Dysmorphia:
+    ~ text = concat(text, "Sto imparando ad amare il mio corpo.")
+}
+{ activeTopics has Masculinity:
+    ~ text = concat(text, "Meglio beta che misogino.")
+}
+{ activeTopics has Femme:
+    ~ text = concat(text, "Sono la mia dea.")
+}
+{ activeTopics has Friendship:
+    ~ text = concat(text, "Meglio appuntamento: confidenze, amicizia e uncinetto.")
 }
 ~ return text
 
@@ -110,7 +128,7 @@ VAR endGameCounter = 3
       }
       -> loop
 
-  + {discoveredTopics has OldTwink} OldTwink
+  + {discoveredTopics has OldTwink} [OldTwink]
       {
         - activeTopics hasnt OldTwink:
           ~ activeTopics += OldTwink
@@ -119,7 +137,7 @@ VAR endGameCounter = 3
       }
       -> loop
 
-  + {discoveredTopics has Polyamory} Polyamory
+  + {discoveredTopics has Polyamory} [Polyamory]
       {
         - activeTopics hasnt Polyamory:
           ~ activeTopics += Polyamory
@@ -128,7 +146,7 @@ VAR endGameCounter = 3
       }
       -> loop
 
-  + {discoveredTopics has Expectations} Expectations
+  + {discoveredTopics has Expectations} [Expectations]
       {
         - activeTopics hasnt Expectations:
           ~ activeTopics += Expectations
@@ -136,7 +154,7 @@ VAR endGameCounter = 3
           ~ activeTopics -= Expectations
       }
       -> loop
-  + {discoveredTopics has Dysmorphia} Dysmorphia
+  + {discoveredTopics has Dysmorphia} [Dysmorphia]
       {
         - activeTopics hasnt Dysmorphia:
           ~ activeTopics += Dysmorphia
@@ -145,7 +163,7 @@ VAR endGameCounter = 3
       }
       -> loop
 
-  + {discoveredTopics has Masculinity} Masculinity
+  + {discoveredTopics has Masculinity} [Masculinity]
       {
         - activeTopics hasnt Masculinity:
           ~ activeTopics += Masculinity
@@ -154,7 +172,7 @@ VAR endGameCounter = 3
       }
       -> loop
 
-  + {discoveredTopics has Femme} Femme
+  + {discoveredTopics has Femme} [Femme]
       {
         - activeTopics hasnt Femme:
           ~ activeTopics += Femme
@@ -163,7 +181,7 @@ VAR endGameCounter = 3
       }
       -> loop
 
-  + {discoveredTopics has Friendship} Friendship
+  + {discoveredTopics has Friendship} [Friendship]
       {
         - activeTopics hasnt Friendship:
           ~ activeTopics += Friendship
