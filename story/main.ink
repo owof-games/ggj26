@@ -1,3 +1,8 @@
+//Debug
+VAR debug = false
+
+
+//Liste per character design
 LIST ages = Giovane, Medio, Vecchio
 LIST bodies = Bear, Fit, Twink
 LIST inSearchOf = Monogamia, Poliamore, Sesso, Amicizia
@@ -7,13 +12,13 @@ LIST anonymousChar = Anon_uno, Anon_due, Anon_tre, Anon_quattro
 //Personaggi speciali
 LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char_sei, Char_sette, Char_otto
 
-
 LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
 // da randomizzare
 VAR PGAge = (Giovane, Medio, Vecchio)
 VAR PGBody = (Bear, Fit, Twink)
 VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
+
 
 -> randomize_pg
 
@@ -29,42 +34,57 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 
 
 === conversation_selection
-Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}
+{debug: Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}}
 
 - (top)
 @choose_character
 //Personaggi speciali
-+ [{Char_uno}]
++ {character_personalization >= 2}[{Char_uno}]
   //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
-  -> dialogue_Char_uno
-+ [{Char_due}]
-  -> dialogue_Char_due
-+ [{Char_tre}]
-  -> dialogue_Char_tre
-+ [{Char_quattro}]
-  ->dialogue_Char_quattro
-+ [{Char_cinque}]
-  -> dialogue_Char_cinque
-+ [{Char_sei}]
-  -> dialogue_Char_sei
-+ [{Char_sette}]
-  -> dialogue_Char_sette
-+ [{Char_otto}]
-  -> dialogue_Char_otto
+    -> dialogue_Char_uno
++ {character_personalization >= 2}[{Char_due}]
+    -> dialogue_Char_due
++ {character_personalization >= 2}[{Char_tre}]
+    -> dialogue_Char_tre
++ {character_personalization >= 2}[{Char_quattro}]
+    ->dialogue_Char_quattro
++ {character_personalization >= 2}[{Char_cinque}]
+    -> dialogue_Char_cinque
++ {character_personalization >= 2}[{Char_sei}]
+    -> dialogue_Char_sei
++ {character_personalization >= 2}[{Char_sette}]
+    -> dialogue_Char_sette
++ {character_personalization >= 2}[{Char_otto}]
+    -> dialogue_Char_otto
 
 
 //Personaggi anonimi
-+ [Anon_uno]
-  conversazione con anonymous 1
-    -> top
-+ [Anon_due]
-  conversazione con anonymous 2
-    -> top
-+ [Anon_tre]
-  conversazione con anonymous 3
-    -> top
++ (anon_uno)[Anon_uno]
+  {
+    - anon_uno == 1:
+      conversazione con anonymous 1
+    - else:
+      Smamma!
+       -> top 
+  }
+    
++ (anon_due)[Anon_due]
+   {
+    - anon_due == 1:
+      conversazione con anonymous 2
+    - else:
+      Smamma!
+       -> top 
+  }
++ (anon_tre)[Anon_tre]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
 -
-
 -> character_personalization
 
 
