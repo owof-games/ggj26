@@ -61,3 +61,13 @@ layout_mode = 2
 [node name="ProfileButton9" parent="ButtonsContainer" unique_id=57156859 instance=ExtResource("1_gyasx")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[connection signal="pressed" from="ButtonsContainer/ProfileButton" to="." method="_on_profile_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton2" to="." method="_on_profile_button_2_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton3" to="." method="_on_profile_button_3_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton4" to="." method="_on_profile_button_4_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton5" to="." method="_on_profile_button_5_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton6" to="." method="_on_profile_button_6_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton7" to="." method="_on_profile_button_7_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton8" to="." method="_on_profile_button_8_pressed"]
+[connection signal="pressed" from="ButtonsContainer/ProfileButton9" to="." method="_on_profile_button_9_pressed"]
