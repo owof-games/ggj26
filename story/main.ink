@@ -136,18 +136,15 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 + {character_personalization >= 2  && not dialogue_Char_tre}[{Char_tre}]
       {
         - activeTopics:
-          - Ageism:
+          - Masculinity:
               non mi interessano quelle cose lì
             -> top
-          - Dysmorphia:
+          - OldTwink:
               non mi interessano quelle cose lì
             -> top
-          - Femme:
+          - Expectations:
               non mi interessano quelle cose lì
             -> top  
-          - Friendship:
-              non mi interessano quelle cose lì
-            -> top
       }
       {
           - PGAge:
@@ -182,13 +179,13 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
           - Ageism:
               non mi interessano quelle cose lì
             -> top
-          - Dysmorphia:
+          - OldTwink:
               non mi interessano quelle cose lì
             -> top
-          - Femme:
+          - Polyamory:
               non mi interessano quelle cose lì
             -> top  
-          - Friendship:
+          - Masculinity:
               non mi interessano quelle cose lì
             -> top
       }
@@ -212,8 +209,6 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
           - PGInSearchOf:
             - Monogamia:
               -> dialogue_Char_quattro
-            - Poliamore:
-              -> dialogue_Char_quattro  
             - Amicizia:
               -> dialogue_Char_quattro  
             - else:
@@ -227,15 +222,12 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
           - Ageism:
               non mi interessano quelle cose lì
             -> top
-          - Dysmorphia:
+          - OldTwink:
               non mi interessano quelle cose lì
             -> top
           - Femme:
               non mi interessano quelle cose lì
             -> top  
-          - Friendship:
-              non mi interessano quelle cose lì
-            -> top
       }
       {
           - PGAge:
@@ -269,13 +261,13 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
           - Ageism:
               non mi interessano quelle cose lì
             -> top
-          - Dysmorphia:
+          - Polyamory:
               non mi interessano quelle cose lì
             -> top
           - Femme:
               non mi interessano quelle cose lì
             -> top  
-          - Friendship:
+          - Dysmorphia:
               non mi interessano quelle cose lì
             -> top
       }
@@ -311,18 +303,16 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 + {character_personalization >= 2  && not dialogue_Char_sette}[{Char_sette}]      
       {
         - activeTopics:
-          - Ageism:
+          - OldTwink:
               non mi interessano quelle cose lì
             -> top
-          - Dysmorphia:
+          - Expectations:
               non mi interessano quelle cose lì
             -> top
-          - Femme:
-              non mi interessano quelle cose lì
-            -> top  
           - Friendship:
               non mi interessano quelle cose lì
-            -> top
+            -> top       
+
       }
       {
           - PGAge:
@@ -357,16 +347,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 + {character_personalization >= 2  && not dialogue_Char_otto}[{Char_otto}]
       {
         - activeTopics:
-          - Ageism:
-              non mi interessano quelle cose lì
-            -> top
-          - Dysmorphia:
-              non mi interessano quelle cose lì
-            -> top
-          - Femme:
-              non mi interessano quelle cose lì
-            -> top  
-          - Friendship:
+          - Masculinity:
               non mi interessano quelle cose lì
             -> top
       }
