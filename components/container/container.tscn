@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://ci8a1evxcfr0v"]
 
+[ext_resource type="Script" uid="uid://dbgxe402ulrpu" path="res://components/container/container.gd" id="1_b8ywi"]
+[ext_resource type="PackedScene" uid="uid://cmii6lrmui8ls" path="res://components/story_engine/story_engine.tscn" id="2_20rxh"]
+
 [node name="Container" type="Control" unique_id=426943350]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +10,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b8ywi")
+
+[node name="StoryEngine" parent="." unique_id=2097755872 instance=ExtResource("2_20rxh")]
+unique_name_in_owner = true
 
 [node name="TextureRect" type="ColorRect" parent="." unique_id=11817452]
 layout_mode = 1
@@ -25,3 +32,9 @@ offset_left = 660.0
 offset_right = -660.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="MobileScreen" unique_id=1342919232]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Testo di esempio"

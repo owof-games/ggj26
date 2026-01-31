@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cmii6lrmui8ls"]
+
+[ext_resource type="Script" uid="uid://fudssdnq4xu5" path="res://components/story_engine/StoryEngine.cs" id="1_4prxb"]
+[ext_resource type="Resource" uid="uid://5s4broeew02y" path="res://story/main.ink" id="2_1dw7s"]
+
+[node name="StoryEngine" type="Node" unique_id=2097755872]
+script = ExtResource("1_4prxb")
+story = ExtResource("2_1dw7s")
