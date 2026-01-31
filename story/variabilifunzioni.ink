@@ -29,6 +29,10 @@ VAR PGBody = (Bear, Fit, Twink)
 VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 VAR Alias = ""
 
+//Numero di iterazioni prima di avere personaggi speciali
+VAR startNumber = 3
+//Numero di personaggi max per schermata
+VAR maxScreenChar = 9
 
 //FUNZIONI///
 //GESTIONE PG//
