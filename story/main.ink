@@ -15,6 +15,13 @@ INCLUDE dialogues.ink
 
 
 === conversation_selection
+  //Gestione finale
+  {
+    - LIST_COUNT(discoveredTopics) >= endGameCounter:
+      -> endings
+    - else:
+      -> top  
+  }
 
   - (top)
   @choose_character
@@ -24,13 +31,13 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Expectations:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Femme:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Friendship:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
         }
         {PGAge:
               - Vecchio:
@@ -39,21 +46,21 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_uno
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters  
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_uno
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters    
         }
         {PGInSearchOf:
               - Sesso:
                 -> dialogue_Char_uno
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters  
         }
 
       
@@ -61,23 +68,23 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Ageism:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Dysmorphia:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Femme:
                 non mi interessano quelle cose lì
-              -> top  
+              -> randomize_characters 
             - Friendship:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
         }
         {PGAge:
               - Medio:
                 -> dialogue_Char_due
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters 
         }
         {PGBody:
               - Fit:
@@ -86,7 +93,7 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_due  
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
         {PGInSearchOf:
               - Sesso:
@@ -95,20 +102,20 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_due  
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
       
   + {actualSpeakers has Char_tre &&character_personalization >= startNumber}[{Char_tre} #alias:xx #age:37 #body:medium #insearchof:sex]
         {activeTopics:
             - Masculinity:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - OldTwink:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Expectations:
                 non mi interessano quelle cose lì
-              -> top  
+              -> randomize_characters 
         }
         {PGAge:
               - Giovane:
@@ -117,51 +124,51 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_tre
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters 
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_tre
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
         {PGInSearchOf:
               - Poliamore:
                 -> dialogue_Char_tre
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
       
   + {actualSpeakers has Char_quattro &&character_personalization >= startNumber}[{Char_quattro} #alias:xx #age:37 #body:medium #insearchof:sex]
         {activeTopics:
             - Ageism:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - OldTwink:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Polyamory:
                 non mi interessano quelle cose lì
-              -> top  
+              -> randomize_characters 
             - Masculinity:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
         }
         {PGAge:
               - Giovane:
                 -> dialogue_Char_quattro
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters  
         }
         {PGBody:
               - Bear:
                 -> dialogue_Char_quattro
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters 
         }
         {PGInSearchOf:
               - Monogamia:
@@ -170,41 +177,41 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_quattro  
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
       
   + {actualSpeakers has Char_cinque &&character_personalization >= startNumber}[{Char_cinque} #alias:xx #age:37 #body:medium #insearchof:sex]    
         {activeTopics:
             - Ageism:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - OldTwink:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Femme:
                 non mi interessano quelle cose lì
-              -> top  
+              -> randomize_characters
         }
         {PGAge:
               - Giovane:
                 -> dialogue_Char_cinque
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters 
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_cinque
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
         {PGInSearchOf:
               - Sesso:
                 -> dialogue_Char_cinque
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
 
       
@@ -212,16 +219,16 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Ageism:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Polyamory:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Femme:
                 non mi interessano quelle cose lì
-              -> top  
+              -> randomize_characters
             - Dysmorphia:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
         }
         {PGAge:
               - Medio:
@@ -230,7 +237,7 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_sei
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters
         }
         {PGBody:
               - Fit:
@@ -239,27 +246,27 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_sei  
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters  
         }
         {PGInSearchOf:
               - Sesso:
                 -> dialogue_Char_sei
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters
         }
       
   + {actualSpeakers has Char_sette &&character_personalization >= startNumber}[{Char_sette} #alias:xx #age:37 #body:medium #insearchof:sex]      
         {activeTopics:
             - OldTwink:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Expectations:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
             - Friendship:
                 non mi interessano quelle cose lì
-              -> top       
+              -> randomize_characters    
 
         }
         {PGAge:
@@ -269,7 +276,7 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_sette
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters 
         }
         {PGBody:
               - Fit:
@@ -278,14 +285,14 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_sette 
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters
         }
         {PGInSearchOf:
               - Monogamia:
                 -> dialogue_Char_sette
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters   
         }
 
       
@@ -293,7 +300,7 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Masculinity:
                 non mi interessano quelle cose lì
-              -> top
+              -> randomize_characters
         }
         {PGAge:
               - Medio:
@@ -302,7 +309,7 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_otto
               - else:
                 non sei il mio tipo
-                -> top  
+                -> randomize_characters
         }
         {PGBody:
               - Bear:
@@ -311,14 +318,14 @@ INCLUDE dialogues.ink
                 -> dialogue_Char_otto
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters  
         }
         {PGInSearchOf:
               - Amicizia:
                 -> dialogue_Char_otto
               - else:
                 non sei il mio tipo
-                -> top    
+                -> randomize_characters 
         }
       
 
@@ -439,9 +446,9 @@ INCLUDE dialogues.ink
 {debug: <i>character_personalization}
   - (loop)
 
-  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchoff:{pg_in_search_of()}
+  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchof:{pg_in_search_of()}
 
-  + {dialogue_Char_uno.ageism} Ageism
+  + {discoveredTopics has Ageism} Ageism
       {
         - activeTopics hasnt Ageism:
           ~ activeTopics += Ageism
@@ -450,7 +457,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_due.old_twink} OldTwink
+  + {discoveredTopics has OldTwink} OldTwink
       {
         - activeTopics hasnt OldTwink:
           ~ activeTopics += OldTwink
@@ -459,7 +466,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_tre.poli_things} Polyamory
+  + {discoveredTopics has Polyamory} Polyamory
       {
         - activeTopics hasnt Polyamory:
           ~ activeTopics += Polyamory
@@ -468,7 +475,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_quattro.expectations} Expectations
+  + {discoveredTopics has Expectations} Expectations
       {
         - activeTopics hasnt Expectations:
           ~ activeTopics += Expectations
@@ -476,7 +483,7 @@ INCLUDE dialogues.ink
           ~ activeTopics -= Expectations
       }
       -> loop
-  + {dialogue_Char_cinque.dysmorphia} Dysmorphia
+  + {discoveredTopics has Dysmorphia} Dysmorphia
       {
         - activeTopics hasnt Dysmorphia:
           ~ activeTopics += Dysmorphia
@@ -485,7 +492,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_sei.masculinity} Masculinity
+  + {discoveredTopics has Masculinity} Masculinity
       {
         - activeTopics hasnt Masculinity:
           ~ activeTopics += Masculinity
@@ -494,7 +501,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_sette.femme} Femme
+  + {discoveredTopics has Femme} Femme
       {
         - activeTopics hasnt Femme:
           ~ activeTopics += Femme
@@ -503,7 +510,7 @@ INCLUDE dialogues.ink
       }
       -> loop
 
-  + {dialogue_Char_otto.friendship} Friendship
+  + {discoveredTopics has Friendship} Friendship
       {
         - activeTopics hasnt Friendship:
           ~ activeTopics += Friendship

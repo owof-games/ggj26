@@ -20,6 +20,9 @@ LIST dialogueStates = on
 
 LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
+
+VAR discoveredTopics = ()
+
 VAR actualSpeakers = ()
 
 
@@ -35,6 +38,8 @@ VAR startNumber = 3
 VAR maxScreenChar = 9
 //Numero di personaggi speciali max per schermata
 VAR maxSpecialChar = 3
+//Numero di topics sbloccati per chiudere il gioco
+VAR endGameCounter = 3
 
 //FUNZIONI///
 //GESTIONE PG//

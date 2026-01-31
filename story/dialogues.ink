@@ -1,40 +1,40 @@
 ///Storylets personaggi speciali///
 === dialogue_Char_uno
     Ageismo
-    - (ageism)
 
+    ~ discoveredTopics += Ageism
     -> character_personalization
 
 
 === dialogue_Char_due
     Vecchio twink
-    - (old_twink)
 
+    ~ discoveredTopics += OldTwink
     -> character_personalization
 
 === dialogue_Char_tre
     Questioni poli
-    - (poli_things)
 
+    ~ discoveredTopics += Polyamory    
     -> character_personalization
 
 
 === dialogue_Char_quattro
     Aspettative
-    - (expectations)
 
+    ~ discoveredTopics += Expectations
     -> character_personalization
 
 === dialogue_Char_cinque
     Fit e dismorfia
-    - (dysmorphia)
 
+    ~ discoveredTopics += Dysmorphia
     -> character_personalization
 
 
 === dialogue_Char_sei
     Mascolinità Bear
-    - (masculinity)
+
 
 
     -> character_personalization
@@ -42,15 +42,19 @@
 
 === dialogue_Char_sette
     Twink femme
-    - (femme)
 
 
+    ~ discoveredTopics += Femme
     -> character_personalization
 
 
 === dialogue_Char_otto
     Amicizia hacking
-    - (friendship)
 
-
+    ~ discoveredTopics += Friendship
     -> character_personalization
+
+=== endings
+    Gestione dei finali
+
+    -> END
