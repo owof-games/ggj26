@@ -18,9 +18,9 @@ const _TEXTURES: Array[CompressedTexture2D] = [
 const _CHAR_ANONYMOUS: CompressedTexture2D = preload("uid://7uwvimmk7b2v")
 
 
-func setup(character: String, alias: String, age: int, body: String, looking_for: String) -> void:
+func setup(character: String, alias: String, age: String, body: String, looking_for: String) -> void:
 	%Alias.text = alias
-	%Age.text = str(age)
+	%Age.text = age
 	%Body.text = body
 	%LookingFor.text = looking_for
 	

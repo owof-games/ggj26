@@ -12,7 +12,7 @@ public partial class StoryEngine : Node
     [Export] private InkStory story;
 
     [Signal]
-    public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, int[] ages,
+    public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, string[] ages,
         string[] bodies, string[] inSearchOfs);
 
     [Signal]
@@ -50,8 +50,7 @@ public partial class StoryEngine : Node
                 Random.Shared.Shuffle(choices);
                 var characters = choices.Select(choice => choice.Text.Trim()).ToArray();
                 var aliases = choices.Select(choice => GetTagValue(choice.Tags, AliasTagName)).ToArray();
-                var ages = choices.Select(choice => GetTagValue(choice.Tags, AgeTagName)).Select(int.Parse)
-                    .ToArray();
+                var ages = choices.Select(choice => GetTagValue(choice.Tags, AgeTagName)).ToArray();
                 var bodies = choices.Select(choice => GetTagValue(choice.Tags, BodyTagName)).ToArray();
                 var inSearchOfs = choices.Select(choice => GetTagValue(choice.Tags, InSearchOfTagName))
                     .ToArray();
