@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Global Game Jam 2026"
-run/main_scene="uid://ci8a1evxcfr0v"
+run/main_scene="uid://d4jcjgahluf6"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
