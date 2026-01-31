@@ -9,7 +9,7 @@ INCLUDE dialogues.ink
   ~ PGAge = LIST_RANDOM(PGAge)
   ~ PGBody = LIST_RANDOM(PGBody)
   ~ PGInSearchOf = LIST_RANDOM(PGInSearchOf)
-  ~ Alias = "{~ Looking4Something|22AndMore|FuckAndTalk|Normale|M|Ospito|Maschile|NewInTown|TomTom|Ulisse|420|Gino|ACAB&Coccole|FatCock|THENERD|Gaymer|MaschioBianco}"
+  ~ Alias = "{~Looking4Something|22AndMore|FuckAndTalk|Normale|M|Ospito|Maschile|NewInTown|TomTom|Ulisse|420|Gino|ACAB&Coccole|FatCock|THENERD|Gaymer|MaschioBianco}"
 
     -> character_personalization
 

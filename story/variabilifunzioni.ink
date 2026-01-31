@@ -117,7 +117,7 @@ VAR endGameCounter = 3
 {debug: <i>character_personalization}
   - (loop)
 
-  @profile #alias:{Alias} #age:{pg_age_translator()} #body:{pg_body_translator()} #insearchof:{pg_in_search_of()} #tag:{activeWords()}
+  @profile #alias: {Alias} #age: {pg_age_translator()} #body: {pg_body_translator()} #searching: {pg_in_search_of()} #tag: {activeWords()}
 
   + {discoveredTopics has Ageism} [Ageism]
       {
