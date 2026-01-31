@@ -29,3 +29,5 @@ func _on_story_engine_choose_character(indices: PackedInt32Array, characters: Pa
 
 func _on_profile_clicked(choice_index: int) -> void:
 	print("Choice taken: %d" % [choice_index])
+	story_engine.PickChoice(choice_index)
+	story_engine.Continue()

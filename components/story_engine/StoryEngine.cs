@@ -47,6 +47,11 @@ public partial class StoryEngine : Node
         }
     }
 
+    private void PickChoice(int choiceIndex)
+    {
+        story.ChooseChoiceIndex(choiceIndex);
+    }
+
     string GetTagValue(IReadOnlyList<string> tags, string tagName)
     {
         var prefix = $"{tagName}:";
