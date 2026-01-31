@@ -8,7 +8,7 @@ LIST bodies = Bear, Fit, Twink
 LIST inSearchOf = Monogamia, Poliamore, Sesso, Amicizia
 
 //Personaggi anomini
-LIST anonymousChar = Anon_uno, Anon_due, Anon_tre, Anon_quattro
+LIST anonymousChar = Anon_uno, Anon_due, Anon_tre, Anon_quattro, Anon_cinque, Anon_sei, Anon_sette, Anon_otto, Anon_nove, Anon_dieci, Anon_undici, Anon_dodici
 //Personaggi speciali
 LIST specialChar = Char_uno, Char_due, Char_tre, Char_quattro, Char_cinque, Char_sei, Char_sette, Char_otto
 
@@ -18,7 +18,7 @@ LIST dialogueStates = on
 
 LIST activeTopics = Ageism, OldTwink, Polyamory, Expectations, Dysmorphia, Masculinity, Femme, Friendship
 
-
+VAR actualSpeakers = ()
 
 
 // Dati PG
@@ -82,7 +82,7 @@ VAR Alias = ""
 - (top)
 @choose_character
 //Personaggi speciali
-+ {character_personalization >= 2 && not dialogue_Char_uno}[{Char_uno} #alias:xx #age:37 #body:medium #insearchof:sex]
++ {actualSpeakers has Char_uno}[{Char_uno} #alias:xx #age:37 #body:medium #insearchof:sex]
   //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
       {activeTopics:
           - Expectations:
@@ -120,7 +120,7 @@ VAR Alias = ""
       }
 
     
-+ {character_personalization >= 2 && not dialogue_Char_due}[{Char_due} #alias:xx #age:37 #body:medium #insearchof:sex]
++ {actualSpeakers has Char_due}[{Char_due} #alias:xx #age:37 #body:medium #insearchof:sex]
       {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
@@ -161,7 +161,7 @@ VAR Alias = ""
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_tre}[{Char_tre} #alias:xx #age:37 #body:medium #insearchof:sex]
++ {actualSpeakers has Char_tre}[{Char_tre} #alias:xx #age:37 #body:medium #insearchof:sex]
       {activeTopics:
           - Masculinity:
               non mi interessano quelle cose lì
@@ -197,7 +197,7 @@ VAR Alias = ""
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_quattro}[{Char_quattro} #alias:xx #age:37 #body:medium #insearchof:sex]
++ {actualSpeakers has Char_quattro}[{Char_quattro} #alias:xx #age:37 #body:medium #insearchof:sex]
       {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
@@ -236,7 +236,7 @@ VAR Alias = ""
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_cinque}[{Char_cinque} #alias:xx #age:37 #body:medium #insearchof:sex]    
++ {actualSpeakers has Char_cinque}[{Char_cinque} #alias:xx #age:37 #body:medium #insearchof:sex]    
       {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
@@ -271,7 +271,7 @@ VAR Alias = ""
       }
 
     
-+ {character_personalization >= 2  && not dialogue_Char_sei}[{Char_sei} #alias:xx #age:37 #body:medium #insearchof:sex]
++ {actualSpeakers has Char_sei}[{Char_sei} #alias:xx #age:37 #body:medium #insearchof:sex]
       {activeTopics:
           - Ageism:
               non mi interessano quelle cose lì
@@ -312,7 +312,7 @@ VAR Alias = ""
               -> top    
       }
     
-+ {character_personalization >= 2  && not dialogue_Char_sette}[{Char_sette} #alias:xx #age:37 #body:medium #insearchof:sex]      
++ {actualSpeakers has Char_sette}[{Char_sette} #alias:xx #age:37 #body:medium #insearchof:sex]      
       {activeTopics:
           - OldTwink:
               non mi interessano quelle cose lì
@@ -352,7 +352,7 @@ VAR Alias = ""
       }
 
     
-+ {character_personalization >= 2  && not dialogue_Char_otto}[{Char_otto} #alias:xx #age:37 #body:medium #insearchof:sex]
++ {actualSpeakers has Char_otto}[{Char_otto} #alias:xx #age:37 #body:medium #insearchof:sex]
       {activeTopics:
           - Masculinity:
               non mi interessano quelle cose lì
@@ -387,7 +387,7 @@ VAR Alias = ""
 
 
 //Personaggi anonimi
-+ (anon_uno)[Anon_uno #alias:xx #age:37 #body:medium #insearchof:sex]
++ (anon_uno){actualSpeakers has Anon_uno}[Anon_uno #alias:xx #age:37 #body:medium #insearchof:sex]
   {
     - anon_uno == 1:
       conversazione con anonymous 1
@@ -396,7 +396,7 @@ VAR Alias = ""
        -> top 
   }
     
-+ (anon_due)[Anon_due #alias:xx #age:37 #body:medium #insearchof:sex]
++ (anon_due){actualSpeakers has Anon_due}[Anon_due #alias:xx #age:37 #body:medium #insearchof:sex]
    {
     - anon_due == 1:
       conversazione con anonymous 2
@@ -404,7 +404,7 @@ VAR Alias = ""
       Smamma!
        -> top 
   }
-+ (anon_tre)[Anon_tre #alias:xx #age:37 #body:medium #insearchof:sex]
++ (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:xx #age:37 #body:medium #insearchof:sex]
    {
     - anon_tre == 1:
       conversazione con anonymous 3
@@ -412,6 +412,86 @@ VAR Alias = ""
       Smamma!
        -> top 
   }
++ {actualSpeakers has Anon_quattro}[Anon_quattro #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_cinque}[Anon_cinque #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_sei}[Anon_sei #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_sette}[Anon_sette #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_otto}[Anon_otto #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_nove}[Anon_nove #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_dieci}[Anon_dieci #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_undici}[Anon_undici #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }
+
++ {actualSpeakers has Anon_dodici}[Anon_dodici #alias:xx #age:37 #body:medium #insearchof:sex]
+   {
+    - anon_tre == 1:
+      conversazione con anonymous 3
+    - else:
+      Smamma!
+       -> top 
+  }   
 -
 -> character_personalization
 
@@ -500,7 +580,243 @@ VAR Alias = ""
 
 
 === randomize_characters
-// logica di randomizzazione dei personaggi
+// logica di randomizzazione dei personaggi 
+//La logica è: randomizzo prima tre png seri, se le condizioni sono rispettate, e poi sei png anonimi
+
+{character_personalization:
+  - >= 2:
+    -> main_randomize
+  - else:
+    -> anon_randomize  
+
+}
+
+ 
+= main_randomize
+  - (mainTop)
+  ~ temp mainDice = RANDOM(1,8)
+  
+  {mainDice:
+    - 1:
+      {
+        - not dialogue_Char_uno:
+          ~ actualSpeakers += Char_uno
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 2:
+      {
+        - not dialogue_Char_due:
+          ~ actualSpeakers += Char_due
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 3:
+      {
+        - not dialogue_Char_tre:
+           ~actualSpeakers += Char_tre
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 4:
+      {
+        - not dialogue_Char_quattro:
+          ~ actualSpeakers += Char_quattro
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 5:
+      {
+        - not dialogue_Char_cinque:
+          ~ actualSpeakers += Char_cinque
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 6:
+      {
+        - not dialogue_Char_sei:
+           ~actualSpeakers += Char_sei
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 7:
+      {
+        - not dialogue_Char_sette:
+           ~ actualSpeakers += Char_sette
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+    - 8:
+      {
+        - not dialogue_Char_otto:
+          ~ actualSpeakers += Char_otto
+            {
+              - LIST_COUNT(actualSpeakers) <=3: 
+                    -> mainTop
+              - else:
+                -> anon_randomize 
+
+            }
+        - else:
+          -> mainTop
+      }
+
+
+  }
+  -> anon_randomize 
+
+
+= anon_randomize
+  ~ temp anon_randomizeDice = RANDOM(1,12)
+  {anon_randomizeDice:
+    - 1:
+      ~ actualSpeakers += Anon_uno 
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          }   
+    - 2:
+      ~ actualSpeakers += Anon_due
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 3:
+      ~ actualSpeakers += Anon_tre
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 4:
+      ~ actualSpeakers += Anon_quattro
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 5:
+      ~ actualSpeakers += Anon_cinque
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 6:
+      ~ actualSpeakers += Anon_sei
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 7:
+      ~ actualSpeakers += Anon_sette
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 8:
+      ~ actualSpeakers += Anon_otto
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 9:
+      ~ actualSpeakers += Anon_nove
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 10:
+      ~ actualSpeakers += Anon_dieci
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 11:
+      ~ actualSpeakers += Anon_undici
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+    - 12:
+      ~ actualSpeakers += Anon_dodici
+          {
+            - LIST_COUNT(actualSpeakers) < 12: 
+                -> mainTop
+            - else:
+                -> conversation_selection
+          } 
+
+  }
+
 -> conversation_selection
 
 
