@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bqgqknlxtbjjg"]
 
 [ext_resource type="Script" uid="uid://6peu8n3vwm7a" path="res://components/profiles/profile_button.gd" id="1_fchya"]
+[ext_resource type="Texture2D" uid="uid://cgpv2vll6qxhe" path="res://data/images/char_portraits/Char_due.png" id="1_novr3"]
 
 [node name="ProfileButton" type="Button" unique_id=400822401]
 offset_right = 100.0
 offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+icon = ExtResource("1_novr3")
+expand_icon = true
 script = ExtResource("1_fchya")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=89845351]
