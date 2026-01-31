@@ -48,13 +48,13 @@ INCLUDE dialogues.ink
 
 //Personaggi anonimi
 + [Anon_uno #alias:Anon #age:37 #body:medium #insearchof:sex]
-  conversazione con anonymous 1
+  Anon: conversazione con anonymous 1
     -> top
 + [Anon_due #alias:Anon #age:37 #body:medium #insearchof:sex]
-  conversazione con anonymous 2
+  Anon: conversazione con anonymous 2
     -> top
 + [Anon_tre #alias:Anon #age:37 #body:medium #insearchof:sex]
-  conversazione con anonymous 3
+  Anon: conversazione con anonymous 3
     -> top
 -
 

@@ -28,7 +28,7 @@ func _ready() -> void:
 	story_engine.Continue()
 
 
-func _on_story_engine_choose_character(indices: PackedInt32Array, characters: PackedStringArray, aliases: PackedStringArray, ages: PackedInt32Array, bodies: PackedStringArray, in_search_ofs: PackedStringArray) -> void:
+func _on_story_engine_choose_character(indices: PackedInt32Array, characters: PackedStringArray, aliases: PackedStringArray, ages: PackedStringArray, bodies: PackedStringArray, in_search_ofs: PackedStringArray) -> void:
 	await _wait_for_chat()
 	_clean_current_scene()
 	var profiles: Profiles = _profiles_scene.instantiate()
@@ -39,7 +39,7 @@ func _on_story_engine_choose_character(indices: PackedInt32Array, characters: Pa
 	_state = State.Profiles
 
 
-func _on_profile_clicked(choice_index: int) -> void:
+func _on_profile_clicked(choice_index: int, alias: String, age: String, body: String, in_search_of: String) -> void:
 	print("Choice taken: %d" % [choice_index])
 	story_engine.PickChoice(choice_index)
 	_clean_current_scene()
@@ -50,6 +50,7 @@ func _on_profile_clicked(choice_index: int) -> void:
 	_current_child_scene = chat
 	if not chat.is_node_ready():
 		await chat.ready
+	chat.setup(alias, age, body, in_search_of)
 	_state = State.Chat
 	story_engine.Continue.call_deferred()
 
@@ -81,7 +82,7 @@ func _on_story_engine_generic_text_line(line: String, choices: PackedStringArray
 
 
 
-func _on_story_engine_character_personalization(alias: String, age: String, body: String, in_search_of: String, topics: Array[String]) -> void:
+func _on_story_engine_character_personalization(alias: String, age: String, body: String, in_search_of: String, description: String, topics: Array[String]) -> void:
 	await _wait_for_chat()
 	var character_personalization: MyProfile
 	if _state == State.MyProfile:
@@ -93,7 +94,7 @@ func _on_story_engine_character_personalization(alias: String, age: String, body
 		character_personalization.chat_pressed.connect(_chat_pressed)
 		%MobileScreen.add_child(character_personalization)
 	var active_topics := story_engine.GetActiveTopics()
-	character_personalization.setup(topics, active_topics, alias, age, body, in_search_of)
+	character_personalization.setup(topics, active_topics, alias, age, body, in_search_of, description)
 	_current_child_scene = character_personalization
 	_state = State.MyProfile
 

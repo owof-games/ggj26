@@ -12,7 +12,7 @@ public partial class StoryEngine : Node
     [Export] private InkStory story;
 
     [Signal]
-    public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, int[] ages,
+    public delegate void ChooseCharacterEventHandler(int[] indices, string[] characters, string[] aliases, string[] ages,
         string[] bodies, string[] inSearchOfs);
 
     [Signal]
@@ -20,13 +20,14 @@ public partial class StoryEngine : Node
 
     [Signal]
     public delegate void CharacterPersonalizationEventHandler(string alias, string age, string body, string inSearchOf,
-        string[] topics);
+        string description, string[] topics);
 
     private const string ChooseCharacterCommand = "@choose_character";
     private const string AliasTagName = "alias";
     private const string AgeTagName = "age";
     private const string BodyTagName = "body";
     private const string InSearchOfTagName = "searching";
+    private const string DescriptionTagName = "tag";
     private const string CharacterPersonalizationCommand = "@profile";
 
     public void OverrideStory(InkStory overrideStory)
@@ -50,8 +51,7 @@ public partial class StoryEngine : Node
                 Random.Shared.Shuffle(choices);
                 var characters = choices.Select(choice => choice.Text.Trim()).ToArray();
                 var aliases = choices.Select(choice => GetTagValue(choice.Tags, AliasTagName)).ToArray();
-                var ages = choices.Select(choice => GetTagValue(choice.Tags, AgeTagName)).Select(int.Parse)
-                    .ToArray();
+                var ages = choices.Select(choice => GetTagValue(choice.Tags, AgeTagName)).ToArray();
                 var bodies = choices.Select(choice => GetTagValue(choice.Tags, BodyTagName)).ToArray();
                 var inSearchOfs = choices.Select(choice => GetTagValue(choice.Tags, InSearchOfTagName))
                     .ToArray();
@@ -65,9 +65,10 @@ public partial class StoryEngine : Node
                 var age = GetTagValue(story.CurrentTags, AgeTagName);
                 var body = GetTagValue(story.CurrentTags, BodyTagName);
                 var inSearchOf = GetTagValue(story.CurrentTags, InSearchOfTagName);
+                var description = GetTagValue(story.CurrentTags, DescriptionTagName);
                 var topics = story.CurrentChoices.Select(choice => choice.Text.Trim()).Where(text => text != ChatChoice)
                     .ToArray();
-                EmitSignalCharacterPersonalization(alias, age, body, inSearchOf, topics);
+                EmitSignalCharacterPersonalization(alias, age, body, inSearchOf, description, topics);
                 break;
             }
             default:

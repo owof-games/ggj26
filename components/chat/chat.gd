@@ -14,6 +14,11 @@ var _choice_box_scene: PackedScene = preload("uid://cmwi5jl87bfp1")
 @onready var _continue_button: Button = %ContinueButton
 @onready var _choices_container: VBoxContainer = %ChoicesContainer
 @onready var _quit_button: Button = %QuitButton
+@onready var _alias: Label = %Alias
+@onready var _age: Label = %Age
+@onready var _body: Label = %Body
+@onready var _in_search_of: Label = %InSearchOf
+
 
 
 
@@ -21,6 +26,13 @@ var _choice_box_scene: PackedScene = preload("uid://cmwi5jl87bfp1")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
+
+func setup(alias: String, age: String, body: String, in_search_of: String) -> void:
+	_alias.text = alias
+	_age.text = age
+	_body.text = body
+	_in_search_of.text = in_search_of
 
 
 func step(is_from_me: bool, text: String, choices: Array[String]) -> void:

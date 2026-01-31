@@ -15,6 +15,38 @@ size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_rmmqr")
 
+[node name="Alias" type="Label" parent="." unique_id=666273286]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "xxx"
+
+[node name="Age" type="Label" parent="." unique_id=65509235]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 34.0
+offset_right = 46.0
+offset_bottom = 57.0
+text = "xxx"
+
+[node name="Body" type="Label" parent="." unique_id=1950228250]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 69.0
+offset_right = 40.0
+offset_bottom = 92.0
+text = "xxx"
+
+[node name="InSearchOf" type="Label" parent="." unique_id=22861548]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 112.0
+offset_right = 40.0
+offset_bottom = 135.0
+text = "xxx"
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=132487575]
 layout_mode = 1
 anchors_preset = -1
