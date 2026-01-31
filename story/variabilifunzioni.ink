@@ -41,6 +41,49 @@ VAR maxSpecialChar = 3
 //Numero di topics sbloccati per chiudere il gioco
 VAR endGameCounter = 3
 
+//Variabli per non ripetere i topics degli anonimi
+    //anon_uno
+        VAR anon_unoFemme = true
+        VAR anon_unoAgeism = true
+        VAR anon_unoOldTwink= true
+        VAR anon_unoPoliamory = true
+        VAR anon_unoVecchio = true
+        VAR anon_unoTwink = true
+        VAR anon_unoFit= true
+        VAR anon_unoPoliamore = true
+        VAR anon_unoMonogamia = true
+        VAR anon_unoSesso = true
+    //anon_due
+        VAR anon_dueExpectations = true
+        VAR anon_dueFemme = true
+        VAR anon_dueAgeism= true
+        VAR anon_duePolyamory = true
+        VAR anon_dueVecchio = true
+        VAR anon_dueBear = true
+        VAR anon_dueAmicizia= true
+        VAR anon_dueMonogamia = true
+        VAR anon_dueFit = true
+        VAR anon_dueGiovane = true
+    //anon_tre
+        VAR anon_treExpectations = true
+        VAR anon_treFemme = true
+        VAR anon_treAgeism= true
+        VAR anon_trePolyamory = true
+        VAR anon_treVecchio = true
+        VAR anon_treBear = true
+        VAR anon_treAmicizia= true
+        VAR anon_treMonogamia = true
+        VAR anon_treFit = true
+        VAR anon_treGiovane = true
+        VAR anon_treFriendship = true
+        VAR anon_treMasculinity = true
+        VAR anon_treTwink = true
+        VAR anon_treMedio = true
+        VAR anon_trePoliamore = true
+        VAR anon_treSesso = true
+
+
+
 //FUNZIONI///
 //GESTIONE PG//
 === function pg_age_translator()

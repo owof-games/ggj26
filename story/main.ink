@@ -334,157 +334,214 @@ INCLUDE dialogues.ink
     + (anon_uno){actualSpeakers has Anon_uno}[Anon_uno #alias:Peppo79 #age:40 #body:tonico #insearchof:amore della vita]
         {activeTopics:
             - Femme:
-                Interessante quella roba lì sul tuo profilo, di abbracciare la tua femminilità.
-                Vuoi vedere il mio cazzone?
-                  -> character_personalization
-            - Ageism:
-                Come se ci fosse qualcosa di orgoglioso nell'essere vecchio.
-                Ti tira ancora, almeno?
-                  -> character_personalization
-            - OldTwink:
-                Uno però alla certa dovrebbe accettare la sua età.
-                Mi fai tristezza.
-                  -> character_personalization
-            - Polyamory:
-                "Orgoglioso di essere poliamoroso" è come "Sono felice di essere cornuto."
-                Sfigato.
+              {anon_unoFemme:
+                Anon: Interessante quella roba lì sul tuo profilo, di abbracciare la tua femminilità.
+                Anon: Vuoi vedere il mio cazzone?
+                  ~ anon_unoFemme = false
                     -> character_personalization
+              }
+                 
+            - Ageism:
+            {anon_unoAgeism:
+                Anon: Come se ci fosse qualcosa di orgoglioso nell'essere vecchio.
+                Anon: Ti tira ancora, almeno?
+                  ~ anon_unoAgeism = false
+                  -> character_personalization
+            }
+            - OldTwink:
+            {anon_unoOldTwink:
+                Anon: Uno però alla certa dovrebbe accettare la sua età.
+                Anon: Mi fai tristezza.
+                  ~ anon_unoOldTwink = false
+                  -> character_personalization
+            }
+            - Polyamory:
+              {anon_unoPoliamory:
+                Anon: "Orgoglioso di essere poliamoroso" è come "Sono felice di essere cornuto."
+                Anon: Sfigato.
+                  ~ anon_unoPoliamory = false
+                    -> character_personalization
+              }      
         }
       
         {PGAge:
               - Vecchio:
-                  Belloccio.
-                  Per la tua età.
-                  Io ho mentito un poco sulla mia.
-                  Sono cose che si fanno, no?
+              {anon_unoVecchio:
+                  Anon: Belloccio.
+                  Anon: Per la tua età.
+                  Anon: Io ho mentito un poco sulla mia.
+                  Anon: Sono cose che si fanno, no?
+                    ~ anon_unoVecchio = false
                     -> character_personalization 
+              }     
         }
         {PGBody:
               - Twink:
-                  Mi piacciono i tipetti asciutti.
-                  E un po' così, effemminati.
-                  Ora sono di corsa, ma mi faccio risentire.
-                      -> character_personalization  
+              {anon_unoTwink:
+                  Anon: Mi piacciono i tipetti asciutti.
+                  Anon: E un po' così, effemminati.
+                  Anon: Ora sono di corsa, ma mi faccio risentire.
+                    ~ anon_unoTwink = false
+                      -> character_personalization
+              }
               - Fit:
-                  No.
-                  Non potrei mai stare con uno più muscoloso di me.
-                  Mi sentirei sempre una merda.
+              {anon_unoFit:
+                  Anon: No.
+                  Anon: Non potrei mai stare con uno più muscoloso di me.
+                  Anon: Mi sentirei sempre una merda.
+                    ~ anon_unoFit = false
                       -> character_personalization 
+              }        
         }
         {PGInSearchOf:
               - Poliamore:
-                  Che palle con questo poliamore.
-                  Imparare a impegnarsi, no?
-                    -> character_personalization 
-              - Monogamia:
-                  Anche io cerco una relazione seria.
-                  Ma becco solo casi umani.
-                  Ehi, perché non rispondi?
-                  Ehi!
-                  Cafone!
-                  Ti sto scrivendo!
-                      -> character_personalization
-              - Sesso:
-                  Tu mi sai proprio di cazzo grosso.
-                  Appena torno da lavoro ti mando una foto.
-                  Ho due chiappe che sono da Nobel.
+              {anon_unoPoliamore:
+                  Anon: Che palle con questo poliamore.
+                  Anon: Imparare a impegnarsi, no?
+                    ~ anon_unoPoliamore = false
                     -> character_personalization
-              
-              - else:
-                {
-                  - anon_uno == 1:
-                    Ciao.
-                    Anzi, no.
-                    Non sei il mio tipo.
+              }
+              - Monogamia:
+              {anon_unoMonogamia:
+                  Anon: Anche io cerco una relazione seria.
+                  Anon: Ma becco solo casi umani.
+                  Anon: Ehi, perché non rispondi?
+                  Anon: Ehi!
+                  Anon: Cafone!
+                  Anon: Ti sto scrivendo!
+                    ~ anon_unoMonogamia = false
                       -> character_personalization
-                  - else:
-                    Abbiamo già parlato, smamma.
-                      -> randomize_characters 
-                }
-                        
+              }
+              - Sesso:
+              {anon_unoSesso:
+                  Anon: Tu mi sai proprio di cazzo grosso.
+                  Anon: Appena torno da lavoro ti mando una foto.
+                  Anon: Ho due chiappe che sono da Nobel.
+                    ~ anon_unoSesso = false
+                    -> character_personalization
+              }             
         }
+
+      {anon_uno:
+        - = 1:
+          Anon: Ciao.
+          Anon: Anzi, no.
+          Anon: Non sei il mio tipo.
+            -> character_personalization
+        - else:
+          Anon: Abbiamo già parlato, smamma.
+            -> randomize_characters 
+      }
                 
         
         
     + (anon_due){actualSpeakers has Anon_due}[Anon_due #alias:24IsNotTheAge #age:19 #body:lontra #insearchof:sesso ora]
       {activeTopics:
-            - Expectations:
-                Mi piace questa cosa delle aspettative che hai sul profilo, sai?
-                Anche per scopare è sempre un casino.
-                Funziona meglio quando ti trovi e scopri sul momento cosa vuoi.
-                Grande! 
+          - Expectations:
+            {anon_dueExpectations:
+                Anon: Mi piace questa cosa delle aspettative che hai sul profilo, sai?
+                Anon: Anche per scopare è sempre un casino.
+                Anon: Funziona meglio quando ti trovi e scopri sul momento cosa vuoi.
+                Anon: Grande!
+                    ~ anon_dueExpectations = false
                   -> character_personalization
-            - Femme:
-                Questa roba dell'essere femme mi disagia un po'.
-                Cioè, se voglio andare con una donna, vado con una donna, no?
+            }    
+          - Femme:
+            {anon_dueFemme:
+                Anon: Questa roba dell'essere femme mi disagia un po'.
+                Anon: Cioè, se voglio andare con una donna, vado con una donna, no?
+                    ~ anon_dueFemme = false
                   -> character_personalization
-            - Ageism:
-                Ciao nonno.
-                Sai che non sono mai stato con uno della tua età?
-                Devi avere un sacco di cose da insegnarmi.
-                E magari qualche regalo da farmi.
-                Ci sentiamo dopo lezione!
+            }      
+          - Ageism:
+            {anon_dueAgeism:
+                Anon: Ciao nonno.
+                Anon: Sai che non sono mai stato con uno della tua età?
+                Anon: Devi avere un sacco di cose da insegnarmi.
+                Anon: E magari qualche regalo da farmi.
+                Anon: Ci sentiamo dopo lezione!
+                    ~ anon_dueAgeism = false
                   -> character_personalization
-            - Polyamory:
-                Figa la roba poli comunque.
-                Non capisco perché posso avere tanti amici ma una sola persona da amare.
-                Non tu, non mi piaci.
-                Ma mi piace l'idea!
-                  -> character_personalization
+              }    
+          - Polyamory:
+          {anon_duePolyamory:
+              Anon: Figa la roba poli comunque.
+              Anon: Non capisco perché posso avere tanti amici ma una sola persona da amare.
+              Anon: Non tu, non mi piaci.
+              Anon: Ma mi piace l'idea!
+                  ~ anon_duePolyamory = false
+                -> character_personalization
+          }      
         }
         
         {PGAge:
             - Vecchio:
-              Uh, un po' di carne con esperienza, interessante.
-              Chissà se hai più grosso il cazzo o il portafoglio?
-                -> character_personalization 
-            - Giovane:
-              Non ho molto da imparare da un tipo che ha quasi la mia età
-              Anche se sei carino.
+            {anon_dueVecchio:
+              Anon: Uh, un po' di carne con esperienza, interessante.
+              Anon: Chissà se hai più grosso il cazzo o il portafoglio?
+                  ~ anon_dueVecchio = false
                 -> character_personalization
+            }   
+            - Giovane:
+            {anon_dueGiovane:
+              Anon: Non ho molto da imparare da un tipo che ha quasi la mia età
+              Anon: Anche se sei carino.
+                  ~ anon_dueGiovane = false
+                -> character_personalization
+            }    
         }
         {PGBody:
-              - Bear:
-                Mmm, no, non ti scoperei.
-                Troppa panza.
-                Però hai un bel faccino.
-                Se fai della palestra poi ti do un GROSSO premio!
+              - Bear_
+              {anon_dueBear:
+                Anon: Mmm, no, non ti scoperei.
+                Anon: Troppa panza.
+                Anon: Però hai un bel faccino.
+                Anon: Se fai della palestra poi ti do un GROSSO premio!
+                    ~ anon_dueBear = false
                   -> character_personalization
+              }    
               - Fit:
-                Mi piacciono i muscoli.
-                Due bei deltoidi tesi mentre mi succhi il cazzo.
+              {anon_dueFit:
+                Anon: Mi piacciono i muscoli.
+                Anon: Due bei deltoidi tesi mentre mi succhi il cazzo.
+                    ~ anon_dueFit = false
                   -> character_personalization
+              }    
         }
         {PGInSearchOf:
               - Amicizia:
-                Cercare amicizia qui, che roba da sfigati.
-                Ti faccio una sega, giusto per pietà, se vuoi.
-                Dopo lezione.
+              {anon_dueAmicizia:
+                Anon: Cercare amicizia qui, che roba da sfigati.
+                Anon: Ti faccio una sega, giusto per pietà, se vuoi.
+                Anon: Dopo lezione.
+                    ~ anon_dueAmicizia = false
                   -> character_personalization 
+              }   
               - Monogamia:
-                Che cosa da vecchi questa roba della monogamia.
+              {anon_dueMonogamia:
+                Anon: Che cosa da vecchi questa roba della monogamia.
+                    ~ anon_dueMonogamia = false
                   -> character_personalization
-              - else:
-                {
-                  - anon_due == 1:
-                      Sai che una botta te la darei? 
-                      Non è che sei il mio tipo, ma c'è qualcosa che mi fa dire "Faccia da bukkake".
-                      Ed è un gran complimento detto da me!
-                        -> character_personalization
-                  - else:
-                      Ed eccolo che ci riprova.
-                      Guarda che ti blocco!
-                        -> randomize_characters  
-                }
-                 
+              }    
         }
 
+        {anon_due:
+          - = 1:
+              Anon: Sai che una botta te la darei? 
+              Anon: Non è che sei il mio tipo, ma c'è qualcosa che mi fa dire "Faccia da bukkake".
+              Anon: Ed è un gran complimento detto da me!
+                -> character_personalization
+          - else:
+              Anon: Ed eccolo che ci riprova.
+              Anon: Guarda che ti blocco!
+                -> randomize_characters  
+        }
       
       
     + (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:Riproviamoci #age:36 #body:skinny legend #insearchof:amore della vita]
 
         {activeTopics:
-            - Expectations:
+            - Expectations && anon_treExpectations:
                 Ehi, ho visto i tuoi tag, e mi ha colpito il fatto che parli di aspettative.
                 Qui mi sento un pesce fuor d'acqua.
                 Dopo anni di matrimonio e tutto il resto.
@@ -492,86 +549,96 @@ INCLUDE dialogues.ink
                 Tranquilla.
                 Senza pretese.
                 Ma ora devo andare.
+                  ~ anon_treExpectations = false
                   -> character_personalization
-            - Femme:
+            - Femme && anon_treFemme:
                 Il tag "femme".
                 Cioè.
                 Non è che puoi esserlo senza pure dirlo?
                 O è un modo per prendere soldi dai più grandi?
                 Perché io non ne ho.
+                  ~ anon_treFemme = false
                   -> character_personalization
-            - Friendship:
+            - Friendship && anon_treFriendship:
                 L'amicizia è una cosa carina, per carità.
                 Mi fa piacere che l'hai messa nel tag.
                 Ma, insomma.
                 Non qui.
                 Manco l'amore qui si trova!
+                  ~ anon_treFriendship = false
                   -> character_personalization
-            - Masculinity:
+            - Masculinity && anon_treMasculinity:
                 Ma vedi te se uno deve criticare la mascolinità anche qui.
                 Come se non ti facessi le seghe sui maschioni.
                 Poi chiedono perché sono tutti incazzati con le cose woke.
+                  ~ anon_treMasculinity = false
                   -> character_personalization
         }
         {PGAge:
-              - Vecchio:
+              - Vecchio && anon_treVecchio:
                   Vederti qui mi uccide.
                   Perché se anche uno vecchio come te è a caccia, allora è vero che l'amore non esiste.
                   Che schifo essere gay.
+                    ~ anon_treVecchio = false
                     -> character_personalization
-              - Medio:
+              - Medio && anon_treMedio:
                   Uno della mia età quasi, qui.
                   Chissà se anche tu hai una storia triste.
                   Ora sono a lavoro, ma poi ti racconto la mia.
+                    ~ anon_treMedio = false
                     -> character_personalization
         }
         {PGBody:
-              - Bear:
+              - Bear && anon_treBear:
                   I corpi grossi mi piacciono.
                   Mi fanno sentire al sicuro.
                   Chissà com'è stare su quella pancia.
                   E invece devo stare qui, a scrivere mail al mio capo idiota.
                   A dopo.
+                    ~ anon_treBear = false
                     -> character_personalization 
-              - Twink:
+              - Twink && anon_treTwink:
                   Goditelo questo corpo sottile.
                   Perché non è eterno.
+                    ~ anon_treTwink = false
                       -> character_personalization 
         }
         {PGInSearchOf:
-              - Poliamore:
+              - Poliamore && anon_trePoliamore:
                   Avete rovinato tutto, voi poligami.
                   Con le relazioni aperte e le cose anarchiche.
                   Te lo dico io: non hai trovato quello giusto.
                   Punto.
                   Magari una di queste sere si beve assieme.
+                    ~ anon_trePoliamore = false
                     -> character_personalization
-              - Monogamia:
+              - Monogamia && anon_treMonogamia:
                   Un miracolo, un monogamo!
                   Forse c'è speranza.
                   Anche se non sei molto carino.
+                    ~ anon_treMonogamia = false
                     -> character_personalization 
-              - Sesso:
+              - Sesso && anon_treSesso:
                   Sesso, sesso, sesso.
                   Gli uomini gay pensano solo al sesso.
                   E poi dormono soli, disperati.
+                    ~ anon_treSesso = false
                       -> character_personalization
-              - else:
-              {
-                - anon_tre == 1:
-                    Non sembri male.
-                    Ma l'ho già vista questa storia.
-                    Uno è carino, belloccio.
-                    Mi innamoro.
-                    Lo sposo.
-                    E poi mi fotte.
-                    Per cui addio.
-                    -> character_personalization 
-                - else:
-                    Non ho altro da dirti.
-                    -> randomize_characters  
-              }
         }
+      {anon_tre:
+        - = 1:
+            Anon: Non sembri male.
+            Anon: Ma l'ho già vista questa storia.
+            Anon: Uno è carino, belloccio.
+            Anon: Mi innamoro.
+            Anon: Lo sposo.
+            Anon: E poi mi fotte.
+            Anon: Per cui addio.
+            -> character_personalization 
+        - else:
+            Anon: Non ho altro da dirti.
+            -> randomize_characters  
+      }    
           
     + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:xx #age:37 #body:medium #insearchof:sex]
 
