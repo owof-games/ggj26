@@ -1,5 +1,5 @@
 //Debug
-VAR debug = false
+VAR debug = true
 
 
 //Liste per character design
@@ -31,7 +31,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 
 -> conversation_selection
 
-
+#alias:xx #age:{PGAge} #body:medium #insearchoff:sex
 
 === conversation_selection
 {debug: Ho età {PGAge}, il mio corpo è {PGBody} e cerco {PGInSearchOf}}
@@ -59,7 +59,7 @@ VAR PGInSearchOf = (Monogamia, Poliamore, Sesso, Amicizia)
 
 
 //Personaggi anonimi
-+ (anon_uno)[Anon_uno]
++ (anon_uno)[Anon_uno]#alias:xx #age:37 #body:medium #insearchof:sex
   {
     - anon_uno == 1:
       conversazione con anonymous 1
