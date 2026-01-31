@@ -26,7 +26,7 @@ public partial class StoryEngine : Node
     private const string AliasTagName = "alias";
     private const string AgeTagName = "age";
     private const string BodyTagName = "body";
-    private const string InSearchOfTagName = "insearchof";
+    private const string InSearchOfTagName = "searching";
     private const string CharacterPersonalizationCommand = "@profile";
 
     public void OverrideStory(InkStory overrideStory)
@@ -40,7 +40,7 @@ public partial class StoryEngine : Node
     {
         var result = story.Continue().Trim();
 
-        GD.Print(result);
+        GD.Print($"Continue returned: {result}");
 
         switch (result)
         {
