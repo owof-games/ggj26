@@ -129,20 +129,24 @@ INCLUDE finali.ink
                   -> randomize_characters   
         }
       
-  + {actualSpeakers has Char_tre &&character_personalization >= startNumber}[{Char_tre} #alias:xx #age:42 #body:muscoloso #insearchof:relazione poli]
+  + {actualSpeakers has Char_tre &&character_personalization >= startNumber}[{Char_tre} #alias:TwoIsMeglCheOne #age:42 #body:muscoloso #insearchof:relazione poli]
         {activeTopics:
             - Masculinity:
                 {char_treMasculinity:
                     // commenti legati a un mio tag che bloccano la conversazione
-                    Alias:
-                    Alias:
+                    TwoIsMeglCheOne: quando dico che voglio avere più di un uomo
+                    TwoIsMeglCheOne: intendo un UOMO
+                    TwoIsMeglCheOne: di quelli che sanno ancora come prenderti e metterti sotto
+                    TwoIsMeglCheOne: e non si fanno seghe mentali su misoginia e queste robe
                       ~ char_treMasculinity = false
                       -> randomize_characters
                   } 
             - OldTwink:
                 {char_treOldTwink:
-                  Alias:
-                  Alias:
+                  TwoIsMeglCheOne: io non so come fai a stare su quest'app onestamente
+                  TwoIsMeglCheOne: già a me dicono in continuazione che sono vecchio
+                  TwoIsMeglCheOne: tu verrai sbranato
+                  TwoIsMeglCheOne: guarda, ci si sente in un altro momento che adesso non sono nel mood
                     ~ char_treOldTwink = false
                     -> randomize_characters
                 }
@@ -162,7 +166,9 @@ INCLUDE finali.ink
                 -> dialogue_Char_tre
             - else:
                 // qua commento perché non mi piaci
-                Alias:
+                TwoIsMeglCheOne: mi sa che tra di noi non può funzionare
+                TwoIsMeglCheOne: già ti vedo a farmi una scenata dopo due giorni
+                TwoIsMeglCheOne: solo perché sto baciando il mio altro partner
                 -> randomize_characters   
         }
       

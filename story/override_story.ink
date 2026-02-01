@@ -1,9 +1,9 @@
 INCLUDE variabilifunzioni.ink
 INCLUDE dialogues.ink
 
-~ discoveredTopics += Ageism
-~ discoveredTopics += OldTwink
-~ activeTopics += Ageism
+// ~ discoveredTopics += Ageism
+// ~ discoveredTopics += OldTwink
+// ~ activeTopics += Ageism
 
 
 -> randomize_pg
@@ -14,6 +14,10 @@ INCLUDE dialogues.ink
   ~ PGAge = LIST_RANDOM(PGAge)
   ~ PGBody = LIST_RANDOM(PGBody)
   ~ PGInSearchOf = LIST_RANDOM(PGInSearchOf)
+
+  ~ PGAge = Vecchio
+  ~ PGBody = Fit
+  ~ PGInSearchOf = Poliamore
   ~ Alias = "{~ Looking4Something|22AndMore|FuckAndTalk|Normale|M|Ospito|Maschile|NewInTown|TomTom|Ulisse|420|Gino|ACAB&Coccole|FatCock|THENERD|Gaymer|MaschioBianco}"
 
     -> character_personalization
@@ -33,7 +37,44 @@ INCLUDE dialogues.ink
 + [{Char_due} #alias:Due #age:37 #body:medium #insearchof:sex]
   -> dialogue_Char_due
 + [{Char_tre} #alias:Tre #age:37 #body:medium #insearchof:sex]
-  -> dialogue_Char_tre
+  {activeTopics:
+            - Masculinity:
+                {char_treMasculinity:
+                    // commenti legati a un mio tag che bloccano la conversazione
+                    TwoIsMeglCheOne: quando dico che voglio avere più di un uomo
+                    TwoIsMeglCheOne: intendo un UOMOs
+                    TwoIsMeglCheOne: di quelli che sanno ancora come prenderti e metterti sotto
+                    TwoIsMeglCheOne: e non si fanno seghe mentali su misoginia e queste robe
+                      ~ char_treMasculinity = false
+                      -> randomize_characters
+                  } 
+            - OldTwink:
+                {char_treOldTwink:
+                  TwoIsMeglCheOne: 
+                    ~ char_treOldTwink = false
+                    -> randomize_characters
+                }
+        }
+        {PGAge:
+              - Giovane:
+                -> dialogue_Char_tre
+              - Medio:
+                -> dialogue_Char_tre
+        }
+        {PGBody:
+              - Fit:
+                -> dialogue_Char_tre
+        }
+        {PGInSearchOf:
+              - Poliamore:
+                -> dialogue_Char_tre
+            - else:
+                // qua commento perché non mi piaci
+                TwoIsMeglCheOne: mi sa che tra di noi non può funzionare
+                TwoIsMeglCheOne: già ti vedo a farmi una scenata dopo due giorni
+                TwoIsMeglCheOne: solo perché mi sto baciando con un altro
+                -> randomize_characters   
+        }
 + [{Char_quattro} #alias:Quattro #age:37 #body:medium #insearchof:sex]
   ->dialogue_Char_quattro
 + [{Char_cinque} #alias:Cinque #age:37 #body:medium #insearchof:sex]

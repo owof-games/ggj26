@@ -76,17 +76,31 @@
         {
             // commenti sulle caratteristiche che mi possono piacere
             - PGAge has Giovane:
-                Alias:
+                TwoIsMeglCheOne: Mi piacciono le persone giovani
+                TwoIsMeglCheOne: Siete ancora disponibili ad ascoltare, crescere, imparare cose su voi stessi
             - PGAge has Medio:
-                Alias:   
+                TwoIsMeglCheOne: Quelli come te hanno l'età perfetta per avere esperienza senza essere bacchettoni
             - PGBody has Fit:
-                Alias:   
+                TwoIsMeglCheOne: Con quei pettorali avrai sempre addosso gli occhi di tutti
+                TwoIsMeglCheOne: Pure io, ma non perché sono bono come te
             - PGInSearchOf has Poliamore:
-                Alias:   
+                TwoIsMeglCheOne: So che non è facile dirlo apertamente
+                TwoIsMeglCheOne: Quando ti è capitato la prima volta di essere innamorato di più di una persona
+                TwoIsMeglCheOne: Hai sentito lo sguardo degli altri addosso, vero?
  
         }
         // dialogo che mi permette di accettare la sua tematica (poliamore)
-        Alias:   
+        TwoIsMeglCheOne: {PGBody hasnt Fit: Io c|C}'ho messo un bel po' di tempo prima di accettarlo
+        TwoIsMeglCheOne: Quando mi sono innamorato di un altro la prima volta, mi sono sentito così fottutamente in colpa
+        TwoIsMeglCheOne: Poi ho provato ad avere una coppia aperta, perché, dai, alla fine quella è accettabile, no?
+        TwoIsMeglCheOne: Però col cazzo che è accettabile per me
+        TwoIsMeglCheOne: Amare qualcuno non vuol dire dedicargli una scopata nei ritagli di tempo
+        TwoIsMeglCheOne: Alla fine, se ci pensi, è semplice
+        TwoIsMeglCheOne: Cosa ci può essere di sbagliato se regalo amore alle persone vicine a me?
+        TwoIsMeglCheOne: Se ci supportiamo e siamo consenzienti, cos'hanno mai da dire tutti a riguardo?
+        TwoIsMeglCheOne: Altro che sensi di colpa sul poliamore
+        TwoIsMeglCheOne: Se c'è qualcosa di brutto da provare, al massimo è che sono stufo dei giudizi di chi non sa niente di noi
+        TwoIsMeglCheOne: Anzi: POLISTUFO!
 
     ~ discoveredTopics += Polyamory    
     -> character_personalization
