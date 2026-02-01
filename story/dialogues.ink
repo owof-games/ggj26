@@ -191,8 +191,40 @@
 
 
 === dialogue_Char_sette
-    Twink femme
-
+    {
+        - PGAge has Medio:
+            ADHD&SkinCare: Lo dico ora: non mi spiace ricevere qualche regalo.
+            ADHD&SkinCare: Ma ti giuro che non te ne penti.
+        - PGAge has Vecchio:
+            ADHD&SkinCare: Lo dico ora: non mi spiace ricevere qualche regalo.
+            ADHD&SkinCare: Ma ti giuro che non te ne penti.
+        - PGBody has Fit:
+            ADHD&SkinCare: Quei muscoletti meriterebbero un bel massaggio.
+        - PGBody has Bear:
+            ADHD&SkinCare: Chissà come rimbalza bene il tuo culone mentre ti scopo.
+        - PGInSearchOf has Monogamia:
+            ADHD&SkinCare: Il fatto che cerchi anche tu un compagno è una cosa carina.
+        }
+    
+    ADHD&SkinCare: Prima di beccarci però ti devo dire una cosa importante, faccina seria.
+    ADHD&SkinCare: So di essere superfemme.
+    ADHD&SkinCare: E non me ne vergogno, emoji delle unghie con lo smalto.
+    ADHD&SkinCare: Però mi fa incazzare come cosa.
+    ADHD&SkinCare: E sai perché mi fa incazzare, faccina rossa con le bestemmie?
+    ADHD&SkinCare: Perché i froci mi fanno incazzare.
+    ADHD&SkinCare: Perché dicono "ah, Manlio (è il mio nome, ridicolo, vero?) è straeffemminato e quindi sicuro è passivo".
+    ADHD&SkinCare: E non sai quanti appuntamenti sono finiti con me che urlo incazzato a bestia perché insistono per scoparmi.
+    ADHD&SkinCare: Per cui {Alias}, sia chiaro sin da subito. 
+    ADHD&SkinCare: Sì, sono femme.
+    ADHD&SkinCare: Sì, mi sento una dea.
+    ADHD&SkinCare: Una dea con un cazzo modesto ma che ti porta in paradiso.
+    ADHD&SkinCare: Andata e ritorno.
+    ADHD&SkinCare: Come una vera divinità.
+    ADHD&SkinCare: E i froci devono smetterla di decidere cosa fa uno a letto solo dall'aspetto fisico.
+    ADHD&SkinCare: Hanno rotto le ovaie.
+    ADHD&SkinCare: Per cui se ti piaccio fatti due perette e tieniti il giorno dopo libero, perché ti rivolto come un guantino.
+    ADHD&SkinCare: E poi, magari, chiacchieriamo anche un po' e ci innamoriamo.
+    ADHD&SkinCare: Ma solo se mi chiamerai "Mia dea".
 
     ~ discoveredTopics += Femme
     -> character_personalization

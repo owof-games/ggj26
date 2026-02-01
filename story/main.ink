@@ -311,42 +311,45 @@ INCLUDE dialogues.ink
                 -> randomize_characters
         }
       
-  + {actualSpeakers has Char_sette &&character_personalization >= startNumber}[{Char_sette} #alias:xx #age:37 #body:medium #insearchof:sex]      
+  + {actualSpeakers has Char_sette &&character_personalization >= startNumber}[{Char_sette} #alias:ADHD&SkinCare #age:18 #body:quello che vuoi #insearchof:kink e marito]      
         {activeTopics:
             - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+              {char_setteOldTwink:
+                    ADHD&SkinCare: Dopo averti visto ho scritto a una mia amica.
+                    ADHD&SkinCare: E le ho detto.
+                    ADHD&SkinCare: "Amo, se mi vedi su un profilo frocial con scritte robe tipo "Vecchia twink fa buon twerk", abbattimi."
+                    ADHD&SkinCare: Se tu avessi vere amiche, non saresti qui, faccina arrabbiata.
+                      ~ char_setteOldTwink = false
+                      -> randomize_characters
+                }
             - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters    
-
+                {char_setteExpectations:
+                    ADHD&SkinCare: "Conosciamoci con calma, senza preconcetti."
+                    ADHD&SkinCare: Che ne dici se invece prima ti sfondo il culo e poi ci conosciamo?
+                    ADHD&SkinCare: Così non ho preconcetti perché so cosa aspettarmi, faccina con l'occhiolino.
+                      ~ char_setteExpectations = false
+                      -> randomize_characters
+                }
         }
         {PGAge:
+              - Vecchio:
+                -> dialogue_Char_sette
               - Medio:
                 -> dialogue_Char_sette
-              - Giovane:
-                -> dialogue_Char_sette
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_sette
-              - Twink:
+              - Bear:
                 -> dialogue_Char_sette 
-              - else:
-                non sei il mio tipo
-                -> randomize_characters
         }
         {PGInSearchOf:
               - Monogamia:
                 -> dialogue_Char_sette
               - else:
-                non sei il mio tipo
+                ADHD&SkinCare: Non ricordo se abbiamo già parlato.
+                ADHD&SkinCare: Ma non mi piaci, soooorryyyyyyyy faccina triste.
+                ADHD&SkinCare: Ciao ciao manina che saluta.
                 -> randomize_characters   
         }
 
