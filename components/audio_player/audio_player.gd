@@ -10,7 +10,7 @@ enum SFX {
 	MyProfileDisableTopic
 }
 
-@onready var _audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var _sfx_audio_stream_player: AudioStreamPlayer = %SFXAudioStreamPlayer
 var _audio_stream_playback_polyphonic: AudioStreamPlaybackPolyphonic
 const _profile_selected_audio_stream: AudioStream = preload("uid://ca7lw6qymkt61")
 const _enter_chat_audio_stream: AudioStream = preload("uid://plo7fsj38t2f")
@@ -21,9 +21,9 @@ const _my_profile_disable_topic_audio_stream: AudioStream = preload("uid://do2pa
 
 
 func _ready() -> void:
-	_audio_stream_player.max_polyphony = (_audio_stream_player.stream as AudioStreamPolyphonic).polyphony
-	_audio_stream_player.play()
-	_audio_stream_playback_polyphonic = _audio_stream_player.get_stream_playback()
+	_sfx_audio_stream_player.max_polyphony = (_sfx_audio_stream_player.stream as AudioStreamPolyphonic).polyphony
+	_sfx_audio_stream_player.play()
+	_audio_stream_playback_polyphonic = _sfx_audio_stream_player.get_stream_playback()
 	print("AudioPlayer ready")
 
 

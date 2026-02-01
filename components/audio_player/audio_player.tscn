@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://c6qifrl4vo3ey"]
 
 [ext_resource type="Script" uid="uid://trblj3dhc83i" path="res://components/audio_player/audio_player.gd" id="1_n7be6"]
+[ext_resource type="AudioStream" uid="uid://ecpk2ybcvmns" path="res://data/audio/hARITON zOE - PRESTIGE.mp3" id="2_oqo3g"]
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_rq35s"]
 
 [node name="AudioPlayer" type="Node" unique_id=843111752]
 script = ExtResource("1_n7be6")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=232002885]
+[node name="SFXAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=232002885]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamPolyphonic_rq35s")
 bus = &"SFX"
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=460711017]
+unique_name_in_owner = true
+stream = ExtResource("2_oqo3g")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
