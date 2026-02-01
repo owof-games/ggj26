@@ -1,0 +1,15 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://bihpfyx5hfqnd"]
+
+[ext_resource type="Texture2D" uid="uid://bjkm4jofk1q42" path="res://data/images/my_profile/tag.png" id="1_qkyb1"]
+
+[resource]
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+texture = ExtResource("1_qkyb1")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+modulate_color = Color(0.34407577, 0.34407574, 0.34407574, 1)

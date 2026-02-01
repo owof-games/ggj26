@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b4lh2v78fh54m" path="res://data/images/chat_elements/boxceleste.png" id="2_3tgcr"]
 [ext_resource type="Texture2D" uid="uid://dok7ffq6smuyb" path="res://data/images/chat_elements/tastoscorri.png" id="3_2j26v"]
 [ext_resource type="StyleBox" uid="uid://dob0i24t8gom0" path="res://theme/transparent_style_box.tres" id="4_bsgh5"]
+[ext_resource type="StyleBox" uid="uid://bihpfyx5hfqnd" path="res://theme/my_profile_tag_not_pressed.tres" id="6_hkdp6"]
+[ext_resource type="StyleBox" uid="uid://bl5hvat30plj4" path="res://theme/my_profile_tag_pressed.tres" id="7_vuoay"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3tgcr"]
 content_margin_left = 24.0
@@ -82,7 +84,14 @@ DialogueBoxChoice/styles/pressed = ExtResource("1_84gcg")
 DialogueBoxVBoxContainer/base_type = &"VBoxContainer"
 DialogueBoxVBoxContainer/constants/separation = 16
 MyProfileTopicButton/base_type = &"Button"
-MyProfileTopicButton/styles/pressed = ExtResource("1_84gcg")
+MyProfileTopicButton/colors/font_color = Color(0.5568628, 0.5568628, 0.5568628, 1)
+MyProfileTopicButton/colors/font_hover_color = Color(0.728822, 0.728822, 0.7288219, 1)
+MyProfileTopicButton/colors/font_hover_pressed_color = Color(0.24115604, 0.24115604, 0.24115604, 1)
+MyProfileTopicButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+MyProfileTopicButton/styles/hover = ExtResource("6_hkdp6")
+MyProfileTopicButton/styles/hover_pressed = ExtResource("7_vuoay")
+MyProfileTopicButton/styles/normal = ExtResource("6_hkdp6")
+MyProfileTopicButton/styles/pressed = ExtResource("7_vuoay")
 ProfileButtonAge/base_type = &"Label"
 ProfileButtonAge/colors/font_color = Color(0, 0, 0, 1)
 ProfileButtonAge/font_sizes/font_size = 12
