@@ -27,7 +27,7 @@ INCLUDE dialogues.ink
   @choose_character
   //Personaggi speciali
   + {actualSpeakers has Char_uno && character_personalization >= startNumber}[{Char_uno} #alias:xx #age:37 #body:medium #insearchof:sex]
-    //Se interessato, vado al nodo, altrimenti reagisce in modo diverso.
+    //Tema che genera: Ageismo
         {activeTopics:
             - Expectations:
                 non mi interessano quelle cose lì

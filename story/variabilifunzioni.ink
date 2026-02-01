@@ -1,7 +1,7 @@
 //VARIABILI//
 
 //Debug
-VAR debug = false
+VAR debug = true
 
 
 //Liste per character design
@@ -439,9 +439,19 @@ VAR endGameCounter = 3
 
 
   = anon_randomize
-  ~ temp anon_randomizeDice = RANDOM(1,6)
-  {debug: il valore di anon_randomizeDice è {anon_randomizeDice}.}
-  {anon_randomizeDice:
+  //~ temp anon_randomizeDice = RANDOM(1,6)
+  // {debug: il valore di anon_randomizeDice è {anon_randomizeDice}.}
+  // {anon_randomizeDice:
+
+    ~ actualSpeakers += Anon_uno
+    ~ actualSpeakers += Anon_due
+    ~ actualSpeakers += Anon_tre
+    ~ actualSpeakers += Anon_quattro
+    ~ actualSpeakers += Anon_cinque
+    ~ actualSpeakers += Anon_sei
+
+  -> conversation_selection
+
     - 1:
       {
         - actualSpeakers hasnt Anon_uno:
