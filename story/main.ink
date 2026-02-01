@@ -938,20 +938,25 @@ INCLUDE dialogues.ink
   
 
 
-//Extra
-    + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias: CoppiaVolpi #age: 57 #body: Sugar bear+Polar bear #insearchof: una domenica tranquilla in tre]
+    + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias: CoppiaVolpi #age: 57 #body: Sugar bear+Polar bear #insearchof: su un divano in tre]
       //Simpatici ma un po' a caccia. Acculturati. Stranamente critici verso il discorso poli. Cercano molto giovane.
         {activeTopics:
             - Friendship:
                   {anon_setteFriendship:
-                    Anon: Un miracolo, un monogamo!
+                    CoppiaVolpi: Carina questa cosa dell'amicizia.
+                    CoppiaVolpi: Se intendi "Scopamicizia".
+                    CoppiaVolpi: Un amico da teatro e lenzuola.
+                    CoppiaVolpi: Siamo intenditori in entrambi i campi.
                       ~ anon_setteFriendship = false
                       -> character_personalization
                   }
-            - Ageism:
-                {anon_setteAgeism:
-                    Anon: Un miracolo, un monogamo!
-                      ~ anon_setteAgeism = false
+            - Polyamory:
+                {anon_settePolyamory:
+                    CoppiaVolpi: Qui Teo, quello giovane.
+                    CoppiaVolpi: Giusto per dirti che la roba poli ha rotto il cazzo.
+                    CoppiaVolpi: Non è mai esistita la monogamia.
+                    CoppiaVolpi: Ma non per questo le persone andavano in giro a vantarsi di essere "decostruite".
+                      ~ anon_settePolyamory = false
                       -> character_personalization
                   }
         }  
@@ -959,7 +964,11 @@ INCLUDE dialogues.ink
       {PGAge:
               - Giovane:
                 {anon_setteGiovane:
-                    Anon: Un miracolo, un monogamo!
+                    CoppiaVolpi: Sei molto giovane.
+                    CoppiaVolpi: Troppo.
+                    CoppiaVolpi: Ed è un peccato.
+                    CoppiaVolpi: Perché in altri tempi ti avremmo aiutato a crescere.
+                    CoppiaVolpi: Ora minimo ci cancellano.
                       ~ anon_setteGiovane = false
                       -> character_personalization
                   }
@@ -968,7 +977,9 @@ INCLUDE dialogues.ink
         {PGBody:
               - Twink:
                 {anon_setteTwink:
-                    Anon: Un miracolo, un monogamo!
+                    CoppiaVolpi: Pensavo che i twink fossero spariti dopo "Belli e Dannati".
+                    CoppiaVolpi: Seriamente, dopo l'apice raggiunto da River Phoenix tutto il resto è triste e sciapo.
+                    CoppiaVolpi: Come pensare di essere Eleonora Duse e sembrare Valeria Marini.
                       ~ anon_setteTwink = false
                       -> character_personalization
                   }
@@ -977,17 +988,26 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Sesso:
                 {anon_setteSesso:
-                    Anon: Un miracolo, un monogamo!
+                    CoppiaVolpi: "Divertimento, ora"
+                    CoppiaVolpi: Quanto è diventato squallido il mondo.
+                    CoppiaVolpi: "Divertente" è una commedia di Alan Bennett.
+                    CoppiaVolpi: Scopare invece è per lo più appiccicoso e faticoso.
+                    CoppiaVolpi: E poi per lo meno scrivete le cose come stanno, cristo.
+                    CoppiaVolpi: "Sfondami il culo".
+                    CoppiaVolpi: "Spompami le palle".
+                    CoppiaVolpi: Dov'è finita l'onestà intellettuale?
+                    CoppiaVolpi: La classe?
                       ~ anon_setteSesso = false
                       -> character_personalization
                   } 
         }
         {
           - anon_sette == 1:
-            Non sei il mio tipo.
+              CoppiaVolpi: Sembri tanto profondo quanto un film di Guadagnino.
+              CoppiaVolpi: Addio.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+              CoppiaVolpi: Ti abbiamo già detto di lasciarci in pace.
             -> randomize_characters  
         } 
 

@@ -105,7 +105,7 @@ VAR endGameCounter = 3
         VAR anon_seiPoliamore = true
     //anon_sette
         VAR anon_setteFriendship = true
-        VAR anon_setteAgeism = true
+        VAR anon_settePolyamory = true
         VAR anon_setteGiovane = true
         VAR anon_setteTwink = true
         VAR anon_setteSesso = true
