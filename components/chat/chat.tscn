@@ -1,89 +1,13 @@
 [gd_scene format=3 uid="uid://d03lout7yjecq"]
 
-[ext_resource type="Script" uid="uid://dsvvpn1wlvh40" path="res://components/chat/chat.gd" id="1_rmmqr"]
+[ext_resource type="Script" uid="uid://cyq6dgwd43n3a" path="res://components/chat/chat_box.gd" id="1_k5lin"]
 
-[node name="Chat" type="Control" unique_id=1003781371]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1312.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-mouse_filter = 1
-script = ExtResource("1_rmmqr")
-
-[node name="Alias" type="Label" parent="." unique_id=666273286]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "xxx"
-
-[node name="Age" type="Label" parent="." unique_id=65509235]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 6.0
-offset_top = 34.0
-offset_right = 46.0
-offset_bottom = 57.0
-text = "xxx"
-
-[node name="Body" type="Label" parent="." unique_id=1950228250]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 69.0
-offset_right = 40.0
-offset_bottom = 92.0
-text = "xxx"
-
-[node name="InSearchOf" type="Label" parent="." unique_id=22861548]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 112.0
-offset_right = 40.0
-offset_bottom = 135.0
-text = "xxx"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=132487575]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 207.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer2" unique_id=1475674277]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 500)
-layout_mode = 2
-horizontal_scroll_mode = 0
-
-[node name="ChatContainer" type="VBoxContainer" parent="VBoxContainer2/ScrollContainer" unique_id=588169815]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ContinueButton" type="Button" parent="VBoxContainer2" unique_id=165509852]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 8
-text = "Continue »"
-
-[node name="QuitButton" type="Button" parent="VBoxContainer2" unique_id=1732678689]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_horizontal = 8
-text = "Quit »"
-
-[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer2" unique_id=961823453]
-unique_name_in_owner = true
-layout_mode = 2
-
-[connection signal="pressed" from="VBoxContainer2/ContinueButton" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="VBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="ChatBoxMandato" type="Label" unique_id=124988980]
+custom_minimum_size = Vector2(20, 20)
+offset_right = 357.0
+offset_bottom = 105.0
+theme_type_variation = &"ChatBubbleText"
+text = "Questo è il testo cheee viene mandato"
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("1_k5lin")

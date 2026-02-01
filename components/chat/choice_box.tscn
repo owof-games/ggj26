@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://cmwi5jl87bfp1"]
 
-[ext_resource type="Script" uid="uid://dyqjrdf0ruio1" path="res://components/chat/choice_box.gd" id="2_n3gde"]
+[ext_resource type="Script" uid="uid://cyq6dgwd43n3a" path="res://components/chat/chat_box.gd" id="1_cn52f"]
 
-[node name="ChoiceBox" type="Button" unique_id=1409486982]
-custom_minimum_size = Vector2(400, 0)
-offset_right = 78.0
-offset_bottom = 169.0
-theme_type_variation = &"DialogueBoxChoice"
-text = "Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. Questo è il testo della scelta. Sto dicendo davvero molte cose,e quindi dovrò andare a capo. Penso. Prima o poi. "
+[node name="ChatBoxMandato" type="Label" unique_id=124988980]
+custom_minimum_size = Vector2(20, 20)
+offset_right = 357.0
+offset_bottom = 105.0
+theme_type_variation = &"ChatBubbleText"
+text = "Questo è il testo cheee viene mandato"
+vertical_alignment = 1
 autowrap_mode = 2
-script = ExtResource("2_n3gde")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+script = ExtResource("1_cn52f")
