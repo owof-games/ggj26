@@ -331,7 +331,7 @@ INCLUDE dialogues.ink
 
 
 //Personaggi anonimi
-    + (anon_uno){actualSpeakers has Anon_uno}[Anon_uno #alias:Peppo79 #age:40 #body:tonico #insearchof:amore della vita]
+    + (anon_uno){actualSpeakers has Anon_uno}[Anon_uno #alias:Peppo79 #age:40 #body:tonico #insearchof:la mia metà]
         {activeTopics:
             - Femme:
               {anon_unoFemme:
@@ -538,7 +538,7 @@ INCLUDE dialogues.ink
         }
       
       
-    + (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:Riproviamoci #age:36 #body:skinny legend #insearchof:amore della vita]
+    + (anon_tre){actualSpeakers has Anon_tre}[Anon_tre #alias:Riproviamoci #age:36 #body:skinny legend #insearchof:Grande Amore]
 
         {activeTopics:
             - Expectations:
@@ -662,7 +662,7 @@ INCLUDE dialogues.ink
             -> randomize_characters  
       }    
           
-    + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:. #age:sì #body:sì #insearchof:sì]
+    + (anon_quattro){actualSpeakers has Anon_quattro}[Anon_quattro #alias:sì #age:sì #body:sì #insearchof:sì]
 
         {activeTopics:
             - Femme:
@@ -740,18 +740,22 @@ INCLUDE dialogues.ink
         } 
   
 
-    + (anon_cinque){actualSpeakers has Anon_cinque}[Anon_cinque #alias:QuelBenny #age:21 #body:alphaMale #insearchof: divertimento tra maschi]
+    + (anon_cinque){actualSpeakers has Anon_cinque}[Anon_cinque #alias:QuelBenny #age:21 #body:alphaMale #insearchof: sex tra maschi]
     //Lui è il tipo camerata
           {activeTopics:
             - Femme:
                   {anon_cinqueFemme:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: Ma quale dea e dea.
+                    Anon: Sei un maschio, dio can.
+                    Anon: Ti servirebbe un po' di militare!
                       ~ anon_cinqueFemme = false
                       -> character_personalization
                   }
             - Masculinity:
                 {anon_cinqueMasculinity:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: Che profilo di merda.
+                    Anon: Pensi proprio da beta.
+                    Anon: E ci scommetto che fai schifo anche come passivo.
                       ~ anon_cinqueMasculinity = false
                       -> character_personalization
                   }
@@ -760,7 +764,9 @@ INCLUDE dialogues.ink
       {PGAge:
               - Giovane:
                 {anon_cinqueGiovane:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: Ciao coetaneo.
+                    Anon: Te lo dico subito così non mi rompi il cazzo: non sono una zecca da centro sociale.
+                    Anon: Per cui se sei qui con Pride o cose sulla Palestina, vedi di levarti di culo.
                       ~ anon_cinqueGiovane = false
                       -> character_personalization
                   }
@@ -769,7 +775,10 @@ INCLUDE dialogues.ink
         {PGBody:
               - Bear:
                 {anon_cinqueBear:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: Dio che corpo che hai.
+                    Anon: Ho sempre amato gli orsi.
+                    Anon: Non sono i muscoli a fare un maschio, ma tutto quel pelo.
+                    Anon: Non hai idea di quanto mi arrapi.
                       ~ anon_cinqueBear= false
                       -> character_personalization
                   }
@@ -778,17 +787,23 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Sesso:
                 {anon_cinqueSesso:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: A o P?
+                    Anon: Io A.
+                    Anon: Ma se hai il cazzo grosso faccio il passivo.
+                    Anon: Ma ti sto sopra.
+                    Anon: Voglio il controllo.
                       ~ anon_cinqueSesso = false
                       -> character_personalization
                   } 
         }
         {
           - anon_cinque == 1:
-            Non sei il mio tipo.
+                Anon: Che profilo di merda.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+                Anon: Non so se l'hai capito, ma devi lasciarmi in pace.
+                Anon: In pace.
+                Anon: O ti meno.
             -> randomize_characters  
         } 
   
@@ -798,13 +813,23 @@ INCLUDE dialogues.ink
          {activeTopics:
             - Friendship:
                   {anon_seiFriendship:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: Ehi ama!
+                    Anon: Che bene che sei qui per l'amicizia.
+                    Anon: Quando finisco il turno se ti va ci spariamo qualche cazzata su Dropout.
+                    Anon: E prendiamo in giro QuelBenny.
                       ~ anon_seiFriendship = false
                       -> character_personalization
                   }
             - Dysmorphia:
                 {anon_seiDysmorphia:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: "Sto imparando ad amare il mio corpo."
+                    Anon: Vorrei tanto farlo anche io.
+                    Anon: O meglio, mi piaccio come sono.
+                    Anon: Ma mi pesa non piacere agli altri.
+                    Anon: Sono una bella persona, credo.
+                    Anon: Per lo meno sono uno sciallone totale.
+                    Anon: Ma i più mi ignorano solo perché non ho il fisico di Jacob Elordi.
+                    Anon: Scusa il pippone, mi faccio un piantozzo e torno.
                       ~ anon_seiDysmorphia = false
                       -> character_personalization
                   }
@@ -813,7 +838,14 @@ INCLUDE dialogues.ink
       {PGAge:
             - Medio:
               {anon_seiMedio:
-                  Anon: Un miracolo, un monogamo!
+                  Anon: Ho visto che abbiamo età simili.
+                  Anon: Ma è solo una mia impressione o i nostri coetanei sono rincoglioniti?
+                  Anon: "Interessi: Harry Potter".
+                  Anon: Ripigliati, hai quarant'anni e quella là spara odio sulle ame trans.
+                  Anon: "Disney princess".
+                  Anon: Amo, Disney sta a finanziare i fascisti.
+                  Anon: L'unica principessa a cui potrai somigliare sarà Diana.
+                  Anon: Da morta.
                     ~ anon_seiMedio = false
                     -> character_personalization
                 }
@@ -835,20 +867,33 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Poliamore:
                 {anon_seiPoliamore:
-                    Anon: Un miracolo, un monogamo!
+                    Anon: Ho letto che sei poli.
+                    Anon: Ogni tanto ci penso.
+                    Anon: Anche se non riesco manco a trovare un compagno, figurarsi due.
+                    Anon: Però se ti va una volta ci si fa un birrino e ti riempio di domande.
+                    Anon: Ora torno a riempire scaffali.
                       ~ anon_seiPoliamore = false
                       -> character_personalization
                   }
         }
         {
           - anon_sei == 1:
-            Non sei il mio tipo.
+                Anon: Bel profilo, ma mi sa che non sono nel mood, scusa.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+                Anon: Ehi, mi sa che non c'ho molto altro da dirti per ora.
             -> randomize_characters  
         } 
   
+
+
+//Extra
+
+
+
+
+
+
 
     + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias: CoppiaVolpi #age: 57 #body: Sugar bear+Polar bear #insearchof: una domenica tranquilla in tre]
       //Simpatici ma un po' a caccia. Acculturati. Stranamente critici verso il discorso poli. Cercano molto giovane.
