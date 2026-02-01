@@ -22,6 +22,9 @@ public partial class StoryEngine : Node
     public delegate void CharacterPersonalizationEventHandler(string alias, string age, string body, string inSearchOf,
         string description, string[] topics);
 
+    [Signal]
+    public delegate void StoryEndEventHandler();
+
     private const string ChooseCharacterCommand = "@choose_character";
     private const string AliasTagName = "alias";
     private const string AgeTagName = "age";
@@ -34,6 +37,11 @@ public partial class StoryEngine : Node
     public void OverrideStory(InkStory overrideStory)
     {
         story = overrideStory;
+    }
+
+    public void ResetState()
+    {
+        story.ResetState();
     }
 
     private const string ChatChoice = "Chat";
@@ -81,6 +89,10 @@ public partial class StoryEngine : Node
                 );
                 break;
         }
+
+        // check story end
+        if (story.CanContinue || story.CurrentChoices.Count != 0) return;
+        EmitSignalStoryEnd();
     }
 
     private const string ActiveTopicsVariableName = "activeTopics";
