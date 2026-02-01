@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5g8bocel1e7d"]
+
+[ext_resource type="PackedScene" uid="uid://ci8a1evxcfr0v" path="res://components/container/container.tscn" id="1_epwoh"]
+
+[node name="MainScene" type="Control" unique_id=379100402]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" parent="." unique_id=426943350 instance=ExtResource("1_epwoh")]
+layout_mode = 1
