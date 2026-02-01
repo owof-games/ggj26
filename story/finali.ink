@@ -11,6 +11,7 @@
     }
 
     = full_ending
+        @choose_character
         + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
         + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
         + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
@@ -44,6 +45,7 @@
             -> END
 
     = empty_ending
+        @choose_character
         + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
         + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
         + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
@@ -74,6 +76,7 @@
         -> END
 
     = medium_ending
+        @choose_character
         + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
         + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
         + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
