@@ -1,6 +1,6 @@
 [gd_resource type="StyleBoxTexture" format=3 uid="uid://b601osnwxgnhy"]
 
-[ext_resource type="Texture2D" uid="uid://xb6o66uh7hf6" path="res://data/images/chat_elements/choice_box.png" id="1_5w6al"]
+[ext_resource type="Texture2D" uid="uid://b7j5x0s1c0f3g" path="res://data/images/chat_elements/boxscelte.png" id="1_5w6al"]
 
 [resource]
 content_margin_left = 39.0
@@ -8,7 +8,7 @@ content_margin_top = 33.0
 content_margin_right = 39.0
 content_margin_bottom = 18.0
 texture = ExtResource("1_5w6al")
-texture_margin_left = 40.0
-texture_margin_top = 31.0
-texture_margin_right = 35.0
-texture_margin_bottom = 33.0
+texture_margin_left = 36.0
+texture_margin_top = 36.0
+texture_margin_right = 36.0
+texture_margin_bottom = 36.0

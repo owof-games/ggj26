@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://c7n05vr6udce"]
-
-[ext_resource type="PackedScene" uid="uid://b6af3jd5vdg3n" path="res://components/chat/chat_box.tscn" id="1_cqs7r"]
-[ext_resource type="Texture2D" uid="uid://b25aqv0ifnknq" path="res://data/images/chat_elements/dialogue_box_2.png" id="2_j1jv7"]
-
-[node name="ChatBox" unique_id=487414082 instance=ExtResource("1_cqs7r")]
-texture = ExtResource("2_j1jv7")

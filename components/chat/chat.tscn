@@ -1,13 +1,143 @@
 [gd_scene format=3 uid="uid://d03lout7yjecq"]
 
-[ext_resource type="Script" uid="uid://cyq6dgwd43n3a" path="res://components/chat/chat_box.gd" id="1_k5lin"]
+[ext_resource type="Script" uid="uid://dsvvpn1wlvh40" path="res://components/chat/chat.gd" id="1_rmmqr"]
+[ext_resource type="Texture2D" uid="uid://cmhq7esbqsuh" path="res://data/images/chat_elements/schermata 2_72.jpg" id="2_rmmqr"]
+[ext_resource type="Texture2D" uid="uid://bx23y6kx7xnjb" path="res://data/images/chat_elements/sfondoscelte.png" id="5_675hk"]
 
-[node name="ChatBoxMandato" type="Label" unique_id=124988980]
-custom_minimum_size = Vector2(20, 20)
-offset_right = 357.0
-offset_bottom = 105.0
-theme_type_variation = &"ChatBubbleText"
-text = "Questo è il testo cheee viene mandato"
-vertical_alignment = 1
-autowrap_mode = 2
-script = ExtResource("1_k5lin")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1uy0"]
+content_margin_left = 12.0
+content_margin_top = 14.0
+content_margin_right = 12.0
+content_margin_bottom = 14.0
+texture = ExtResource("5_675hk")
+texture_margin_left = 38.0
+texture_margin_top = 38.0
+texture_margin_right = 38.0
+texture_margin_bottom = 38.0
+
+[node name="Chat" type="Control" unique_id=1003781371]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1312.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+script = ExtResource("1_rmmqr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=139988153]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rmmqr")
+expand_mode = 1
+
+[node name="Alias" type="Label" parent="." unique_id=666273286]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42598686
+anchor_top = 0.027777778
+anchor_right = 0.4901316
+anchor_bottom = 0.037962962
+offset_right = 27.0
+offset_bottom = 23.0
+theme_type_variation = &"ChatAlias"
+text = "pippo"
+metadata/_edit_use_anchors_ = true
+
+[node name="Age" type="Label" parent="." unique_id=65509235]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = 27.0
+offset_bottom = 23.0
+text = "xxx"
+
+[node name="Body" type="Label" parent="." unique_id=1950228250]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = 27.0
+offset_bottom = 23.0
+text = "xxx"
+
+[node name="InSearchOf" type="Label" parent="." unique_id=22861548]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42598686
+anchor_top = 0.05648148
+anchor_right = 0.46875
+anchor_bottom = 0.05648148
+offset_right = 27.0
+offset_bottom = 23.0
+theme_type_variation = &"ChatInSearchOf"
+text = "scopata"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=132487575]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = 0.148
+anchor_right = 0.97203946
+anchor_bottom = 0.9537037
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=1475674277]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer" unique_id=1689917335]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 17
+theme_override_constants/margin_bottom = 15
+
+[node name="ChatContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer" unique_id=588169815]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ChatContainer"
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=165509852]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(77.625, 73.125)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"ChatContinueButton"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1732678689]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Quit »"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1492223958]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i1uy0")
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer" unique_id=961823453]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

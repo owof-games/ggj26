@@ -48,8 +48,12 @@ INCLUDE dialogues.ink
 
 //Personaggi anonimi
 + [Anon_uno #alias:Anon1 #age:37 #body:medium #insearchof:sex]
-  Anon: conversazione con anonymous 1
+  Anon: Anonymous 1 sta parlando. Dice davvero tante cose, così il box di testo si può allungare un po'!
   PG: risposta ad anonymous 1
+  ++ PG: Scelta 1
+  ++ PG: Scelta 2
+  --
+  Anon: Mia risposta.
     -> top
 + [Anon_due #alias:Anon2 #age:37 #body:medium #insearchof:sex]
   Anon: conversazione con anonymous 2

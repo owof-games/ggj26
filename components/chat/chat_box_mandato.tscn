@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dxqarq0xfp6b6"]
+
+[ext_resource type="Script" uid="uid://cyq6dgwd43n3a" path="res://components/chat/chat_box.gd" id="1_4y64u"]
+
+[node name="ChatBoxMandato" type="Label" unique_id=124988980]
+custom_minimum_size = Vector2(20, 20)
+offset_right = 357.0
+offset_bottom = 105.0
+theme_type_variation = &"ChatBubbleText"
+text = "Questo è il testo cheee viene mandato"
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("1_4y64u")

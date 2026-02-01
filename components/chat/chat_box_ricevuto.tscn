@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://vyqm7g5g6hr1"]
+
+[ext_resource type="PackedScene" uid="uid://dxqarq0xfp6b6" path="res://components/chat/chat_box_mandato.tscn" id="1_ht53n"]
+
+[node name="ChatBoxRicevuto" unique_id=124988980 instance=ExtResource("1_ht53n")]
+offset_right = 496.0
+offset_bottom = 185.0
+theme_type_variation = &"ChatBubbleTextReceived"
+text = "Questo è il testo che viene ricevuto. Possiamo provare a fare un testo lungo così vediamo come si comporta!"

@@ -1,6 +1,34 @@
 [gd_resource type="Theme" format=3 uid="uid://bje1xdoowr41k"]
 
 [ext_resource type="StyleBox" uid="uid://b601osnwxgnhy" path="res://theme/dialogue_box_choice_stylebox.tres" id="1_84gcg"]
+[ext_resource type="Texture2D" uid="uid://dpsase1838v3x" path="res://data/images/chat_elements/boxbianco.png" id="1_kanq1"]
+[ext_resource type="Texture2D" uid="uid://b4lh2v78fh54m" path="res://data/images/chat_elements/boxceleste.png" id="2_3tgcr"]
+[ext_resource type="Texture2D" uid="uid://dok7ffq6smuyb" path="res://data/images/chat_elements/tastoscorri.png" id="3_2j26v"]
+[ext_resource type="StyleBox" uid="uid://dob0i24t8gom0" path="res://theme/transparent_style_box.tres" id="4_bsgh5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3tgcr"]
+content_margin_left = 24.0
+content_margin_top = 15.0
+content_margin_right = 36.0
+content_margin_bottom = 19.0
+texture = ExtResource("1_kanq1")
+texture_margin_right = 26.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2j26v"]
+content_margin_left = 57.0
+content_margin_top = 16.0
+content_margin_right = 31.0
+content_margin_bottom = 24.0
+texture = ExtResource("2_3tgcr")
+texture_margin_left = 23.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsgh5"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84gcg"]
 bg_color = Color(0.7490196, 0.7490196, 0.7490196, 1)
@@ -21,12 +49,33 @@ expand_margin_right = 10.0
 expand_margin_bottom = 2.0
 
 [resource]
-DialogueBox1MarginContainer/base_type = &"MarginContainer"
-DialogueBox1MarginContainer/constants/margin_bottom = 50
-DialogueBox1MarginContainer/constants/margin_left = 42
-DialogueBox1MarginContainer/constants/margin_right = 49
-DialogueBox1MarginContainer/constants/margin_top = 27
+ChatAlias/base_type = &"Label"
+ChatAlias/font_sizes/font_size = 24
+ChatBubbleText/base_type = &"Label"
+ChatBubbleText/colors/font_color = Color(0, 0, 0, 1)
+ChatBubbleText/font_sizes/font_size = 24
+ChatBubbleText/styles/normal = SubResource("StyleBoxTexture_3tgcr")
+ChatBubbleTextReceived/base_type = &"Label"
+ChatBubbleTextReceived/colors/font_color = Color(0, 0, 0, 1)
+ChatBubbleTextReceived/font_sizes/font_size = 24
+ChatBubbleTextReceived/styles/normal = SubResource("StyleBoxTexture_2j26v")
+ChatContainer/base_type = &"VBoxContainer"
+ChatContainer/constants/separation = 33
+ChatContinueButton/base_type = &"Button"
+ChatContinueButton/icons/icon = ExtResource("3_2j26v")
+ChatContinueButton/styles/disabled = ExtResource("4_bsgh5")
+ChatContinueButton/styles/focus = ExtResource("4_bsgh5")
+ChatContinueButton/styles/hover = ExtResource("4_bsgh5")
+ChatContinueButton/styles/hover_pressed = ExtResource("4_bsgh5")
+ChatContinueButton/styles/normal = ExtResource("4_bsgh5")
+ChatContinueButton/styles/pressed = SubResource("StyleBoxFlat_bsgh5")
+ChatInSearchOf/base_type = &"Label"
+ChatInSearchOf/font_sizes/font_size = 14
+ChatMainContainer/base_type = &"VBoxContainer"
+ChatMainContainer/constants/separation = 10
+DialogueBoxChoice/base_type = &"Button"
 DialogueBoxChoice/colors/font_color = Color(0, 0, 0, 1)
+DialogueBoxChoice/colors/font_hover_color = Color(0.051970966, 0.05197096, 0.05197095, 1)
 DialogueBoxChoice/styles/hover = ExtResource("1_84gcg")
 DialogueBoxChoice/styles/normal = ExtResource("1_84gcg")
 DialogueBoxChoice/styles/pressed = ExtResource("1_84gcg")

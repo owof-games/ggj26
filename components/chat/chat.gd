@@ -7,11 +7,12 @@ signal choice_pressed(choice_index: int)
 signal quit
 
 
-var _chat_box_1_scene: PackedScene = preload("uid://b6af3jd5vdg3n")
-var _chat_box_2_scene: PackedScene = preload("uid://c7n05vr6udce")
+var _chat_box_1_scene: PackedScene = preload("uid://dxqarq0xfp6b6")
+var _chat_box_2_scene: PackedScene = preload("uid://vyqm7g5g6hr1")
 var _choice_box_scene: PackedScene = preload("uid://cmwi5jl87bfp1")
 @onready var _chat_container: VBoxContainer = %ChatContainer
 @onready var _continue_button: Button = %ContinueButton
+@onready var _choices_panel_container: PanelContainer = %PanelContainer
 @onready var _choices_container: VBoxContainer = %ChoicesContainer
 @onready var _quit_button: Button = %QuitButton
 @onready var _alias: Label = %Alias
@@ -76,6 +77,7 @@ func step(is_from_me: bool, text: String, choices: Array[String]) -> void:
 		choice_box.setup(choice, i)
 		_choices_container.add_child(choice_box)
 		choice_box.choice_pressed.connect(_choice_pressed)
+	_choices_panel_container.visible = choices.size()
 
 
 func _on_continue_button_pressed() -> void:
