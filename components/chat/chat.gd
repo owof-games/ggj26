@@ -62,6 +62,7 @@ func step(is_from_me: bool, text: String, choices: Array[String]) -> void:
 
 
 func _on_continue_button_pressed() -> void:
+	AudioPlayer.play_sfx(AudioPlayer.SFX.ChatContinue)
 	continue_button_pressed.emit()
 
 

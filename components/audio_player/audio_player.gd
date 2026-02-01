@@ -3,12 +3,14 @@ extends Node
 
 enum SFX {
 	ProfileSelected,
-	EnterChat
+	EnterChat,
+	ChatContinue
 }
 
 @onready var _audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 const _profile_selected_audio_stream: AudioStream = preload("uid://ca7lw6qymkt61")
 const _enter_chat_audio_stream: AudioStream = preload("uid://plo7fsj38t2f")
+const _chat_continue_audio_stream: AudioStream = preload("uid://4si5lmik10ai")
 var _audio_stream_playback_polyphonic: AudioStreamPlaybackPolyphonic
 
 
@@ -26,6 +28,8 @@ func play_sfx(sfx: SFX) -> void:
 			audio_stream = _profile_selected_audio_stream
 		SFX.EnterChat:
 			audio_stream = _enter_chat_audio_stream
+		SFX.ChatContinue:
+			audio_stream = _chat_continue_audio_stream
 		_:
 			push_warning("Cannot find audio stream for sfx %s" % [sfx])
 			return
