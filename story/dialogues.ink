@@ -76,31 +76,31 @@
         {
             // commenti sulle caratteristiche che mi possono piacere
             - PGAge has Giovane:
-                TwoIsMeglCheOne: Mi piacciono le persone giovani
-                TwoIsMeglCheOne: Siete ancora disponibili ad ascoltare, crescere, imparare cose su voi stessi
+                TwoIsMeglCheOne: mi piacciono le persone giovani
+                TwoIsMeglCheOne: siete ancora disponibili ad ascoltare, crescere, imparare cose su voi stessi
             - PGAge has Medio:
-                TwoIsMeglCheOne: Quelli come te hanno l'età perfetta per avere esperienza senza essere bacchettoni
+                TwoIsMeglCheOne: quelli come te hanno l'età perfetta per avere esperienza senza essere bacchettoni
             - PGBody has Fit:
-                TwoIsMeglCheOne: Con quei pettorali avrai sempre addosso gli occhi di tutti
-                TwoIsMeglCheOne: Pure io, ma non perché sono bono come te
+                TwoIsMeglCheOne: con quei pettorali avrai sempre addosso gli occhi di tutti
+                TwoIsMeglCheOne: pure io, ma non perché sono bono come te
             - PGInSearchOf has Poliamore:
-                TwoIsMeglCheOne: So che non è facile dirlo apertamente
-                TwoIsMeglCheOne: Quando ti è capitato la prima volta di essere innamorato di più di una persona
-                TwoIsMeglCheOne: Hai sentito lo sguardo degli altri addosso, vero?
+                TwoIsMeglCheOne: so che non è facile dirlo apertamente
+                TwoIsMeglCheOne: quando ti è capitato la prima volta di essere innamorato di più di una persona
+                TwoIsMeglCheOne: hai sentito lo sguardo degli altri addosso, vero?
  
         }
         // dialogo che mi permette di accettare la sua tematica (poliamore)
-        TwoIsMeglCheOne: {PGBody hasnt Fit: Io c|C}'ho messo un bel po' di tempo prima di accettarlo
-        TwoIsMeglCheOne: Quando mi sono innamorato di un altro la prima volta, mi sono sentito così fottutamente in colpa
-        TwoIsMeglCheOne: Poi ho provato ad avere una coppia aperta, perché, dai, alla fine quella è accettabile, no?
-        TwoIsMeglCheOne: Però col cazzo che è accettabile per me
-        TwoIsMeglCheOne: Amare qualcuno non vuol dire dedicargli una scopata nei ritagli di tempo
-        TwoIsMeglCheOne: Alla fine, se ci pensi, è semplice
-        TwoIsMeglCheOne: Cosa ci può essere di sbagliato se regalo amore alle persone vicine a me?
-        TwoIsMeglCheOne: Se ci supportiamo e siamo consenzienti, cos'hanno mai da dire tutti a riguardo?
-        TwoIsMeglCheOne: Altro che sensi di colpa sul poliamore
-        TwoIsMeglCheOne: Se c'è qualcosa di brutto da provare, al massimo è che sono stufo dei giudizi di chi non sa niente di noi
-        TwoIsMeglCheOne: Anzi: POLISTUFO!
+        TwoIsMeglCheOne: {PGBody hasnt Fit: Io c|c}'ho messo un bel po' di tempo prima di accettarlo
+        TwoIsMeglCheOne: quando mi sono innamorato di un altro la prima volta, mi sono sentito così fottutamente in colpa
+        TwoIsMeglCheOne: poi ho provato ad avere una coppia aperta, perché, dai, alla fine quella è accettabile, no?
+        TwoIsMeglCheOne: però col cazzo che è accettabile per me
+        TwoIsMeglCheOne: amare qualcuno non vuol dire dedicargli una scopata nei ritagli di tempo
+        TwoIsMeglCheOne: alla fine, se ci pensi, è semplice
+        TwoIsMeglCheOne: cosa ci può essere di sbagliato se regalo amore alle persone vicine a me?
+        TwoIsMeglCheOne: se ci supportiamo e siamo consenzienti, cos'hanno mai da dire tutti a riguardo?
+        TwoIsMeglCheOne: altro che sensi di colpa sul poliamore
+        TwoIsMeglCheOne: se c'è qualcosa di brutto da provare, al massimo è che sono stufo dei giudizi di chi non sa niente di noi
+        TwoIsMeglCheOne: anzi: POLISTUFO!
 
     ~ discoveredTopics += Polyamory    
     -> character_personalization
