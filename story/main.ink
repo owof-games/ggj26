@@ -1011,18 +1011,25 @@ INCLUDE dialogues.ink
             -> randomize_characters  
         } 
 
-    + (anon_otto){actualSpeakers has Anon_otto}[Anon_otto #alias: LaPatty #age: 24 #body: magra e alta #insearchof: il principe azzurro]
+    + (anon_otto){actualSpeakers has Anon_otto}[Anon_otto #alias:LaPatty #age: 24 #body:magra e alta #insearchof:principe azzurro]
       //Hai quasi ammesso di essere una ama trans, quasi. Dai Patty che ce la fai!
         {activeTopics:
             - Femme:
                   {anon_ottoFemme:
-                    Anon: Un miracolo, un monogamo!
+                    LaPatty: LaPatty dice "Sono la mia dea."
+                    LaPatty: E aggiunge "Vai ama!".
+                    LaPatty: Anche se sono qui per farmi trattare come un arrosto.
+                    LaPatty: Ma ci si vede in giro bella!
                       ~ anon_ottoFemme = false
                       -> character_personalization
                   }
             - Dysmorphia:
                 {anon_ottoDysmorphia:
-                    Anon: Un miracolo, un monogamo!
+                    LaPatty: LaPatty legge "Sto imparando ad amare il mio corpo."
+                    LaPatty: E pensa "Magari".
+                    LaPatty: E che a questo corpo ci mancano due tette a modo.
+                    LaPatty: E vorrebbe parlare di questa cosa con {Alias}.
+                    LaPatty: Ma poi LaPatty si agita e chiude la chat.
                       ~ anon_ottoDysmorphia = false
                       -> character_personalization
                   }
@@ -1031,7 +1038,9 @@ INCLUDE dialogues.ink
       {PGAge:
               - Medio:
                 {anon_ottoMedio:
-                    Anon: Un miracolo, un monogamo!
+                    LaPatty: LaPatty pensa che te li porti bene i tuoi anni.
+                    LaPatty: Ma anche che alla tua età se qui sei lo scarto di qualcuno.
+                    LaPatty: E LaPatty ha smesso di uscire con gente irrisolta.
                       ~ anon_ottoMedio = false
                       -> character_personalization
                   }
@@ -1040,7 +1049,11 @@ INCLUDE dialogues.ink
         {PGBody:
               - Bear:
                 {anon_ottoBear:
-                    Anon: Un miracolo, un monogamo!
+                    LaPatty: LaPatty guarda quel corpicione che ti ritrovi.
+                    LaPatty: E pensa che sarebbe bello stare tra quei pelozzi.
+                    LaPatty: LaPatty si sentirebbe protetta.
+                    LaPatty: Ma gli uomini che hanno promesso protezione a LaPatty prima o dopo l'hanno ferita.
+                    LaPatty: E quindi LaPatty ti saluta.
                       ~ anon_ottoBear= false
                       -> character_personalization
                   }
@@ -1049,17 +1062,24 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Monogamia:
                 {anon_ottoMonogamia:
-                    Anon: Un miracolo, un monogamo!
+                    LaPatty: LaPatty legge che sei monogamo.
+                    LaPatty: E lei dice che lo è anche lei.
+                    LaPatty: E che vuole l'amore della sua vita.
+                    LaPatty: MA.
+                    LaPatty: Ma forse LaPatty prima deve accettare alcune cose di sé.
+                    LaPatty: E poi sarà pronta di nuovo a scriverti.
                       ~ anon_ottoMonogamia = false
                       -> character_personalization
                   }
         }
         {
           - anon_otto == 1:
-            Non sei il mio tipo.
+                LaPatty: LaPatty è lusingata quando qualcuno visita il suo profilo.
+                LaPatty: Ma LaPatty non apprezza molto quello che ha davanti.
+                LaPatty: E quinde sparisce in una nuova di glitter e svapo al mentolo.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+                LaPatty: LaPatty non è in casa in questo momento. Lasciate un messaggio dopo il segnale acustico.
             -> randomize_characters  
         } 
 
