@@ -60,5 +60,16 @@ layout_mode = 2
 theme_type_variation = &"StartingMenuButton"
 text = "Esci"
 
+[node name="Credits" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1538137452]
+layout_mode = 2
+text = "Credits:
+
+Marco Spelgatti - testi, programmazione
+Gabriele Perugini - grafica, UI/UX, testi
+Mattia Belletti - programmazione, testi
+
+SFX: Kenney
+Music: PRESTIGE by hARITON zOE"
+
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
