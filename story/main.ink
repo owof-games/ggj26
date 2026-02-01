@@ -1225,7 +1225,10 @@ INCLUDE dialogues.ink
       {activeTopics:
             - Polyamory:
                 {anon_undiciPolyamory:
-                    Anon: Un miracolo, un monogamo!
+                    Piedone: "Polistufo".
+                    Piedone: Dio.
+                    Piedone: Se non ci comportiamo normalmente è ovvio poi che i mono non ci prenderanno mai sul serio.
+                    Piedone: Mi fai vergognare di me.
                       ~ anon_undiciPolyamory = false
                       -> character_personalization
                   }
@@ -1234,13 +1237,15 @@ INCLUDE dialogues.ink
       {PGAge:
               - Vecchio:
                 {anon_undiciVecchio:
-                    Anon: Un miracolo, un monogamo!
+                    Piedone: Per fortuna porto i miei anni meglio di te.
+                    Piedone: A volte la cosa migliore è sparire, sai?
                       ~ anon_undiciVecchio = false
                       -> character_personalization
                   }
               - Medio:
                 {anon_undiciMedio:
-                    Anon: Un miracolo, un monogamo!
+                    Piedone: Vuoi venti centimetri di esperienza?
+                    Piedone: E sentirti al sicuro come quando eri tra le braccia di papà?
                       ~ anon_undiciMedio = false
                       -> character_personalization
                   }
@@ -1249,7 +1254,12 @@ INCLUDE dialogues.ink
         {PGBody:
               - Fit:
                 {anon_undiciFit:
-                    Anon: Un miracolo, un monogamo!
+                    Piedone: Scometto che su quella tartaruga ci puoi rompere le noci.
+                    Piedone: E chissà che odore che avrai quando hai finito di allenarti.
+                    Piedone: Sono già durissimo, lo vuoi vedere?
+                    Piedone: Ehi!
+                    Piedone: Vuoi vederlo?!?!
+                    Piedone: Cafone!
                       ~ anon_undiciFit = false
                       -> character_personalization
                   }
@@ -1258,17 +1268,20 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Poliamore:
                 {anon_undiciPoliamore:
-                    Anon: Un miracolo, un monogamo!
+                    Piedone: Anche qui un poli.
+                    Piedone: Anche se mio marito non è molto d'accordo.
+                    Piedone: Per questo non sa che sono qui.
+                    Piedone: Ma quando la natura chiama, chiama, no?
                       ~ anon_undiciPoliamore = false
                       -> character_personalization
                   }
         }
         {
           - anon_undici == 1:
-            Non sei il mio tipo.
+                Piedone: Non mi interessi.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+                Piedone: Vattene, non mi interessi.
             -> randomize_characters  
         } 
 

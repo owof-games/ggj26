@@ -212,7 +212,7 @@ VAR endGameCounter = 3
     ~ text = concat(text, "Vecchia twink fa buon twerk.")
 }
 { activeTopics has Polyamory:
-    ~ text = concat(text, "L'amore è infinito ma la mia pazienza no.")
+    ~ text = concat(text, "L'amore è infinito ma la mia pazienza no. Aka: polistufo.")
 }
 { activeTopics has Expectations:
     ~ text = concat(text, "Conosciamoci con calma, senza preconcetti.")
