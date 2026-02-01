@@ -158,7 +158,9 @@ VAR endGameCounter = 3
         VAR char_cinqueFemme = true
         VAR char_cinqueBear = true
         VAR char_cinquePoliamore = true     
-
+    //char_sei
+        VAR char_seiPolyamory = true
+        VAR char_seiFemme = true
 
 //FUNZIONI///
 //GESTIONE PG//

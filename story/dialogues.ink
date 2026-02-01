@@ -146,10 +146,47 @@
 
 
 === dialogue_Char_sei
-    Mascolinità Bear
+    {
+            - PGAge has Medio:
+                OutOfTheCult: Ciao {Alias}!
+                OutOfTheCult: Ho visto che abbiamo quasi la stessa età!
+            - PGAge has Giovane:
+                OutOfTheCult: Ciao giovane.
+                OutOfTheCult: Spero di non essere troppo vecchio per te.
+            - PGBody has Fit:
+                OutOfTheCult: Che corpo che hai.
+                OutOfTheCult: Potremmo fare la lotta, sarebbe divertente.
+                OutOfTheCult: E sexy.
+            - PGBody has Bear:
+                OutOfTheCult: Un orso senza mezzo muscolo.
+                OutOfTheCult: L'apice della sua specie.
+            - PGInSearchOf has Monogamia:
+                OutOfTheCult: Siamo una minoranza qui, a cercare una relazione seria.
+                OutOfTheCult: Un solo uomo.
+        }
+    
+    OutOfTheCult: Non riesco a capire se sei davvero online.
+    OutOfTheCult: Ma guardando il tuo profilo ho pensato "Vorrei conoscere questa persona".
+    OutOfTheCult: Farmi conoscere.
+    OutOfTheCult: E mi son detto: la cosa più sensata è dirgli che sono un coglione.
+    OutOfTheCult: Ma non come quelli che ci ridono sopra.
+    OutOfTheCult: Sto cercando di uscire da un culto, sai?
+    OutOfTheCult: Uno che riguarda tantissimi froci.
+    OutOfTheCult: Magari ci stai dentro pure tu e non lo sai.
+    OutOfTheCult: Che è il culto del maschio, della mascolinità.
+    OutOfTheCult: Non sai quanto male mi ha fatto, quanto male fa alle persone vicine.
+    OutOfTheCult: Sarà la crisi di mezza età ma me lo sono chiesto: perché come froci non abbiamo lottato contro questa roba?
+    OutOfTheCult: Perché ci facciamo le seghe sui video dei militari e di pseudoetero?
+    OutOfTheCult: Perché umiliamo le persone effemminate?
+    OutOfTheCult: Ora sono in casa con indosso una maglia di una mia amica.
+    OutOfTheCult: C'è scritto "Meglio un giorno da frocio che cento da leone."
+    OutOfTheCult: Mi pesa ancora dirmi "frocio".
+    OutOfTheCult: Ma vedo la tua faccia, mi fai simpatia e mi dico...
+    OutOfTheCult: Spero che {Alias} voglia diventare più frocio con me.
+    OutOfTheCult: Voglio dimenticare tutta questa merda dell'essere macho.
+    OutOfTheCult: Spero mi scriverai.
 
-
-
+    ~ discoveredTopics += Masculinity
     -> character_personalization
 
 
@@ -167,6 +204,9 @@
     ~ discoveredTopics += Friendship
     -> character_personalization
 
+
+
+//FINALI
 === endings
     Gestione dei finali
 

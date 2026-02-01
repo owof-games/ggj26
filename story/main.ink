@@ -269,44 +269,45 @@ INCLUDE dialogues.ink
         }
 
       
-  + {actualSpeakers has Char_sei &&character_personalization >= startNumber}[{Char_sei} #alias:xx #age:37 #body:medium #insearchof:sex]
+  + {actualSpeakers has Char_sei &&character_personalization >= startNumber}[{Char_sei} #alias:OutOfTheCult #age:39 #body: muscle bear #insearchof:compagno di vita]
         {activeTopics:
-            - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
             - Polyamory:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+                {char_seiPolyamory:
+                    OutOfTheCult: Ma la smettete di rubarci i fidanzati?!?!?
+                    OutOfTheCult: Che cazzata egoista.
+                    OutOfTheCult: Non ve ne basta uno a voi poli.
+                    OutOfTheCult: Li volete tutti.
+                    OutOfTheCult: E a noi normali rimangono solo i disagiati.
+                      ~ char_seiPolyamory = false
+                      -> randomize_characters
+                  }
             - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+                {char_seiFemme:
+                    OutOfTheCult: Ti devo chiedere scusa.
+                    OutOfTheCult: Credo che fino a qualche mese fa sarei venuto qui a insultarti.
+                    OutOfTheCult: Per quella cosa della dea.
+                    OutOfTheCult: Per cui ora ti devo delle scuse.
+                      ~ char_seiFemme = false
+                      -> randomize_characters
+                }
         }
         {PGAge:
               - Medio:
                 -> dialogue_Char_sei
               - Giovane:
                 -> dialogue_Char_sei
-              - else:
-                non sei il mio tipo
-                -> randomize_characters
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_sei
               - Bear:
                 -> dialogue_Char_sei  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
         }
         {PGInSearchOf:
-              - Sesso:
+              - Monogamia:
                 -> dialogue_Char_sei
               - else:
-                non sei il mio tipo
+                OutOfTheCult: Mi spiace, ma proprio non sei il mio tipo, scusa.
                 -> randomize_characters
         }
       
