@@ -70,7 +70,7 @@ func _on_story_engine_generic_text_line(line: String, choices: PackedStringArray
 		return
 	var _chat: Chat = _current_child_scene
 
-	var parts := line.split(":")
+	var parts := line.split(":", true, 1)
 	if parts.size() != 2:
 		push_warning("Could not parse chat line: %s" % [line])
 		story_engine.Continue()
