@@ -91,7 +91,18 @@
 
 
 === dialogue_Char_quattro
-    Aspettative
+        {
+            - PGAge has Giovane:
+                Alias:
+            - PGBody has Bear:
+                Alias:   
+            - PGInSearchOf has Monogamia:
+                Alias:   
+            - PGInSearchOf has Amicizia:
+                Alias:   
+ 
+        }
+        Alias:  
 
     ~ discoveredTopics += Expectations
     -> character_personalization

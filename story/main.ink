@@ -163,34 +163,39 @@ INCLUDE dialogues.ink
                 -> randomize_characters   
         }
       
-  + {actualSpeakers has Char_quattro &&character_personalization >= startNumber}[{Char_quattro} #alias:xx #age:37 #body:medium #insearchof:sex]
+  + {actualSpeakers has Char_quattro &&character_personalization >= startNumber}[{Char_quattro} #alias:xx #age:23 #body:orsettino #insearchof:amici]
         {activeTopics:
             - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+              {char_quattroAgeism:
+                    Alias:
+                    Alias:
+                      ~ char_quattroAgeism = false
+                      -> randomize_characters
+                  } 
             - Polyamory:
-                non mi interessano quelle cose lì
+                {char_quattroPolyamory:
+                    Alias:
+                    Alias:
+                      ~ char_quattroPolyamory = false
+                      -> randomize_characters
+                  } 
               -> randomize_characters 
             - Masculinity:
-                non mi interessano quelle cose lì
+                {char_quattroMasculinity:
+                    Alias:
+                    Alias:
+                      ~ char_quattroMasculinity = false
+                      -> randomize_characters
+                  } 
               -> randomize_characters
         }
         {PGAge:
               - Giovane:
                 -> dialogue_Char_quattro
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
         }
         {PGBody:
               - Bear:
                 -> dialogue_Char_quattro
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
         }
         {PGInSearchOf:
               - Monogamia:
@@ -198,7 +203,7 @@ INCLUDE dialogues.ink
               - Amicizia:
                 -> dialogue_Char_quattro  
               - else:
-                non sei il mio tipo
+                  Alias:
                 -> randomize_characters   
         }
       

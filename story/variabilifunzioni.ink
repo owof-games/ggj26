@@ -149,6 +149,11 @@ VAR endGameCounter = 3
     //char_tre
         VAR char_treOldTwink = true
         VAR char_treMasculinity = true    
+    //char_quattro
+        VAR char_quattroAgeism = true
+        VAR char_quattroPolyamory = true
+        VAR char_quattroMasculinity = true
+
 
 //FUNZIONI///
 //GESTIONE PG//
