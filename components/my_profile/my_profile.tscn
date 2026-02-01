@@ -111,48 +111,49 @@ metadata/_edit_use_anchors_ = true
 [node name="Button" parent="TagsContainer" unique_id=713931208 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Old & Proud"
 topic_name = "Ageism"
 
 [node name="Button2" parent="TagsContainer" unique_id=251301885 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Old Twink"
+text = "Happy Twink"
 topic_name = "OldTwink"
 
 [node name="Button3" parent="TagsContainer" unique_id=1112506265 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Poliamore"
+text = "Polistufo"
 topic_name = "Polyamory"
 
 [node name="Button4" parent="TagsContainer" unique_id=1213435029 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Aspettative"
+text = "Con Calma"
 topic_name = "Expectations"
 
 [node name="Button5" parent="TagsContainer" unique_id=143954911 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Dismorfia"
+text = "Dysmorphia"
 topic_name = "Dysmorphia"
 
 [node name="Button6" parent="TagsContainer" unique_id=96442205 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Mascolinità"
+text = "New Masculinity"
 topic_name = "Masculinity"
 
 [node name="Button7" parent="TagsContainer" unique_id=1905627593 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Femme"
+text = "Total Femme"
 topic_name = "Femme"
 
 [node name="Button8" parent="TagsContainer" unique_id=1274511278 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Amicizia"
+text = "New Friends"
 topic_name = "Friendship"
 
 [node name="AboutMe" type="Label" parent="." unique_id=1039388094]
