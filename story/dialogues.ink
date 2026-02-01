@@ -108,7 +108,38 @@
     -> character_personalization
 
 === dialogue_Char_cinque
-    Fit e dismorfia
+        {
+            - PGAge has Giovane:
+                GingerBiceps: Meno male che sei giovane, che palle 'sti vecchi, mi creano disagio.
+            - PGBody has Fit:
+                GingerBiceps: Si vece che sei uno che tiene al suo fisico.
+                GingerBiceps: A occhio c'hai un IMC di 19, ci si può lavorare.
+            - PGInSearchOf has Sesso:
+                GingerBiceps: Quando torno a casa ti mando un po' di foto del mio culo.
+                GingerBiceps: Così se ti piace me lo mangi, che dici?
+        }
+    GingerBiceps: Certo che stare qui è faticoso.
+    GingerBiceps: Non so te, ma a volte passo le ore a guardare gli altri profili per vedere cosa hanno più di me.
+    GingerBiceps: E c'è sempre qualcuno più alto.
+    GingerBiceps: Più asciutto.
+    GingerBiceps: Con più capelli.
+    GingerBiceps: A volte arrivo a lavoro senza aver dormito.
+    GingerBiceps: E quando sono stanco mangio tantissimo.
+    GingerBiceps: Poi mi sento in colpa e passo ore in palestra.
+    GingerBiceps: Ultimamente mi sembra di essere qui solo per i complimenti.
+    GingerBiceps: Ogni messaggio è un punto autostima.
+    GingerBiceps: Ogni minuto di silenzio mi fa sentire un cesso.
+    GingerBiceps: E allora mi rimetto a sollevare pesi.
+    GingerBiceps: All'ultimo appuntamento ho litigato perché il tizio voleva mangiassi di più.
+    GingerBiceps: Cosa ne sa lui del sacrificio?
+    GingerBiceps: Cosa ne sapete tutti?
+    GingerBiceps: Guardo il mio corpo ed è un mostro.
+    GingerBiceps: Un mostro che non so come amare.
+    GingerBiceps: Hai una faccia simpatica, {Alias}, per cui te lo dico.
+    GingerBiceps: Non iniziare a vergognarti del tuo corpo.
+    GingerBiceps: Perché è come una discesa.
+    GingerBiceps: E più prendi velocità, più è difficile fermarsi.
+    GingerBiceps: Tornare indietro.
 
     ~ discoveredTopics += Dysmorphia
     -> character_personalization

@@ -207,37 +207,64 @@ INCLUDE dialogues.ink
                 -> randomize_characters   
         }
       
-  + {actualSpeakers has Char_cinque &&character_personalization >= startNumber}[{Char_cinque} #alias:xx #age:37 #body:medium #insearchof:sex]    
+  + {actualSpeakers has Char_cinque &&character_personalization >= startNumber}[{Char_cinque} #alias:GingerBiceps #age:24 #body:massa grassa 6% #insearchof: sex, no perditempo]    
         {activeTopics:
             - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+                {char_cinqueAgeism:
+                    GingerBiceps: Dovrebbero mettere dei limiti all'età in queste chat.
+                    GingerBiceps: Non mi sento mica sicuro con gente vecchia in giro.
+                    GingerBiceps: Altro che "Proud To Be Old".
+                    GingerBiceps: Fatevi un'app per voi matusa.
+                      ~ char_cinqueAgeism = false
+                      -> randomize_characters
+                  }
             - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+                {char_cinqueFemme:
+                    GingerBiceps: "Sono la mia dea."
+                    GingerBiceps: Sai, da piccolo anche io ero effemminato.
+                    GingerBiceps: Ma ora che sono maschio maschio le cose sono diverse.
+                    GingerBiceps: Ho anche un sacco di amici etero.
+                    GingerBiceps: Magari dopo crossfit ti do qualche dritta.
+                    GingerBiceps: E magari tu mi fai vedere quel culetto che tieni.
+                      ~ char_cinqueFemme = false
+                      -> randomize_characters
+                  }
         }
         {PGAge:
               - Giovane:
                 -> dialogue_Char_cinque
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_cinque
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+              
+              - Bear:
+                {char_cinqueBear:
+                      GingerBiceps: Qualcuno deve dirtelo {Alias}.
+                      GingerBiceps: Tutto quel grasso non è salutare.
+                      GingerBiceps: Lo dico per il tuo bene.
+                      GingerBiceps: Se vuoi si va in palestra assieme e ti aiuto a perdere peso.
+                      GingerBiceps: Puoi sempre ripagarmi con una pompa ogni tanto, che c'hai una bella bocca.
+                        ~ char_cinqueBear = false
+                        -> randomize_characters
+                } 
         }
         {PGInSearchOf:
               - Sesso:
                 -> dialogue_Char_cinque
+              - Poliamore:
+                {char_cinquePoliamore:
+                      GingerBiceps: Questa roba poli.
+                      GingerBiceps: Ma tipo la fai per il sesso vero?
+                      GingerBiceps: Tipo che hai il letto garantito con uno.
+                      GingerBiceps: Ma poi ti levi gli sfizi con altra gente?
+                      GingerBiceps: Che poi chissà quante malattie.
+                      GingerBiceps: Che schifo.
+                        ~ char_cinquePoliamore = false
+                        -> randomize_characters
+                } 
               - else:
-                non sei il mio tipo
+                GingerBiceps: 
                 -> randomize_characters   
         }
 

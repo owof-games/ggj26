@@ -153,6 +153,11 @@ VAR endGameCounter = 3
         VAR char_quattroAgeism = true
         VAR char_quattroPolyamory = true
         VAR char_quattroMasculinity = true
+    //char_cinque
+        VAR char_cinqueAgeism = true
+        VAR char_cinqueFemme = true
+        VAR char_cinqueBear = true
+        VAR char_cinquePoliamore = true     
 
 
 //FUNZIONI///
