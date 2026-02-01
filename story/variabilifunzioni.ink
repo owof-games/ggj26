@@ -146,6 +146,9 @@ VAR endGameCounter = 3
         VAR char_dueDysmorphia = true
         VAR char_dueFemme = true
         VAR char_dueBear = true
+    //char_tre
+        VAR char_treOldTwink = true
+        VAR char_treMasculinity = true    
 
 //FUNZIONI///
 //GESTIONE PG//

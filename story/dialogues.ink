@@ -73,7 +73,18 @@
     -> character_personalization
 
 === dialogue_Char_tre
-    Questioni poli
+        {
+            - PGAge has Giovane:
+                Alias:
+            - PGAge has Medio:
+                Alias:   
+            - PGBody has Fit:
+                Alias:   
+            - PGInSearchOf has Poliamore:
+                Alias:   
+ 
+        }
+        Alias:   
 
     ~ discoveredTopics += Polyamory    
     -> character_personalization

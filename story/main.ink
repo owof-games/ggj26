@@ -128,39 +128,38 @@ INCLUDE dialogues.ink
                   -> randomize_characters   
         }
       
-  + {actualSpeakers has Char_tre &&character_personalization >= startNumber}[{Char_tre} #alias:xx #age:37 #body:medium #insearchof:sex]
+  + {actualSpeakers has Char_tre &&character_personalization >= startNumber}[{Char_tre} #alias:xx #age:42 #body:muscoloso #insearchof:relazione poli]
         {activeTopics:
             - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+                {char_treMasculinity:
+                    Alias:
+                    Alias:
+                      ~ char_treMasculinity = false
+                      -> randomize_characters
+                  } 
             - OldTwink:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters 
+                {char_treOldTwink:
+                  Alias:
+                  Alias:
+                    ~ char_treOldTwink = false
+                    -> randomize_characters
+                }
         }
         {PGAge:
               - Giovane:
                 -> dialogue_Char_tre
               - Medio:
                 -> dialogue_Char_tre
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_tre
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
         }
         {PGInSearchOf:
               - Poliamore:
                 -> dialogue_Char_tre
-              - else:
-                non sei il mio tipo
+            - else:
+                Alias:
                 -> randomize_characters   
         }
       
