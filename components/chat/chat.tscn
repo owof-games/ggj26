@@ -57,6 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer2" unique_id=1475674277]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 horizontal_scroll_mode = 0

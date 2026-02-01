@@ -18,14 +18,25 @@ var _choice_box_scene: PackedScene = preload("uid://cmwi5jl87bfp1")
 @onready var _age: Label = %Age
 @onready var _body: Label = %Body
 @onready var _in_search_of: Label = %InSearchOf
-
-
-
+@onready var _scroll_container: ScrollContainer = %ScrollContainer
+@onready var _vertical_scrollbar: ScrollBar = %ScrollContainer.get_v_scroll_bar()
+var _latest_vertical_scrollbar_max_length: float
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	_latest_vertical_scrollbar_max_length = _vertical_scrollbar.max_value
+	_vertical_scrollbar.changed.connect(_scrollbar_changed)
+
+
+func _scrollbar_changed():
+	if _latest_vertical_scrollbar_max_length == _vertical_scrollbar.max_value:
+		return
+	_latest_vertical_scrollbar_max_length = _vertical_scrollbar.max_value
+	create_tween() \
+		.bind_node(_scroll_container) \
+		.set_trans(Tween.TRANS_LINEAR) \
+		.tween_property(_scroll_container, "scroll_vertical", _latest_vertical_scrollbar_max_length, 0.5)
 
 
 func setup(alias: String, age: String, body: String, in_search_of: String) -> void:
@@ -36,21 +47,27 @@ func setup(alias: String, age: String, body: String, in_search_of: String) -> vo
 
 
 func step(is_from_me: bool, text: String, choices: Array[String]) -> void:
+	# create the chat box
 	var scene: ChatBox
 	if is_from_me:
 		scene = _chat_box_1_scene.instantiate()
 	else:
 		scene = _chat_box_2_scene.instantiate()
 
+	# add the chat box
 	_chat_container.add_child(scene)
 
+	# wait for it to be added in the scene
 	if not scene.is_node_ready():
 		await scene.ready
 
+	# fill its contents
 	scene.setup(text)
-	
+
+	# enable/disable continue button
 	_continue_button.visible = choices.size() == 0
-	
+
+	# enable/disable choices
 	for previous_choice in _choices_container.get_children():
 		previous_choice.queue_free()
 	for i in range(choices.size()):
