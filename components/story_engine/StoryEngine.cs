@@ -29,6 +29,7 @@ public partial class StoryEngine : Node
     private const string InSearchOfTagName = "insearchof";
     private const string DescriptionTagName = "tag";
     private const string CharacterPersonalizationCommand = "@profile";
+    private const string DebugVariable = "debug";
 
     public void OverrideStory(InkStory overrideStory)
     {
@@ -39,6 +40,8 @@ public partial class StoryEngine : Node
 
     public void Continue()
     {
+        story.StoreVariable(DebugVariable, false);
+
         var result = story.Continue().Trim();
 
         GD.Print($"Continue returned: {result}");
