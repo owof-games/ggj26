@@ -1087,13 +1087,22 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Polyamory:
                 {anon_novePolyamory:
-                    Anon: Un miracolo, un monogamo!
+                    FreePalestine: Ciao amo!
+                    FreePalestine: Bella la frase "L'amore è infinito ma la mia pazienza no."
+                    FreePalestine: Giuro che se becco un altro sionista su questa app do fuoco a tutto.
+                    FreePalestine: Più tardi mi farebbe piacere una chiacchierata, appena hanno liberato una compagna.
+                    FreePalestine: Polizia di merda.
+                    FreePalestine: A dopo!
                       ~ anon_novePolyamory = false
                       -> character_personalization
                   }
             - Masculinity:
                 {anon_noveMasculinity:
-                    Anon: Un miracolo, un monogamo!
+                    FreePalestine: "Meglio beta che misogino."
+                    FreePalestine: Volo.
+                    FreePalestine: Questa app andrebbe bruciata da capo e rifatta.
+                    FreePalestine: A volte mi chiedo "perché mi piacciono gli uomini, perchè?!?"
+                    FreePalestine: Dopo torno e ti chiedo due cose.
                       ~ anon_noveMasculinity = false
                       -> character_personalization
                   }
@@ -1102,7 +1111,11 @@ INCLUDE dialogues.ink
       {PGAge:
               - Giovane:
                 {anon_noveGiovane:
-                    Anon: Un miracolo, un monogamo!
+                    FreePalestine: Ehi ama!
+                    FreePalestine: Visto che abbiamo gli stessi anni, vieni in Accademia, ora.
+                    FreePalestine: Ci stanno menando perché stiamo bloccano l'intervento di Shirley Siegal.
+                    FreePalestine: Che poi non solo è sionista, ma disegna davvero di merda.
+                    FreePalestine: Corri qui!
                       ~ anon_noveGiovane = false
                       -> character_personalization
                   }
@@ -1111,23 +1124,29 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Monogamia:
                 {anon_noveMonogamia:
-                    Anon: Un miracolo, un monogamo!
+                    FreePalestine: La monogamia è oppressione relazionale!
+                    FreePalestine: Liberati dalle tue catene.
+                    FreePalestine: Non vincolare il tuo amore!
                       ~ anon_noveMonogamia = false
                       -> character_personalization
                   }
               - Sesso:
                 {anon_noveSesso:
-                    Anon: Un miracolo, un monogamo!
+                    FreePalestine: Cerca connessioni, non solo sesso.
+                    FreePalestine: La vita ha bisogno di unione e comunità.
+                    FreePalestine: Non di palle vuote.
                       ~ anon_noveSesso = false
                       -> character_personalization
                   } 
         }
         {
           - anon_nove == 1:
-            Non sei il mio tipo.
+              FreePalestine: Ehi, grazie per aver visitato il mio profilo.
+              FreePalestine: Ma non mi risuoni molto, scusa.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+              FreePalestine: Ehi, ti ho già detto che non mi piaci.
+              FreePalestine: Rispetta i miei confini.
             -> randomize_characters  
         } 
   
