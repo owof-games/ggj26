@@ -79,4 +79,5 @@ func show_quit() -> void:
 
 
 func _on_quit_button_pressed() -> void:
+	AudioPlayer.play_sfx(AudioPlayer.SFX.ChatContinue)
 	quit.emit()
