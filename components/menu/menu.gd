@@ -1,7 +1,7 @@
 extends Control
 
 
-const _main_scene = preload("uid://c5g8bocel1e7d")
+const _main_scene = preload("uid://ci8a1evxcfr0v")
 
 
 func _on_start_button_pressed() -> void:

@@ -4,9 +4,9 @@ extends Control
 @onready var story_engine: StoryEngine = %StoryEngine
 @export var override_story: InkStory
 
-var _profiles_scene: PackedScene = preload("uid://y16e7cyb1kjn")
-var _chat_scene: PackedScene = preload("uid://d03lout7yjecq")
-var _character_personalization: PackedScene = preload("uid://bi1lkscnsof5v")
+const _profiles_scene: PackedScene = preload("uid://y16e7cyb1kjn")
+const _chat_scene: PackedScene = preload("uid://d03lout7yjecq")
+const _character_personalization: PackedScene = preload("uid://bi1lkscnsof5v")
 
 
 var _current_child_scene: Node
@@ -25,6 +25,7 @@ func _ready() -> void:
 	# used in the museum to load the test story
 	if override_story != null:
 		story_engine.OverrideStory(override_story)
+	story_engine.ResetState()
 	story_engine.Continue()
 
 
@@ -121,3 +122,13 @@ func _wait_for_chat() -> void:
 	var chat: Chat = _current_child_scene
 	chat.show_quit()
 	await chat.quit
+
+
+func _on_story_engine_story_end() -> void:
+	await get_tree().process_frame
+	var menu_scene = load("uid://dyv5itw16lups")
+	var menu = menu_scene.instantiate()
+	print("_menu_scene is null? %s" % [menu_scene == null])
+	print("menu_scene is null? %s" % [menu == null])
+	get_tree().root.add_child(menu)
+	queue_free()

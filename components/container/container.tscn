@@ -39,3 +39,4 @@ grow_vertical = 2
 [connection signal="CharacterPersonalization" from="StoryEngine" to="." method="_on_story_engine_character_personalization"]
 [connection signal="ChooseCharacter" from="StoryEngine" to="." method="_on_story_engine_choose_character"]
 [connection signal="GenericTextLine" from="StoryEngine" to="." method="_on_story_engine_generic_text_line"]
+[connection signal="StoryEnd" from="StoryEngine" to="." method="_on_story_engine_story_end"]
