@@ -47,14 +47,17 @@ INCLUDE dialogues.ink
 
 
 //Personaggi anonimi
-+ [Anon_uno #alias:Anon #age:37 #body:medium #insearchof:sex]
++ [Anon_uno #alias:Anon1 #age:37 #body:medium #insearchof:sex]
   Anon: conversazione con anonymous 1
+  PG: risposta ad anonymous 1
     -> top
-+ [Anon_due #alias:Anon #age:37 #body:medium #insearchof:sex]
++ [Anon_due #alias:Anon2 #age:37 #body:medium #insearchof:sex]
   Anon: conversazione con anonymous 2
+  PG: risposta ad anonymous 2
     -> top
-+ [Anon_tre #alias:Anon #age:37 #body:medium #insearchof:sex]
++ [Anon_tre #alias:Anon3 #age:37 #body:medium #insearchof:sex]
   Anon: conversazione con anonymous 3
+  PG: risposta ad anonymous 3
     -> top
 -
 

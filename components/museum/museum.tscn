@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4jcjgahluf6"]
 
 [ext_resource type="PackedScene" uid="uid://ci8a1evxcfr0v" path="res://components/container/container.tscn" id="1_nab0f"]
+[ext_resource type="Resource" uid="uid://572topxe766t" path="res://story/override_story.ink" id="2_nab0f"]
 
 [node name="Museum" type="Control" unique_id=182361704]
 layout_mode = 3
@@ -12,3 +13,4 @@ grow_vertical = 2
 
 [node name="Container" parent="." unique_id=426943350 instance=ExtResource("1_nab0f")]
 layout_mode = 1
+override_story = ExtResource("2_nab0f")
