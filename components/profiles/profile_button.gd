@@ -14,8 +14,10 @@ const _TEXTURES: Array[CompressedTexture2D] = [
 	preload("uid://0mlgutjd6l66")
 ]
 
+const _CHAR_ANONYMOUS: CompressedTexture2D = preload("uid://qomxhu5es3gm")
 
-const _CHAR_ANONYMOUS: CompressedTexture2D = preload("uid://7uwvimmk7b2v")
+@onready var _image_texture_rect: TextureRect = %ImageTextureRect
+
 
 
 func setup(character: String, alias: String, age: String, body: String, looking_for: String) -> void:
@@ -25,11 +27,12 @@ func setup(character: String, alias: String, age: String, body: String, looking_
 	%LookingFor.text = looking_for
 	
 	var char_index := Constants.CHAR_NAMES.find(character)
+	print("ho cercato character %s e ho trovato indice %d" % [character, char_index])
 	if char_index >= 0:
 		var texture := _TEXTURES[char_index]
-		icon = texture
+		_image_texture_rect.texture = texture
 	else:
-		icon = _CHAR_ANONYMOUS
+		_image_texture_rect.texture = _CHAR_ANONYMOUS
 
 
 func _on_pressed() -> void:
