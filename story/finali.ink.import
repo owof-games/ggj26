@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://bh3wjjvn1ewx7"
+path="res://.godot/imported/finali.ink-05e99ecb9787dd2fb7fd83e1361ef091.res"
+
+[deps]
+
+source_file="res://story/finali.ink"
+dest_files=["res://.godot/imported/finali.ink-05e99ecb9787dd2fb7fd83e1361ef091.res"]
+
+[params]
+
+is_main_file=false
+compress=true

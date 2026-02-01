@@ -74,6 +74,7 @@
 
 === dialogue_Char_tre
         {
+            // commenti sulle caratteristiche che mi possono piacere
             - PGAge has Giovane:
                 Alias:
             - PGAge has Medio:
@@ -84,6 +85,7 @@
                 Alias:   
  
         }
+        // dialogo che mi permette di accettare la sua tematica (poliamore)
         Alias:   
 
     ~ discoveredTopics += Polyamory    
@@ -267,8 +269,3 @@
 
 
 
-//FINALI
-=== endings
-    Gestione dei finali
-
-    -> END

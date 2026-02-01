@@ -1,5 +1,6 @@
 INCLUDE variabilifunzioni.ink
 INCLUDE dialogues.ink
+INCLUDE finali.ink
 
 -> randomize_pg
 
@@ -132,6 +133,7 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Masculinity:
                 {char_treMasculinity:
+                    // commenti legati a un mio tag che bloccano la conversazione
                     Alias:
                     Alias:
                       ~ char_treMasculinity = false
@@ -159,6 +161,7 @@ INCLUDE dialogues.ink
               - Poliamore:
                 -> dialogue_Char_tre
             - else:
+                // qua commento perché non mi piaci
                 Alias:
                 -> randomize_characters   
         }
