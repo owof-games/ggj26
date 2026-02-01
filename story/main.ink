@@ -354,38 +354,31 @@ INCLUDE dialogues.ink
         }
 
       
-  + {actualSpeakers has Char_otto &&character_personalization >= startNumber}[{Char_otto} #alias:xx #age:37 #body:medium #insearchof:sex]
+  + {actualSpeakers has Char_otto &&character_personalization >= startNumber}[{Char_otto} #alias:Burraco67 #age:3767 #body:non pervenuto #insearchof:nuovi amici]
         {activeTopics:
             - Masculinity:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+               {char_ottoMasculinity:
+                    Burraco67: "Meglio beta che misogino."
+                    Burraco67: Ma x' non lasciamo queste cose fuori da qui?
+                    Burraco67: La politica fa già schifo dal vivo.
+                    Burraco67: Qui divertiamoci.
+                      ~ char_ottoMasculinity = false
+                      -> randomize_characters
+                }
+            - Expectations:
+               {char_ottoExpectations:
+                    Burraco67: "Conosciamoci con calma, senza preconcetti."
+                    Burraco67: X' dirlo, non è ovvio?
+                    Burraco67: E poi sn vecchio.
+                    Burraco67: Chi ce l'ha il tempo per la calma?
+                      ~ char_ottoExpectations = false
+                      -> randomize_characters
+                }
+                
+            - else:
+                -> dialogue_Char_otto      
         }
-        {PGAge:
-              - Medio:
-                -> dialogue_Char_otto
-              - Vecchio:
-                -> dialogue_Char_otto
-              - else:
-                non sei il mio tipo
-                -> randomize_characters
-        }
-        {PGBody:
-              - Bear:
-                -> dialogue_Char_otto
-              - Twink:
-                -> dialogue_Char_otto
-              - else:
-                non sei il mio tipo
-                -> randomize_characters  
-        }
-        {PGInSearchOf:
-              - Amicizia:
-                -> dialogue_Char_otto
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
-        }
-    
+
 
 
 //Personaggi anonimi
@@ -946,13 +939,6 @@ INCLUDE dialogues.ink
 
 
 //Extra
-
-
-
-
-
-
-
     + (anon_sette){actualSpeakers has Anon_sette}[Anon_sette #alias: CoppiaVolpi #age: 57 #body: Sugar bear+Polar bear #insearchof: una domenica tranquilla in tre]
       //Simpatici ma un po' a caccia. Acculturati. Stranamente critici verso il discorso poli. Cercano molto giovane.
         {activeTopics:

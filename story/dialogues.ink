@@ -231,7 +231,36 @@
 
 
 === dialogue_Char_otto
-    Amicizia hacking
+    {
+        - activeTopics has Ageism:
+        Burraco67: "Proud To Be Old."
+        Burraco67: Che bello venire stupiti ancora da questa app!
+    }
+    
+    Burraco67: Carino il tuo profilo.
+    Burraco67: Se ero single un po' ci provavo.
+    Burraco67: Xò sono qui per cercare amici.
+    Burraco67: Ti piace il burraco?
+    Burraco67: So che è una cosa da vecchio.
+    Burraco67: Ma è divertente.
+    Burraco67: Tu stai lì giochi e finisce che racconti cose importanti.
+    Burraco67: Mi manca un po' qualcuno con cui parlare di cose così.
+    Burraco67: C'è mio marito, vero.
+    Burraco67: Ma a volte è bello anche lamentarsi dei mariti, no?
+    Burraco67: Qui se non mi insultano o ignorano x' vecchio, lo fanno x' cerco amici.
+    Burraco67: "Hungr è fatto x scopare, gli amici te li fai al centro diurno".
+    Burraco67: Ma io non voglio stare con vecchi scoreggioni.
+    Burraco67: E poi la sai una cosa, {Alias}?
+    Burraco67: Le cose belle le fanno le persone che disubbidiscono.
+    Burraco67: E quindi io sto qui a cercare amici.
+    Burraco67: E compagni di burraco.
+    Burraco67: E tu c'hai la faccia da uno che disubbidisce.
+    Burraco67: X cui se queste app, se questi cellulari ti dicono di fare una cosa, fai l'opposta.
+    Burraco67: Anche solo x dargli fastidio.
+    Burraco67: Che è una grande soddisfazione che ti riprendi solo quando sei vecchio.
+    Burraco67: Cercati amici.
+    Burraco67: Rompi le balle.
+    Burraco67: E se passi da queste parte, fatti una partita di burraco con questo scoreggione.
 
     ~ discoveredTopics += Friendship
     -> character_personalization

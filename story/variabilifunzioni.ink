@@ -162,8 +162,11 @@ VAR endGameCounter = 3
         VAR char_seiPolyamory = true
         VAR char_seiFemme = true
     //char_sette
-      VAR char_setteOldTwink = true
-      VAR char_setteExpectations = true    
+        VAR char_setteOldTwink = true
+        VAR char_setteExpectations = true 
+    //char_otto
+        VAR char_ottoMasculinity = true
+        VAR char_ottoExpectations = true        
 
 //FUNZIONI///
 //GESTIONE PG//
