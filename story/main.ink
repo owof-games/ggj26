@@ -1155,24 +1155,29 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Ageism:
                 {anon_dieciAgeism:
-                    Anon: Bella la frase sull'età.
-                    Anon: Bella la consapevolezza.
-                    Anon: Ma poi io continuo a sentirmi solo.
+                    twinkXBear: "Proud To Be Old."
+                    twinkXBear: LOL.
+                    twinkXBear: Stamattina mi son svegliato con il ginocchio che non si piega fino in fondo.
+                    twinkXBear: Di cosa dovrei essere orgoglioso?!?!?
                       ~ anon_dieciAgeism = false
-                      -> character_personalization
+                        -> character_personalization
                   }
             - OldTwink:
                 {anon_dieciOldTwink:
-                    Anon: Un miracolo, un monogamo!
+                    twinkXBear: "Vecchia twink fa buon twerk."
+                    twinkXBear: E poi serve una gru per sollevarla.
+                    twinkXBear: Mi fai imbarazzo mi fai.
                       ~ anon_dieciOldTwink = false
-                      -> character_personalization
+                        -> character_personalization
                   }
         }  
         
       {PGAge:
               - Vecchio:
                 {anon_dieciVecchio:
-                    Anon: Un miracolo, un monogamo!
+                    twinkXBear: Però nascondila la tua età.
+                    twinkXBear: Se uno vede quella faccia lo capisce che sono più vecchio di quello che ho scritto.
+                    twinkXBear: Un po' di solidarietà tra zie, no?
                       ~ anon_dieciVecchio = false
                       -> character_personalization
                   }
@@ -1181,7 +1186,15 @@ INCLUDE dialogues.ink
         {PGBody:
               - Bear:
                 {anon_dieciBear:
-                    Anon: Un miracolo, un monogamo!
+                    twinkXBear: Sei un sogno da guardare.
+                    twinkXBear: Chissà che piedi fantastici che hai.
+                    twinkXBear: Voglio la mia bocca piena dei tuoi peli.
+                    twinkXBear: Ci 6?!?!
+                    twinkXBear: ...
+                    twinkXBear: Coglione.
+                    twinkXBear: Te la tiri solo perché sei bono.
+                    twinkXBear: Ricorda che tutto passa.
+                    twinkXBear: Tutto.
                       ~ anon_dieciBear= false
                       -> character_personalization
                   }
@@ -1189,17 +1202,21 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Monogamia:
                 {anon_dieciMonogamia:
-                    Anon: Un miracolo, un monogamo!
+                    twinkXBear: "La monogamia non è un serpente"
+                    twinkXBear: "Ma un pensiero indecente"
+                    twinkXBear: "Che ti lascia cornuto e fetente"
+                    twinkXBear: "E ti ritrovi in tre"
+                    twinkXBear: "Ti ritrovi in tre"
                       ~ anon_dieciMonogamia = false
                       -> character_personalization
                   }
         }
         {
           - anon_dieci == 1:
-            Non sei il mio tipo.
+                twinkXBear: Non ho tempo per quella brutta faccia.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+                twinkXBear: Levati di culo, grazie.
             -> randomize_characters  
         } 
   
