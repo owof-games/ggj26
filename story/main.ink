@@ -26,20 +26,20 @@ INCLUDE dialogues.ink
   - (top)
   @choose_character
   //Personaggi speciali
-  + {actualSpeakers has Char_uno && character_personalization >= startNumber}[{Char_uno} #alias:37top #age:37 #body:normale #insearchof:qualcuno da riempire]
+  + {actualSpeakers has Char_uno && character_personalization >= startNumber}[{Char_uno} #alias:47top #age:47 #body:normale #insearchof:qualcuno da riempire]
     //Tema che genera: Ageismo
         {activeTopics:
             - Femme:
               {char_unoFemme:
-                  Anon: "Sono la mia dea."
-                  Anon: Certo che a voi il femminismo ha fatto proprio male.
+                  47top: "Sono la mia dea."
+                  47top: Certo che a voi il femminismo ha fatto proprio male.
                     ~ char_unoFemme = false
                     -> randomize_characters
               }      
             - Friendship:
               {char_unoFriendship:
-                  Anon: "Meglio appuntamento: confidenze, amicizia e uncinetto."
-                  Anon: Posso dire che è una cosa da smosciacazzi?
+                  47top: "Meglio appuntamento: confidenze, amicizia e uncinetto."
+                  47top: Posso dire che è una cosa da smosciacazzi?
                       ~ char_unoFriendship = false
                     -> randomize_characters
               }      
@@ -59,41 +59,63 @@ INCLUDE dialogues.ink
               - Sesso:
                 -> dialogue_Char_uno
               - else:
-                Anon: Lascia fare, non sei il mio tipo.
+                47top: Lascia fare, non sei il mio tipo.
                 -> randomize_characters   
         }
 
       
-  + {actualSpeakers has Char_due &&character_personalization >= startNumber}[{Char_due} #alias:xx #age:37 #body:medium #insearchof:sex]
+  + {actualSpeakers has Char_due &&character_personalization >= startNumber}[{Char_due} #alias:DisagioBottom #age:34 #body:una silfide #insearchof:due salti in padella]
         {activeTopics:
             - Ageism:
-                non mi interessano quelle cose lì
-              -> randomize_characters
-            - Dysmorphia:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+                {char_dueAgeism:
+                    DisagioBottom: "Proud To Be Old".
+                    DisagioBottom: Potresti scrivere anche "I love osteoporosi".
+                    DisagioBottom: O "Netflix&Catetere".
+                    DisagioBottom: Anzi, meglio: "Netflix&Cateratte".
+                      ~ char_dueAgeism = false
+                      -> randomize_characters
+                }
+            - Dysmorphia: 
+                {char_dueDysmorphia:
+                    DisagioBottom: Hai scritto "Sto imparando ad amare il mio corpo."
+                    DisagioBottom: Son venuta qui per farti un commento acido.
+                    DisagioBottom: Ma poi mi è venuto da piangere.
+                    DisagioBottom: Vai a fanculo.
+                      ~ char_dueDysmorphia = false
+                      -> randomize_characters
+                }
             - Femme:
-                non mi interessano quelle cose lì
+                {char_dueFemme:
+                    DisagioBottom: "Sono la mia dea."
+                    DisagioBottom: Amore, un discorso serio.
+                    DisagioBottom: Anche io lo prendo nel culo.
+                    DisagioBottom: E sculetto.
+                    DisagioBottom: Ma rimaniamo comunque dei maschi.
+                    DisagioBottom: Lo sai, vero?
+                      ~ char_dueFemme = false
+                      -> randomize_characters
+                }
               -> randomize_characters 
-            - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
         }
         {PGAge:
               - Medio:
                 -> dialogue_Char_due
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_due
               - Twink:
-                -> dialogue_Char_due  
-              - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                -> dialogue_Char_due
+              - Bear:
+                   {char_dueBear:
+                    DisagioBottom: Non ho mai capito perché vi fate chiamare orsi.
+                    DisagioBottom: Quando siete solo grassi.
+                    DisagioBottom: E pigri.
+                    DisagioBottom: Una dieta non è mica un reato.
+                    DisagioBottom: Va che ti blocco, che mi fai male agli occhi.
+                      ~ char_dueBear = false
+                      -> randomize_characters
+                }
         }
         {PGInSearchOf:
               - Sesso:
@@ -101,8 +123,9 @@ INCLUDE dialogues.ink
               - Monogamia:
                 -> dialogue_Char_due  
               - else:
-                non sei il mio tipo
-                -> randomize_characters   
+                DisagioBottom: Nemmeno tu fossi l'ultimo uomo sulla terra, guarda.
+                DisagioBottom: Piuttosto mi faccio il cane della vicina.
+                  -> randomize_characters   
         }
       
   + {actualSpeakers has Char_tre &&character_personalization >= startNumber}[{Char_tre} #alias:xx #age:37 #body:medium #insearchof:sex]

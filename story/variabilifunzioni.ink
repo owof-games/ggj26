@@ -140,7 +140,12 @@ VAR endGameCounter = 3
         VAR anon_dodiciSesso = true
     //char_uno
         VAR char_unoFemme = true
-        VAR char_unoFriendship = true  
+        VAR char_unoFriendship = true
+    //char_due   
+        VAR char_dueAgeism = true
+        VAR char_dueDysmorphia = true
+        VAR char_dueFemme = true
+        VAR char_dueBear = true
 
 //FUNZIONI///
 //GESTIONE PG//
