@@ -67,6 +67,7 @@ func _on_continue_button_pressed() -> void:
 
 
 func _choice_pressed(choice_index: int) -> void:
+	AudioPlayer.play_sfx(AudioPlayer.SFX.ChatChoice)
 	choice_pressed.emit(choice_index)
 
 
