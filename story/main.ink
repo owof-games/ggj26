@@ -172,27 +172,36 @@ INCLUDE finali.ink
                 -> randomize_characters   
         }
       
-  + {actualSpeakers has Char_quattro &&character_personalization >= startNumber}[{Char_quattro} #alias:xx #age:23 #body:orsettino #insearchof:amici]
+  + {actualSpeakers has Char_quattro &&character_personalization >= startNumber}[{Char_quattro} #alias:D&D&Chat #age:23 #body:orsettino #insearchof:amici]
         {activeTopics:
             - Ageism:
               {char_quattroAgeism:
-                    Alias:
-                    Alias:
+                    D&D&Chat: Questa roba che hai scritto sull'età.
+                    D&D&Chat: A me non piacciono le persone vecchie, ma.
+                    D&D&Chat: Sto imparando meglio che certe cose sono come abitudini.
+                    D&D&Chat: E magari in futuro io perdo questa mia di guardare i vecchi male.
+                    D&D&Chat: E allora ci risentiamo qui.
+                    D&D&Chat: Promesso.
                       ~ char_quattroAgeism = false
                       -> randomize_characters
                   } 
             - Polyamory:
                 {char_quattroPolyamory:
-                    Alias:
-                    Alias:
+                    D&D&Chat: Il mio migliore amico è poli.
+                    D&D&Chat: Ma il suo fidanzato l'ha tradito comunque.
+                    D&D&Chat: Perché erano d'accordo che avrebbero fatto sempre sesso a tre.
+                    D&D&Chat: E invece due settimane fa il fidanzato del mio amico si è fatto un tipo nei bagni dell'uni.
+                    D&D&Chat: Alla fine tradiscono tutti, sempre.
                       ~ char_quattroPolyamory = false
                       -> randomize_characters
                   } 
               -> randomize_characters 
             - Masculinity:
                 {char_quattroMasculinity:
-                    Alias:
-                    Alias:
+                    D&D&Chat: Quando gioco mi piace immaginarmi enorme e fortissimo.
+                    D&D&Chat: Indistruttibile.
+                    D&D&Chat: Quello che dici dei beta è bello.
+                    D&D&Chat: Ma a volte fantasticare, sentirsi di più di quello che si è aiuta ad andare avanti.
                       ~ char_quattroMasculinity = false
                       -> randomize_characters
                   } 
@@ -212,7 +221,8 @@ INCLUDE finali.ink
               - Amicizia:
                 -> dialogue_Char_quattro  
               - else:
-                  Alias:
+                  D&D&Chat: Scusa, ma non me la sento di parlare ora.
+                  D&D&Chat: Non ce l'ho con te, ma non è il momento.
                 -> randomize_characters   
         }
       

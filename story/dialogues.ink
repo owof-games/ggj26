@@ -109,16 +109,45 @@
 === dialogue_Char_quattro
         {
             - PGAge has Giovane:
-                Alias:
+                D&D&Chat: Chissà se uno della mia età capisce questa cosa.
             - PGBody has Bear:
-                Alias:   
+                D&D&Chat: Tu sei un bel bear.
+                D&D&Chat: Non come me.
+                D&D&Chat: Io non esco molto di casa.
+                D&D&Chat: Non sono bear.
+                D&D&Chat: Sono grasso.
+                D&D&Chat: Mostruoso.
             - PGInSearchOf has Monogamia:
-                Alias:   
+                D&D&Chat: Che bello che cerchi l'amore.
+                D&D&Chat: Che tu sai che lo potrai trovare. 
             - PGInSearchOf has Amicizia:
-                Alias:   
+                D&D&Chat: Sono in pochi qui con la cosa di trovare amicizia, sai?  
  
         }
-        Alias:  
+
+        D&D&Chat: Mi dai l'aria di uno che è tranquillo.
+        D&D&Chat: Questo mi rassicura, perché qui tutti hanno solo una cosa.
+        D&D&Chat: Aspettative.
+        D&D&Chat: Devi rispondere secondo i loro ritmi.
+        D&D&Chat: Devi adattarti alle loro fantasie.
+        D&D&Chat: Devi scrivere e pensare e mandare foto che siano quello che vogliono che tu sia.
+        D&D&Chat: Questa cosa è un incubo.
+        D&D&Chat: Anche perché non posso sbagliare.
+        D&D&Chat: Ma conoscersi vuol dire sbagliare, mi capisci vero?
+        D&D&Chat: Quando gioco a qualcosa la cosa bella è sbagliare.
+        D&D&Chat: Perché allora capisco qualcosa di nuovo sul gioco.
+        D&D&Chat: Su di me.
+        D&D&Chat: Su cosa lavorare, se voglio.
+        D&D&Chat: E cosa accettare.
+        D&D&Chat: Qui è impossibile.
+        D&D&Chat: Non esco mai con le persone di qui, sai?
+        D&D&Chat: Sono tutte così spaventose.
+        D&D&Chat: Un giorno vorrei però sentire un bacio.
+        D&D&Chat: Un bacio vero.
+        D&D&Chat: Anche mordendosi o sbavandosi tutti perché si è impacciati.
+        D&D&Chat: Poi ci si ride sopra e via.
+        D&D&Chat: In confidenza. In amicizia.
+        D&D&Chat: Prima o poi accadrà.
 
     ~ discoveredTopics += Expectations
     -> character_personalization
