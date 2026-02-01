@@ -1101,7 +1101,7 @@ INCLUDE dialogues.ink
         } 
   
 
-    + (anon_undici){actualSpeakers has Anon_undici}[Anon_undici #alias:Piedone #age:69 #body:lupo #insearchof:un grande cuore, non solo per me]
+    + (anon_undici){actualSpeakers has Anon_undici}[Anon_undici #alias:Piedone #age:69 #body:lupo #insearchof:un cuore per due]
       {activeTopics:
             - Polyamory:
                 {anon_undiciPolyamory:
