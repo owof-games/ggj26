@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cq4yeei78kgu7" path="res://components/my_profile/topic_button.tscn" id="1_exlrj"]
 [ext_resource type="Script" uid="uid://c800ylddgbplp" path="res://components/my_profile/my_profile.gd" id="1_v1vdn"]
+[ext_resource type="Texture2D" uid="uid://c0ahm3xghqln0" path="res://data/images/my_profile/sfondoniente.png" id="2_3ffqs"]
+[ext_resource type="Texture2D" uid="uid://cw2uakemd5ut2" path="res://data/images/my_profile/simbolo corpo.png" id="4_xr1xn"]
+[ext_resource type="StyleBox" uid="uid://bihpfyx5hfqnd" path="res://theme/my_profile_tag_not_pressed.tres" id="5_owoiq"]
+[ext_resource type="StyleBox" uid="uid://bl5hvat30plj4" path="res://theme/my_profile_tag_pressed.tres" id="6_ot50j"]
 
 [node name="MyProfile" type="Control" unique_id=525923400]
 layout_mode = 3
@@ -15,118 +19,187 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_v1vdn")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1483906721]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3ffqs")
+expand_mode = 1
+
 [node name="Name" type="Label" parent="." unique_id=1596974021]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 7.0
-offset_right = 52.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10197368
+anchor_top = 0.44907406
+anchor_right = 0.16776316
+anchor_bottom = 0.45925927
+offset_right = 45.0
 offset_bottom = 23.0
-text = "prova"
+theme_override_font_sizes/font_size = 24
+text = "rodolfo"
+metadata/_edit_use_anchors_ = true
 
-[node name="Age" type="Label" parent="." unique_id=1512995699]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=897191370]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10197368
+anchor_top = 0.475
+anchor_right = 0.23355263
+anchor_bottom = 0.475
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 7
+metadata/_edit_use_anchors_ = true
+
+[node name="BodyIcon" type="TextureRect" parent="HBoxContainer" unique_id=2129885761]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_xr1xn")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Body" type="Label" parent="HBoxContainer" unique_id=1613266563]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 305.0
-offset_top = 31.0
-offset_right = 350.0
-offset_bottom = 54.0
-text = "prova"
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "fit"
+metadata/_edit_use_anchors_ = true
 
-[node name="Body" type="Label" parent="." unique_id=1613266563]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=1174277327]
+custom_minimum_size = Vector2(1, 20)
+layout_mode = 2
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Age" type="Label" parent="HBoxContainer" unique_id=1512995699]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 305.0
-offset_top = 61.0
-offset_right = 350.0
-offset_bottom = 84.0
-text = "prova"
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "79"
+metadata/_edit_use_anchors_ = true
 
-[node name="InSearchOf" type="Label" parent="." unique_id=238649533]
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=1395512660]
+custom_minimum_size = Vector2(1, 20)
+layout_mode = 2
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="InSearchOf" type="Label" parent="HBoxContainer" unique_id=238649533]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 305.0
-offset_top = 100.0
-offset_right = 350.0
-offset_bottom = 123.0
-text = "prova"
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "sexo"
 
-[node name="Description" type="Label" parent="." unique_id=538998479]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 22.0
-offset_top = 131.0
-offset_right = 67.0
-offset_bottom = 154.0
-text = "prova"
+[node name="TagsContainer" type="HFlowContainer" parent="." unique_id=817459344]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.133
+anchor_top = 0.5361111
+anchor_right = 0.93
+anchor_bottom = 0.5972222
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 22
+metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1055093614]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 249.0
-offset_right = 529.0
-offset_bottom = 1044.0
-
-[node name="Button" parent="VBoxContainer" unique_id=713931208 instance=ExtResource("1_exlrj")]
+[node name="Button" parent="TagsContainer" unique_id=713931208 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 topic_name = "Ageism"
 
-[node name="Button2" parent="VBoxContainer" unique_id=251301885 instance=ExtResource("1_exlrj")]
+[node name="Button2" parent="TagsContainer" unique_id=251301885 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Old Twink"
 topic_name = "OldTwink"
 
-[node name="Button3" parent="VBoxContainer" unique_id=1112506265 instance=ExtResource("1_exlrj")]
+[node name="Button3" parent="TagsContainer" unique_id=1112506265 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Poliamore"
 topic_name = "Polyamory"
 
-[node name="Button4" parent="VBoxContainer" unique_id=1213435029 instance=ExtResource("1_exlrj")]
+[node name="Button4" parent="TagsContainer" unique_id=1213435029 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Aspettative"
 topic_name = "Expectations"
 
-[node name="Button5" parent="VBoxContainer" unique_id=143954911 instance=ExtResource("1_exlrj")]
+[node name="Button5" parent="TagsContainer" unique_id=143954911 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Dismorfia"
 topic_name = "Dysmorphia"
 
-[node name="Button6" parent="VBoxContainer" unique_id=96442205 instance=ExtResource("1_exlrj")]
+[node name="Button6" parent="TagsContainer" unique_id=96442205 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Mascolinità"
 topic_name = "Masculinity"
 
-[node name="Button7" parent="VBoxContainer" unique_id=1905627593 instance=ExtResource("1_exlrj")]
+[node name="Button7" parent="TagsContainer" unique_id=1905627593 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Femme"
 topic_name = "Femme"
 
-[node name="Button8" parent="VBoxContainer" unique_id=1274511278 instance=ExtResource("1_exlrj")]
+[node name="Button8" parent="TagsContainer" unique_id=1274511278 instance=ExtResource("1_exlrj")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Amicizia"
 topic_name = "Friendship"
 
-[node name="Control" type="Control" parent="VBoxContainer" unique_id=1104010924]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="AboutMe" type="Label" parent="." unique_id=1039388094]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.102
+anchor_top = 0.7425926
+anchor_right = 0.102
+anchor_bottom = 0.7425926
+theme_override_font_sizes/font_size = 15
+text = "su di me"
+metadata/_edit_use_anchors_ = true
 
-[node name="ChatButton" type="Button" parent="VBoxContainer" unique_id=1551940554]
-layout_mode = 2
-text = "Chat"
+[node name="Description" type="Label" parent="." unique_id=538998479]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.133
+anchor_top = 0.8055556
+anchor_right = 0.837
+anchor_bottom = 0.8055556
+text = "prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova prova prova di prova "
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
-[connection signal="topic_pressed" from="VBoxContainer/Button" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button2" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button3" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button4" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button5" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button6" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button7" to="." method="_on_button_topic_pressed"]
-[connection signal="topic_pressed" from="VBoxContainer/Button8" to="." method="_on_button_topic_pressed"]
-[connection signal="pressed" from="VBoxContainer/ChatButton" to="." method="_on_chat_button_pressed"]
+[node name="ChatButton" type="Button" parent="." unique_id=1551940554]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7878289
+anchor_top = 0.9453704
+anchor_right = 0.7878289
+anchor_bottom = 0.9453704
+offset_right = 44.0
+offset_bottom = 39.0
+theme_override_styles/normal = ExtResource("5_owoiq")
+theme_override_styles/pressed = ExtResource("6_ot50j")
+theme_override_styles/hover = ExtResource("5_owoiq")
+theme_override_styles/hover_pressed = ExtResource("6_ot50j")
+text = "Chat »"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="topic_pressed" from="TagsContainer/Button" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button2" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button3" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button4" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button5" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button6" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button7" to="." method="_on_button_topic_pressed"]
+[connection signal="topic_pressed" from="TagsContainer/Button8" to="." method="_on_button_topic_pressed"]
+[connection signal="pressed" from="ChatButton" to="." method="_on_chat_button_pressed"]
