@@ -1018,7 +1018,7 @@ INCLUDE dialogues.ink
                   {anon_ottoFemme:
                     LaPatty: LaPatty dice "Sono la mia dea."
                     LaPatty: E aggiunge "Vai ama!".
-                    LaPatty: Anche se sono qui per farmi trattare come un arrosto.
+                    LaPatty: Anche se è qui per farsi trattare come un arrosto.
                     LaPatty: Ma ci si vede in giro bella!
                       ~ anon_ottoFemme = false
                       -> character_personalization
