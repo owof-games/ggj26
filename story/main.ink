@@ -1289,13 +1289,25 @@ INCLUDE dialogues.ink
         {activeTopics:
             - Expectations:
                 {anon_dodiciExpectations:
-                  Anon: Un miracolo, un monogamo!
+                  CercoSingola: "Conosciamoci con calma, senza preconcetti."
+                  CercoSingola: Dai, è una frase da vergine.
+                  CercoSingola: Sei vergine?
+                  CercoSingola: Perché nel caso sono la persona perfetta per te.
+                  CercoSingola: Cazzo modesto ma che arriva proprio dove deve.
+                  CercoSingola: Poi altro che calma.
+                  CercoSingola: Mi starai letteralmente sul cazzo tutti i giorni.
                     ~ anon_dodiciExpectations = false
                     -> character_personalization
                 }
             - Dysmorphia:
                 {anon_dodiciDysmorphia:
-                    Anon: Un miracolo, un monogamo!
+                  CercoSingola: "Sto imparando ad amare il mio corpo."
+                  CercoSingola: Beato te.
+                  CercoSingola: Passo le ore in palestra e vedo solo uno sfigato.
+                  CercoSingola: Innamorato del suo migliore amico etero.
+                  CercoSingola: Che si sfonda di pesi solo perché lui possa ogni tanto toccarlo.
+                  CercoSingola: O per vederlo nudo in doccia.
+                  CercoSingola: Ti odio.
                       ~ anon_dodiciDysmorphia = false
                       -> character_personalization
                   }
@@ -1304,7 +1316,11 @@ INCLUDE dialogues.ink
         {PGBody:
               - Fit:
                 {anon_dodiciFit:
-                    Anon: Un miracolo, un monogamo!
+                    CercoSingola: Dio, che corpo che hai.
+                    CercoSingola: Anche se nessuno batte GingerBiceps.
+                    CercoSingola: Non ho mai avuto il coraggio di parlargli.
+                    CercoSingola: Con quel corpo sarei finalmente felice.
+                    CercoSingola: Scoperei un sacco e sarei felice.
                       ~ anon_dodiciFit = false
                       -> character_personalization
                   }
@@ -1313,17 +1329,28 @@ INCLUDE dialogues.ink
         {PGInSearchOf:
               - Sesso:
                 {anon_dodiciSesso:
-                    Anon: Un miracolo, un monogamo!
+                    CercoSingola: Proposta.
+                    CercoSingola: Ti fai trovare a casa.
+                    CercoSingola: Porta aperta.
+                    CercoSingola: Culo all'aria e faccia coperta.
+                    CercoSingola: Perché un po' mi fai cagare, scusa.
+                    CercoSingola: Ti scopo a sangue.
+                    CercoSingola: E vado via senza dirti nulla.
+                    CercoSingola: Ti lascio pensare.
+                    CercoSingola: Mi raccomando, clisterino strategico prima del mio arrivo.
                       ~ anon_dodiciSesso = false
                       -> character_personalization
                   } 
         }
         {
           - anon_dodici == 1:
-            Non sei il mio tipo.
+              CercoSingola: Lasciami in pace roito.
               -> character_personalization
           - else:
-            Abbiamo già parlato.
+              CercoSingola: Ti ho detto di lasciarmi in pace.
+              CercoSingola: Scrivimi solo se hai una camera.
+              CercoSingola: Non con te.
+              CercoSingola: O vomito.
             -> randomize_characters  
         } 
   
