@@ -32,4 +32,5 @@ func _on_button_topic_pressed(topic_name: String) -> void:
 
 
 func _on_chat_button_pressed() -> void:
+	AudioPlayer.play_sfx(AudioPlayer.SFX.EnterChat)
 	chat_pressed.emit()

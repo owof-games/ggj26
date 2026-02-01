@@ -30,3 +30,7 @@ func setup(character: String, alias: String, age: String, body: String, looking_
 		icon = texture
 	else:
 		icon = _CHAR_ANONYMOUS
+
+
+func _on_pressed() -> void:
+	AudioPlayer.play_sfx(AudioPlayer.SFX.ProfileSelected)
