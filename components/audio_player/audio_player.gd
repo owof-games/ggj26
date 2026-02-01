@@ -5,15 +5,19 @@ enum SFX {
 	ProfileSelected,
 	EnterChat,
 	ChatContinue,
-	ChatChoice
+	ChatChoice,
+	MyProfileEnableTopic,
+	MyProfileDisableTopic
 }
 
 @onready var _audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+var _audio_stream_playback_polyphonic: AudioStreamPlaybackPolyphonic
 const _profile_selected_audio_stream: AudioStream = preload("uid://ca7lw6qymkt61")
 const _enter_chat_audio_stream: AudioStream = preload("uid://plo7fsj38t2f")
 const _chat_continue_audio_stream: AudioStream = preload("uid://4si5lmik10ai")
 const _chat_choice_audio_stream: AudioStream = preload("uid://mgrqrkranijp")
-var _audio_stream_playback_polyphonic: AudioStreamPlaybackPolyphonic
+const _my_profile_enable_topic_audio_stream: AudioStream = preload("uid://jeuf5lcgcf2y")
+const _my_profile_disable_topic_audio_stream: AudioStream = preload("uid://do2pa2a61njds")
 
 
 func _ready() -> void:
@@ -34,6 +38,10 @@ func play_sfx(sfx: SFX) -> void:
 			audio_stream = _chat_continue_audio_stream
 		SFX.ChatChoice:
 			audio_stream = _chat_choice_audio_stream
+		SFX.MyProfileEnableTopic:
+			audio_stream = _my_profile_enable_topic_audio_stream
+		SFX.MyProfileDisableTopic:
+			audio_stream = _my_profile_disable_topic_audio_stream
 		_:
 			push_warning("Cannot find audio stream for sfx %s" % [sfx])
 			return

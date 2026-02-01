@@ -16,7 +16,6 @@ signal chat_pressed
 @onready var _description: Label = %Description
 
 
-
 func setup(topics: Array[String], active_topics: InkList, my_name: String, my_age: String, my_body: String, my_in_search_of: String, description: String):
 	for topic_button in topic_buttons:
 		topic_button.setup(topics, active_topics)
@@ -28,6 +27,12 @@ func setup(topics: Array[String], active_topics: InkList, my_name: String, my_ag
 
 
 func _on_button_topic_pressed(topic_name: String) -> void:
+	var is_enabled := false
+	for topic_button in topic_buttons:
+		if topic_button.topic_name == topic_name:
+			is_enabled = topic_button.button_pressed
+			break
+	AudioPlayer.play_sfx(AudioPlayer.SFX.MyProfileEnableTopic if is_enabled else AudioPlayer.SFX.MyProfileDisableTopic)
 	topic_pressed.emit(topic_name)
 
 
