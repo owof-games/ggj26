@@ -1,6 +1,18 @@
 ///Storylets personaggi speciali///
 === dialogue_Char_uno
-    Ageismo
+        Anon: Ehi, tu.
+        {
+            - PGAge has Vecchio:
+                Anon: Uno più vecchio di me può capire certe cose.
+            - PGAge has Medio:
+                Anon: Anche tu ad affrontare la mezza età?
+            - PGBody has Fit:
+                Anon: Certo che un fisico così non ti dura per sempre.
+            - PGInSearchOf has Sesso:
+                Anon: Anche io cerco da scopare, ma è dura.
+        }
+        Anon: Invecchiare come frocio fa schifo.
+        Anon: 
 
     ~ discoveredTopics += Ageism
     -> character_personalization

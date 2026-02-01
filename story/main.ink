@@ -26,40 +26,40 @@ INCLUDE dialogues.ink
   - (top)
   @choose_character
   //Personaggi speciali
-  + {actualSpeakers has Char_uno && character_personalization >= startNumber}[{Char_uno} #alias:xx #age:37 #body:medium #insearchof:sex]
+  + {actualSpeakers has Char_uno && character_personalization >= startNumber}[{Char_uno} #alias:37top #age:37 #body:normale #insearchof:qualcuno da riempire]
     //Tema che genera: Ageismo
         {activeTopics:
-            - Expectations:
-                non mi interessano quelle cose lì
-              -> randomize_characters
             - Femme:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+              {char_unoFemme:
+                  Anon: "Sono la mia dea."
+                  Anon: Certo che a voi il femminismo ha fatto proprio male.
+                    ~ char_unoFemme = false
+                    -> randomize_characters
+              }      
             - Friendship:
-                non mi interessano quelle cose lì
-              -> randomize_characters
+              {char_unoFriendship:
+                  Anon: "Meglio appuntamento: confidenze, amicizia e uncinetto."
+                  Anon: Posso dire che è una cosa da smosciacazzi?
+                      ~ char_unoFriendship = false
+                    -> randomize_characters
+              }      
         }
+  
         {PGAge:
               - Vecchio:
                 -> dialogue_Char_uno
               - Medio:
                 -> dialogue_Char_uno
-              - else:
-                non sei il mio tipo
-                -> randomize_characters
         }
         {PGBody:
               - Fit:
                 -> dialogue_Char_uno
-              - else:
-                non sei il mio tipo
-                -> randomize_characters 
         }
         {PGInSearchOf:
               - Sesso:
                 -> dialogue_Char_uno
               - else:
-                non sei il mio tipo
+                Anon: Lascia fare, non sei il mio tipo.
                 -> randomize_characters   
         }
 
