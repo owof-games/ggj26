@@ -54,6 +54,19 @@
         -> END
 
     = medium_ending
-
+        frocia_libera: Ciao {Alias}!
+        frocia_libera: Qui è la Frocia Libera.
+        frocia_libera: Una rete di attivistX che cerca di liberare il desiderio dalle grinfie del capitalismo.
+        frocia_libera: Pensata per corpi non conformi e menti libere.
+        frocia_libera: Abbiamo visto il tuo profilo, la tua strada per accogliere la tua unicità.
+        frocia_libera: E siamo qui per dirti: unisciti a noi.
+        frocia_libera: Vieni a conoscerci domani sera.
+        frocia_libera: La nostra associazione è davanti al graffito di Marsha P. Johnson, ai Giardini.
+        frocia_libera: Scoprirai decine di persone come te, stanche dei vincoli delle app di dating.
+        frocia_libera: Stanche di odiare il proprio corpo non incasellabile.
+        frocia_libera: Stanche di veder invisibilizzati i propri desideri di vicinanza.
+        frocia_libera: Di doversi vergognare per un po' di intimità.
+        frocia_libera: Unisciti a noi e disattiva questa trappola!
+        frocia_libera: A domani sera!
 
         -> END    
