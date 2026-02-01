@@ -11,6 +11,16 @@
     }
 
     = full_ending
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        + [hungr_bot #alias:hungr_bot #age:eterno #body:etereo #insearchof:criminali social]
+        -
         hungr_bot: ATTENZIONE!
         hungr_bot: AT-TEN-ZIO-NE!
         hungr_bot: Utente numero 123456019 con l'alias {Alias}.
@@ -34,6 +44,16 @@
             -> END
 
     = empty_ending
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        + [free_desire_collective #alias:free_desire_collective #age:??? #body:??? #insearchof:???]
+        -
         free_desire_collective: Ehi tu, {Alias}!
         free_desire_collective: Qui è la Free Desire Collective.
         free_desire_collective: E abbiamo hackerato questa cloaca di Hungr.
@@ -54,6 +74,16 @@
         -> END
 
     = medium_ending
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        + [frocia_libera #alias:frocia_libera #age:3 #body:moltitudine #insearchof:futuro]
+        -
         frocia_libera: Ciao {Alias}!
         frocia_libera: Qui è la Frocia Libera.
         frocia_libera: Una rete di attivistX che cerca di liberare il desiderio dalle grinfie del capitalismo.
